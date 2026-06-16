@@ -1,0 +1,9 @@
+# Willow Waterhole — legacy Squarespace URL redirects (301)
+# Format:  /old-path   /new-path   301
+# (to be completed from the current site's URLs before launch)
+/lakes-and-trails   /explore.html   301
+/things-to-do       /visit.html     301
+/volunteer          /get-involved.html   301
+/membership         /get-involved.html   301
+/ways-to-give       /support.html   301
+/events             /events.html    301
