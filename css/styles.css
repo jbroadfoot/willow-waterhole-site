@@ -1,0 +1,245 @@
+/* Willow Waterhole — shared design system */
+/* ============================================================
+   WILLOW WATERHOLE — Design System (brand-faithful)
+   Colors: official PMS 348 green #008444 + PMS 300 blue #0063BE
+   Fonts: Libre Baskerville (≈ Baskerville) + Nunito (≈ Arial Rounded)
+   Signature: straight green line over wavy blue line (the logo motif)
+   Logo rules honored: full-color logo on white only; white logo on near-black only
+   ============================================================ */
+:root{
+  --green:#008444;      /* brand green, PMS 348 */
+  --green-d:#006B37;    /* deeper green for hovers */
+  --green-ink:#0B1A0F;  /* near-black green: footer (logo-safe) */
+  --blue:#0063BE;       /* brand blue, PMS 300 */
+  --blue-d:#00509B;
+  --cream:#F6F2E9;      /* warm paper */
+  --sand:#ECE5D6;       /* deeper warm paper */
+  --sky:#E8F0F6;        /* faint water tint */
+  --ink:#1B2016;        /* text */
+  --line:#DED7C6;
+  --maxw:1240px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+h1,h2,h3,.disp{font-family:'Libre Baskerville',Georgia,serif;color:var(--green);line-height:1.2;font-weight:700}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+
+/* buttons */
+.btn{display:inline-block;padding:13px 26px;border-radius:6px;text-decoration:none;font-weight:700;font-size:.93rem;border:2px solid transparent;transition:background .18s,color .18s,border-color .18s;cursor:pointer;font-family:Nunito}
+.btn-green{background:var(--green);color:#fff}
+.btn-green:hover{background:var(--green-d)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d)}
+.btn-ghost{border-color:rgba(255,255,255,.9);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.16)}
+.btn-white{background:#fff;color:var(--green)}
+
+/* utility + nav (white, for logo compliance) */
+.util{background:var(--green-ink);color:#cfe0c2}
+.util .wrap{display:flex;justify-content:flex-end;gap:22px;padding:7px 26px;font-size:.82rem}
+.util a{color:#e9f1e2;text-decoration:none;font-weight:700}
+.util a:hover{color:#fff}
+.nav{background:#fff;position:sticky;top:0;z-index:60;border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:86px}
+.nav img{height:56px}
+.nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+.nav ul a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
+.nav ul a:hover{color:var(--blue)}
+.nav .donate{background:var(--green);color:#fff!important;padding:10px 20px;border-radius:6px}
+.nav .donate:hover{background:var(--green-d)}
+.nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:8px}
+.nav-toggle span{display:block;width:24px;height:2px;background:var(--green);margin:5px 0}
+
+/* HERO — video-ready (drop a <video> into .hero-media later; photo for now) */
+.hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:url('images/lakes-trails/willow-waterhole-triangle-lake.jpg') center/cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(108deg,rgba(8,30,18,.74) 0%,rgba(8,40,30,.40) 46%,rgba(8,40,30,.08) 74%)}
+.hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr 330px;gap:42px;align-items:center}
+.hero-copy{color:#fff}
+.hero-copy .eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 .78rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;color:#bfe3c9;margin-bottom:1.1rem}
+.hero-copy .eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(0,132,68,.35)}
+.hero-copy h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.5rem);max-width:680px;text-shadow:0 2px 22px rgba(0,0,0,.45)}
+.hero-copy p{max-width:480px;margin:1.1rem 0 1.7rem;font-size:1.12rem;color:#f0f3ea;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero-copy .btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* What's Happening card */
+.now{background:rgba(255,255,255,.97);border-radius:10px;box-shadow:0 18px 48px rgba(8,30,18,.34);overflow:hidden}
+.now .nh{background:var(--blue);color:#fff;padding:13px 20px;font:800 .74rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.now .nh::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
+.now ul{list-style:none;padding:4px 20px 8px}
+.now li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:13px;align-items:flex-start}
+.now li:last-child{border-bottom:0}
+.now .tag{font:800 .64rem/1.4 Nunito;letter-spacing:.06em;text-transform:uppercase;color:var(--green);flex:0 0 auto;padding-top:2px}
+.now b{display:block;font-size:.95rem;color:var(--ink);font-weight:700}
+.now span{font-size:.82rem;color:#5e6852}
+.now .all{display:block;padding:11px 20px;background:var(--cream);color:var(--blue);font-weight:700;font-size:.84rem;text-decoration:none;text-align:center}
+.now .all:hover{background:var(--sand)}
+
+/* trailhead facts */
+.facts{background:var(--green);color:#fff}
+.facts .wrap{display:flex;flex-wrap:wrap;gap:14px 48px;align-items:center;justify-content:space-between;padding:17px 26px}
+.facts .grp{display:flex;gap:48px;flex-wrap:wrap}
+.facts .f b{display:block;font:800 .68rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:#bfe3c9;margin-bottom:.3rem}
+.facts .f span{font-size:.94rem;font-weight:600}
+.facts a{color:#fff;font-weight:700;border-bottom:2px solid #fff;text-decoration:none;font-size:.9rem;white-space:nowrap;padding-bottom:2px}
+
+/* signature divider: straight green line + wavy blue line (logo motif) */
+.divider{display:block;width:100%;height:26px;margin:0}
+.divider svg{display:block;width:100%;height:100%}
+
+/* section scaffold */
+section{padding:78px 0}
+.eyebrow-s{font:800 .76rem/1 Nunito;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+.intro{text-align:center;padding-bottom:42px}
+.intro h2{font-size:clamp(1.9rem,3.4vw,2.5rem);max-width:740px;margin:0 auto 1rem;line-height:1.25}
+.intro p{max-width:600px;margin:0 auto;color:#4b563f;font-size:1.12rem}
+
+/* activities */
+.acts{padding-top:8px}
+.actgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:14px}
+.act{text-align:center;text-decoration:none;color:var(--ink)}
+.act .ic{aspect-ratio:1;border-radius:18px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:.7rem;border:2px solid transparent;transition:border-color .2s,transform .2s,background .2s}
+.act:hover .ic{border-color:var(--blue);transform:translateY(-4px);background:#dbe8f2}
+.act svg{width:46px;height:46px;stroke:var(--blue);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.act b{font-size:.95rem;font-weight:700}
+@media(max-width:860px){.actgrid{grid-template-columns:repeat(4,1fr);gap:18px}}
+@media(max-width:460px){.actgrid{grid-template-columns:repeat(3,1fr)}}
+
+/* SIX LAKES — signature */
+.lakes{background:var(--cream)}
+.lakes .head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:.5rem;gap:20px;flex-wrap:wrap}
+.lakes h2{font-size:clamp(1.9rem,3.4vw,2.5rem)}
+.lakes h2 em{font-style:italic;color:var(--blue)}
+.lakes .head a{color:var(--blue);font-weight:700;text-decoration:none;font-size:.92rem;white-space:nowrap}
+.lakes .sub{color:#54604b;margin-bottom:2.2rem;max-width:560px}
+.lk{display:grid;grid-template-columns:54px 1.05fr 1.55fr 230px;gap:24px;align-items:center;padding:18px 0;border-top:1px solid #D8D0BD;text-decoration:none;color:var(--ink);transition:background .15s}
+.lk:hover{background:#EFE9DA}
+.lk:hover .lkimg img{transform:scale(1.05)}
+.lk .no{font-family:'Libre Baskerville';font-size:1.3rem;font-weight:700;color:var(--blue)}
+.lk h3{font-size:1.25rem;color:var(--green)}
+.lk p{font-size:.92rem;color:#54604b}
+.lk .lkimg{aspect-ratio:5/3;overflow:hidden;border-radius:6px}
+.lk .lkimg img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+@media(max-width:860px){.lk{grid-template-columns:38px 1fr}.lk .lkimg{display:none}}
+
+/* FEATURED EXPERIENCE — the boardwalk (flagship, not the everyday visit) */
+.feature{position:relative;color:#fff;overflow:hidden}
+.feature-media{position:absolute;inset:0;background:url('images/boardwalk/boardwalk-prairie-curve.jpg') center/cover}
+.feature::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,30,18,.86) 0%,rgba(8,40,26,.62) 50%,rgba(8,40,26,.30) 100%)}
+.feature .wrap{position:relative;z-index:2;padding:84px 26px}
+.feature .tagline{display:inline-block;background:#C28A3E;color:#fff;font:800 .7rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:1.1rem}
+.feature h2{color:#fff;font-size:clamp(1.9rem,3.6vw,2.7rem);max-width:560px;margin-bottom:1rem}
+.feature p{max-width:520px;color:#e7efe2;margin-bottom:1.6rem}
+.feature .btns{display:flex;gap:12px;flex-wrap:wrap}
+
+/* LEARN & GROW — education, in proportion (one band) */
+.learn{background:#fff}
+.learn .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.learn .eyebrow-s{color:var(--green)}
+.learn h2{font-size:clamp(1.8rem,3.2vw,2.3rem);margin-bottom:1rem;line-height:1.25}
+.learn p{color:#4b563f;margin-bottom:1.4rem}
+.learn .chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:1.6rem}
+.learn .chip{background:var(--sky);color:var(--blue-d);font-weight:700;font-size:.82rem;padding:8px 14px;border-radius:99px}
+.learn .img{border-radius:10px;overflow:hidden;box-shadow:0 8px 30px rgba(8,30,18,.14);aspect-ratio:4/3}
+.learn .img img{width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){.learn .wrap{grid-template-columns:1fr}.learn .img{order:-1}}
+
+/* GET INVOLVED */
+.involve{background:var(--sand)}
+.involve .eyebrow-s{color:var(--green)}
+.involve h2{font-size:clamp(1.8rem,3.2vw,2.3rem);margin-bottom:.4rem}
+.involve .sub{color:#54604b;margin-bottom:2rem;max-width:580px}
+.igrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.icard{border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(8,30,18,.1);background:#fff;display:flex;flex-direction:column}
+.icard .imgwrap{aspect-ratio:3/2;overflow:hidden}
+.icard img{width:100%;height:100%;object-fit:cover}
+.icard .body{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column}
+.icard h3{font-size:1.12rem;margin-bottom:.35rem}
+.icard p{font-size:.89rem;color:#54604b;margin-bottom:1.1rem;flex:1}
+@media(max-width:860px){.igrid{grid-template-columns:1fr}}
+
+/* support line */
+.supportline{background:var(--blue);color:#fff;text-align:center;padding:58px 0}
+.supportline p{font-family:'Libre Baskerville',serif;font-size:clamp(1.25rem,2.4vw,1.7rem);max-width:740px;margin:0 auto 1.3rem;line-height:1.4}
+.supportline p em{font-style:italic;color:#dbe8f5}
+
+/* newsletter */
+.news{background:var(--cream);text-align:center}
+.news h2{font-size:2rem}
+.news p{max-width:500px;margin:.7rem auto 1.5rem;color:#54604b}
+.nf{display:flex;gap:10px;max-width:440px;margin:0 auto}
+.nf input{flex:1;padding:13px 16px;border:1px solid var(--line);border-radius:6px;font:400 1rem Nunito}
+@media(max-width:520px){.nf{flex-direction:column}}
+
+/* footer (near-black, white logo) */
+footer{background:var(--green-ink);color:#bcd0ad;padding:50px 0 28px;font-size:.88rem}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:26px}
+footer h4{color:#fff;font:800 .76rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9rem}
+footer ul{list-style:none}footer li{margin:.45rem 0}
+footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
+.fg img{height:54px;margin-bottom:12px;filter:brightness(0) invert(1);opacity:.95}
+.fbase{border-top:1px solid rgba(255,255,255,.16);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;color:#94ad85}
+@media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}
+
+@media(max-width:980px){
+  .hero .wrap{grid-template-columns:1fr}
+  .now{display:none}
+  .nav ul{position:fixed;top:86px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 0 14px;display:none;border-bottom:1px solid var(--line)}
+  .nav ul.open{display:flex}
+  .nav ul li{width:100%;text-align:center}
+  .nav ul a{display:block;padding:13px}
+  .nav-toggle{display:block}
+}
+
+
+/* ---- content-page components (prairie etc) ---- */
+.wrap-narrow{max-width:780px;margin:0 auto;padding:0 26px}
+/* page hero */
+.phero{position:relative;min-height:56vh;display:flex;align-items:flex-end;overflow:hidden}
+.phero-media{position:absolute;inset:0;background:url('images/prairie/gulf-coasst-prairie-grass.png') center/cover}
+.phero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,30,18,.2),rgba(8,30,18,.78))}
+.phero .wrap{position:relative;z-index:2;padding-bottom:46px;color:#fff}
+.phero .eyebrow{font:800 .78rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;color:#bfe3c9;margin-bottom:1rem}
+.phero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.4rem);max-width:760px;text-shadow:0 2px 20px rgba(0,0,0,.45)}
+.phero p{max-width:560px;margin-top:1rem;font-size:1.12rem;color:#eef3ea;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+/* stat band */
+.stats{background:var(--green);color:#fff}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:24px 26px;text-align:center}
+.stats b{display:block;font-family:'Libre Baskerville',serif;font-size:1.8rem}
+.stats span{font-size:.84rem;color:#cfe6d4}
+.lead{font-size:1.2rem;color:#3c4734;line-height:1.7}
+h2.big{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:1.1rem}
+/* split */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split.alt{background:var(--cream)}
+.split img{border-radius:8px;box-shadow:0 8px 30px rgba(8,30,18,.14);aspect-ratio:4/3;object-fit:cover;width:100%}
+.split .imgcol{order:-1}
+/* pullquote */
+.pull{background:var(--green-ink);color:#fff;text-align:center}
+.pull .wrap-narrow{padding-top:64px;padding-bottom:64px}
+.pull p{font-family:'Libre Baskerville',serif;font-size:clamp(1.3rem,2.6vw,1.9rem);line-height:1.45;font-style:italic}
+.pull cite{display:block;margin-top:1.2rem;font-family:Nunito;font-style:normal;font-weight:700;font-size:.9rem;color:#bfe3c9;letter-spacing:.04em}
+/* species cards */
+.species{background:var(--cream)}
+.species .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:2rem}
+.spec{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(8,30,18,.09)}
+.spec img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.spec .b{padding:20px 22px 24px}
+.spec .status{display:inline-block;font:800 .64rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;padding:5px 10px;border-radius:99px;margin-bottom:.7rem}
+.spec .endangered{background:#fde8e8;color:#b3261e}
+.spec .threatened{background:#fdf2e0;color:#9a6a16}
+.spec h3{font-size:1.12rem;margin-bottom:.4rem}
+.spec p{font-size:.88rem;color:#54604b}
+/* benefits */
+.benefits .grid{display:grid;grid-template-columns:repeat(2,1fr) ;gap:30px 50px;margin-top:1.5rem}
+.benefit{border-left:3px solid var(--blue);padding-left:18px}
+.benefit h3{font-size:1.1rem;color:var(--green);margin-bottom:.4rem}
+.benefit p{font-size:.94rem;color:#54604b}
+/* cta */
+.cta{background:var(--blue);color:#fff;text-align:center}
+.cta h2{color:#fff;font-size:2rem;margin-bottom:.7rem}
+.cta p{max-width:540px;margin:0 auto 1.5rem;color:#dbe8f5}
