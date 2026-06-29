@@ -21,7 +21,7 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+body{font-family:Nunito,system-ui,sans-serif;color:var(--ink);background:#fff;line-height:1.65;font-size:18px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 h1,h2,h3,.disp{font-family:'Libre Baskerville',Georgia,serif;color:var(--green);line-height:1.2;font-weight:700}
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
@@ -40,14 +40,14 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 
 /* utility + nav (white, for logo compliance) */
 .util{background:var(--green-ink);color:#cfe0c2}
-.util .wrap{display:flex;justify-content:flex-end;gap:22px;padding:7px 26px;font-size:.82rem}
+.util .wrap{display:flex;justify-content:flex-end;gap:22px;padding:8px 26px;font-size:.92rem}
 .util a{color:#e9f1e2;text-decoration:none;font-weight:700}
 .util a:hover{color:#fff}
 .nav{background:#fff;position:sticky;top:0;z-index:60;border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:86px}
-.nav img{height:56px}
+.nav img{height:72px}
 .nav ul{display:flex;gap:26px;list-style:none;align-items:center}
-.nav ul a{color:var(--ink);text-decoration:none;font-weight:700;font-size:.95rem}
+.nav ul a{color:var(--ink);text-decoration:none;font-weight:700;font-size:1.02rem}
 .nav ul a:hover{color:var(--blue)}
 .nav .donate{background:var(--green);color:#fff!important;padding:10px 20px;border-radius:6px}
 .nav .donate:hover{background:var(--green-d)}
@@ -55,28 +55,28 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 .nav-toggle span{display:block;width:24px;height:2px;background:var(--green);margin:5px 0}
 
 /* HERO — video-ready (drop a <video> into .hero-media later; photo for now) */
-.hero{position:relative;min-height:84vh;display:flex;align-items:center;overflow:hidden}
-.hero-media{position:absolute;inset:0;background:url('images/lakes-trails/willow-waterhole-triangle-lake.jpg') center/cover}
+.hero{position:relative;min-height:72vh;display:flex;align-items:center;overflow:hidden}
+.hero-media{position:absolute;inset:0;background:url('../images/lakes-trails/willow-waterhole-triangle-lake.jpg') center/cover}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(108deg,rgba(8,30,18,.74) 0%,rgba(8,40,30,.40) 46%,rgba(8,40,30,.08) 74%)}
-.hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:1fr 330px;gap:42px;align-items:center}
+.hero .wrap{position:relative;z-index:2;width:100%;display:block;align-items:center}
 .hero-copy{color:#fff}
 .hero-copy .eyebrow{display:inline-flex;align-items:center;gap:9px;font:700 .78rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;color:#bfe3c9;margin-bottom:1.1rem}
 .hero-copy .eyebrow::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 0 3px rgba(0,132,68,.35)}
 .hero-copy h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.5rem);max-width:680px;text-shadow:0 2px 22px rgba(0,0,0,.45)}
-.hero-copy p{max-width:480px;margin:1.1rem 0 1.7rem;font-size:1.12rem;color:#f0f3ea;text-shadow:0 1px 12px rgba(0,0,0,.5)}
+.hero-copy p{max-width:500px;margin:1.1rem 0 1.7rem;font-size:1.28rem;color:#f0f3ea;text-shadow:0 1px 12px rgba(0,0,0,.5)}
 .hero-copy .btns{display:flex;gap:12px;flex-wrap:wrap}
 
 /* What's Happening card */
 .now{background:rgba(255,255,255,.97);border-radius:10px;box-shadow:0 18px 48px rgba(8,30,18,.34);overflow:hidden}
-.now .nh{background:var(--blue);color:#fff;padding:13px 20px;font:800 .74rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.now .nh{background:var(--blue);color:#fff;padding:15px 20px;font:800 .9rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
 .now .nh::before{content:"";width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 3px rgba(255,255,255,.35)}
 .now ul{list-style:none;padding:4px 20px 8px}
-.now li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:13px;align-items:flex-start}
+.now li{padding:13px 0;border-bottom:1px solid var(--line);display:flex;gap:13px;align-items:flex-start}
 .now li:last-child{border-bottom:0}
-.now .tag{font:800 .64rem/1.4 Nunito;letter-spacing:.06em;text-transform:uppercase;color:var(--green);flex:0 0 auto;padding-top:2px}
-.now b{display:block;font-size:.95rem;color:var(--ink);font-weight:700}
-.now span{font-size:.82rem;color:#5e6852}
-.now .all{display:block;padding:11px 20px;background:var(--cream);color:var(--blue);font-weight:700;font-size:.84rem;text-decoration:none;text-align:center}
+.now .tag{font:800 .66rem/1.4 Nunito;letter-spacing:.06em;text-transform:uppercase;color:var(--green);flex:0 0 auto;padding-top:2px}
+.now b{display:block;font-size:1.14rem;color:var(--ink);font-weight:700}
+.now span{font-size:1rem;color:#5e6852}
+.now .all{display:block;padding:13px 20px;background:var(--cream);color:var(--blue);font-weight:700;font-size:1.02rem;text-decoration:none;text-align:center}
 .now .all:hover{background:var(--sand)}
 
 /* trailhead facts */
@@ -84,8 +84,8 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 .facts .wrap{display:flex;flex-wrap:wrap;gap:14px 48px;align-items:center;justify-content:space-between;padding:17px 26px}
 .facts .grp{display:flex;gap:48px;flex-wrap:wrap}
 .facts .f b{display:block;font:800 .68rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:#bfe3c9;margin-bottom:.3rem}
-.facts .f span{font-size:.94rem;font-weight:600}
-.facts a{color:#fff;font-weight:700;border-bottom:2px solid #fff;text-decoration:none;font-size:.9rem;white-space:nowrap;padding-bottom:2px}
+.facts .f span{font-size:1.05rem;font-weight:600}
+.facts a{color:#fff;font-weight:700;border-bottom:2px solid #fff;text-decoration:none;font-size:1rem;white-space:nowrap;padding-bottom:2px}
 
 /* signature divider: straight green line + wavy blue line (logo motif) */
 .divider{display:block;width:100%;height:26px;margin:0}
@@ -96,7 +96,67 @@ section{padding:78px 0}
 .eyebrow-s{font:800 .76rem/1 Nunito;letter-spacing:.13em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
 .intro{text-align:center;padding-bottom:42px}
 .intro h2{font-size:clamp(1.9rem,3.4vw,2.5rem);max-width:740px;margin:0 auto 1rem;line-height:1.25}
-.intro p{max-width:600px;margin:0 auto;color:#4b563f;font-size:1.12rem}
+.intro p{max-width:620px;margin:0 auto;color:#4b563f;font-size:1.22rem}
+.intro-photo{max-width:1100px;margin:38px auto 0;padding:0 24px}
+.intro-photo img{width:100%;height:auto;max-height:380px;object-fit:cover;display:block;border-radius:10px;box-shadow:0 18px 40px rgba(20,40,20,.18)}
+
+/* UPCOMING EVENTS — inline section, Arboretum-style */
+.upcoming{padding:56px 0 18px;background:#fff}
+.upcoming .up-head{text-align:center;margin-bottom:34px}
+.upcoming h2{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-top:.3rem}
+.up-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:34px;align-items:stretch}
+.up-feature{display:grid;grid-template-rows:auto 1fr;background:var(--cream);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 12px 32px rgba(20,40,20,.10);transition:transform .2s,box-shadow .2s}
+.up-feature:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(20,40,20,.16)}
+.up-feature .up-img{display:block;aspect-ratio:16/9;overflow:hidden}
+.up-feature .up-img img{width:100%;height:100%;object-fit:cover;display:block}
+.up-feature .up-body{padding:26px 30px 30px}
+.up-tag{display:inline-block;background:#C28A3E;color:#fff;font:800 .72rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;margin-bottom:.9rem}
+.up-feature h3{font-size:1.55rem;color:var(--green);margin-bottom:.55rem;line-height:1.25}
+.up-feature p{font-size:1.05rem;color:#46523c;margin-bottom:.9rem;line-height:1.55}
+.up-meta{font-size:.95rem;color:#6b7763;font-weight:600}
+.up-list{background:#fff;border:1px solid var(--line);border-radius:12px;padding:24px 26px;display:flex;flex-direction:column}
+.up-list h3{font-size:1.15rem;color:var(--blue);font-family:Nunito;font-weight:800;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px;padding-bottom:12px;border-bottom:2px solid var(--blue)}
+.up-list ul{list-style:none;margin:0;padding:0;flex:1}
+.up-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
+.up-list li:last-of-type{border-bottom:0}
+.up-date{flex:0 0 auto;background:var(--sky);color:var(--blue);border-radius:8px;padding:6px 10px 8px;text-align:center;min-width:54px;display:flex;flex-direction:column;align-items:center;line-height:1}
+.up-date b{font-family:'Libre Baskerville',serif;font-size:1.3rem}
+.up-date span{font-size:.7rem;font-weight:800;letter-spacing:.08em;margin-top:3px}
+.up-list li > div b{display:block;font-size:1.05rem;color:var(--ink);margin-bottom:3px}
+.up-list li > div span{font-size:.95rem;color:#5e6852}
+.up-all{margin-top:16px;text-align:center;color:var(--blue);font-weight:700;text-decoration:none;font-size:1rem;padding:10px;border-top:1px solid var(--line)}
+
+/* In the News strip — small but prominent news mention */
+.news-strip{margin-top:34px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:20px 26px;background:var(--cream);border-left:4px solid var(--green);border-radius:8px}
+.news-cover{flex:0 0 auto;display:block}
+.news-cover img{width:74px;height:auto;display:block;border-radius:3px;box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.news-tag{display:inline-block;background:var(--green);color:#fff;font:800 .72rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:99px;margin-bottom:.5rem}
+.news-body h3{font-size:1.2rem;color:var(--ink);margin-bottom:.3rem;line-height:1.3;font-family:'Libre Baskerville',serif;font-weight:700}
+.news-body h3 em{font-style:italic;color:var(--green)}
+.news-body p{font-size:.98rem;color:#54604b;margin:0;line-height:1.5}
+.news-cta{color:var(--blue);font-weight:700;text-decoration:none;font-size:1rem;white-space:nowrap}
+.news-cta:hover{color:var(--blue-d)}
+@media(max-width:720px){
+  .news-strip{grid-template-columns:auto 1fr;gap:16px}
+  .news-cta{grid-column:1/-1;text-align:right;padding-top:6px}
+}
+
+/* 25 YEARS ANNIVERSARY — dark landmark band */
+.anniv{padding:72px 0;background:var(--green-ink);color:#fff}
+.anniv .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:56px;align-items:center}
+.anniv-photos{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.anniv-img{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.45)}
+.anniv-img img{width:100%;height:220px;object-fit:cover;display:block;filter:saturate(.85)}
+.anniv-label{position:absolute;bottom:10px;left:12px;background:rgba(0,0,0,.55);color:#fff;font:700 .82rem/1 Nunito;letter-spacing:.08em;padding:5px 10px;border-radius:4px}
+.anniv-eyebrow{display:inline-block;color:#bfe3c9;font:800 .82rem/1 Nunito;letter-spacing:.16em;text-transform:uppercase;margin-bottom:1rem}
+.anniv-copy h2{font-size:clamp(1.9rem,3.2vw,2.6rem);line-height:1.2;margin-bottom:1.1rem;color:#fff}
+.anniv-copy p{font-size:1.12rem;color:#c8dbbf;line-height:1.65;margin-bottom:1.8rem;max-width:480px}
+.anniv-cta{display:inline-block;color:#fff;font-weight:700;text-decoration:none;font-size:1.05rem;border-bottom:2px solid #bfe3c9;padding-bottom:3px}
+.anniv-cta:hover{color:#bfe3c9}
+@media(max-width:980px){
+  .anniv .wrap{grid-template-columns:1fr;gap:34px}
+  .anniv-photos{grid-template-columns:1fr 1fr}
+}
 
 /* activities */
 .acts{padding-top:8px}
@@ -104,8 +164,8 @@ section{padding:78px 0}
 .act{text-align:center;text-decoration:none;color:var(--ink)}
 .act .ic{aspect-ratio:1;border-radius:18px;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:.7rem;border:2px solid transparent;transition:border-color .2s,transform .2s,background .2s}
 .act:hover .ic{border-color:var(--blue);transform:translateY(-4px);background:#dbe8f2}
-.act svg{width:46px;height:46px;stroke:var(--blue);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.act b{font-size:.95rem;font-weight:700}
+.act .ic img{width:48px;height:48px;display:block}
+.act b{font-size:1.05rem;font-weight:700}
 @media(max-width:860px){.actgrid{grid-template-columns:repeat(4,1fr);gap:18px}}
 @media(max-width:460px){.actgrid{grid-template-columns:repeat(3,1fr)}}
 
@@ -120,15 +180,15 @@ section{padding:78px 0}
 .lk:hover{background:#EFE9DA}
 .lk:hover .lkimg img{transform:scale(1.05)}
 .lk .no{font-family:'Libre Baskerville';font-size:1.3rem;font-weight:700;color:var(--blue)}
-.lk h3{font-size:1.25rem;color:var(--green)}
-.lk p{font-size:.92rem;color:#54604b}
+.lk h3{font-size:1.35rem;color:var(--green)}
+.lk p{font-size:1.04rem;color:#54604b}
 .lk .lkimg{aspect-ratio:5/3;overflow:hidden;border-radius:6px}
 .lk .lkimg img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
 @media(max-width:860px){.lk{grid-template-columns:38px 1fr}.lk .lkimg{display:none}}
 
 /* FEATURED EXPERIENCE — the boardwalk (flagship, not the everyday visit) */
 .feature{position:relative;color:#fff;overflow:hidden}
-.feature-media{position:absolute;inset:0;background:url('images/boardwalk/boardwalk-prairie-curve.jpg') center/cover}
+.feature-media{position:absolute;inset:0;background:url('../images/boardwalk/boardwalk-prairie-curve.jpg') center/cover}
 .feature::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(8,30,18,.86) 0%,rgba(8,40,26,.62) 50%,rgba(8,40,26,.30) 100%)}
 .feature .wrap{position:relative;z-index:2;padding:84px 26px}
 .feature .tagline{display:inline-block;background:#C28A3E;color:#fff;font:800 .7rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:99px;margin-bottom:1.1rem}
@@ -158,8 +218,8 @@ section{padding:78px 0}
 .icard .imgwrap{aspect-ratio:3/2;overflow:hidden}
 .icard img{width:100%;height:100%;object-fit:cover}
 .icard .body{padding:20px 22px 24px;flex:1;display:flex;flex-direction:column}
-.icard h3{font-size:1.12rem;margin-bottom:.35rem}
-.icard p{font-size:.89rem;color:#54604b;margin-bottom:1.1rem;flex:1}
+.icard h3{font-size:1.22rem;margin-bottom:.4rem}
+.icard p{font-size:1.02rem;color:#54604b;margin-bottom:1.1rem;flex:1}
 @media(max-width:860px){.igrid{grid-template-columns:1fr}}
 
 /* support line */
@@ -176,7 +236,7 @@ section{padding:78px 0}
 @media(max-width:520px){.nf{flex-direction:column}}
 
 /* footer (near-black, white logo) */
-footer{background:var(--green-ink);color:#bcd0ad;padding:50px 0 28px;font-size:.88rem}
+footer{background:var(--green-ink);color:#bcd0ad;padding:50px 0 28px;font-size:.98rem}
 .fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px;margin-bottom:26px}
 footer h4{color:#fff;font:800 .76rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9rem}
 footer ul{list-style:none}footer li{margin:.45rem 0}
@@ -186,8 +246,9 @@ footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
 @media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}
 
 @media(max-width:980px){
-  .hero .wrap{grid-template-columns:1fr}
-  .now{display:none}
+  .up-grid{grid-template-columns:1fr;gap:22px}
+  .anniv .wrap{grid-template-columns:1fr;gap:34px}
+  .anniv-photo::before{width:72px;height:72px;font-size:2.1rem;top:-12px;left:-12px}
   .nav ul{position:fixed;top:86px;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:8px 0 14px;display:none;border-bottom:1px solid var(--line)}
   .nav ul.open{display:flex}
   .nav ul li{width:100%;text-align:center}
@@ -200,7 +261,7 @@ footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
 .wrap-narrow{max-width:780px;margin:0 auto;padding:0 26px}
 /* page hero */
 .phero{position:relative;min-height:56vh;display:flex;align-items:flex-end;overflow:hidden}
-.phero-media{position:absolute;inset:0;background:url('images/prairie/gulf-coasst-prairie-grass.png') center/cover}
+.phero-media{position:absolute;inset:0;background:url('../images/prairie/gulf-coasst-prairie-grass.png') center/cover}
 .phero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,30,18,.2),rgba(8,30,18,.78))}
 .phero .wrap{position:relative;z-index:2;padding-bottom:46px;color:#fff}
 .phero .eyebrow{font:800 .78rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;color:#bfe3c9;margin-bottom:1rem}
@@ -211,7 +272,7 @@ footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:24px 26px;text-align:center}
 .stats b{display:block;font-family:'Libre Baskerville',serif;font-size:1.8rem}
 .stats span{font-size:.84rem;color:#cfe6d4}
-.lead{font-size:1.2rem;color:#3c4734;line-height:1.7}
+.lead{font-size:1.3rem;color:#3c4734;line-height:1.7}
 h2.big{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:1.1rem}
 /* split */
 .split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
