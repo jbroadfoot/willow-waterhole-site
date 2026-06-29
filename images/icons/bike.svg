@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">Bike</title><desc id="desc">A simple bicycle on a curved trail.</desc>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+  <path d="M26 91 C51 96 78 96 103 91" stroke="#148B4F"/>
+  <circle cx="39" cy="75" r="15" stroke="#0068C9"/>
+  <circle cx="91" cy="75" r="15" stroke="#0068C9"/>
+  <path d="M39 75 L57 53 L70 75 L39 75 Z" stroke="#0068C9"/>
+  <path d="M70 75 L91 75 L78 52 L57 53" stroke="#0068C9"/>
+  <path d="M55 45 H72" stroke="#0068C9"/>
+  <path d="M78 52 H90" stroke="#0068C9"/>
+  <path d="M57 53 L52 42" stroke="#148B4F"/>
+  <path d="M50 42 H64" stroke="#148B4F"/>
+</g>
+</svg>

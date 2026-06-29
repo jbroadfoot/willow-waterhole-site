@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+<title id="title">Prairie</title><desc id="desc">Native prairie grasses and a small wildflower.</desc>
+<g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+  <path d="M30 91 C50 96 78 96 99 91" stroke="#0068C9"/>
+  <path d="M45 89 C46 72 48 55 55 39" stroke="#148B4F"/>
+  <path d="M58 89 C57 69 63 52 73 36" stroke="#148B4F"/>
+  <path d="M73 89 C76 70 82 58 93 45" stroke="#148B4F"/>
+  <path d="M39 88 C33 72 35 59 45 48" stroke="#148B4F"/>
+  <path d="M87 88 C90 74 88 62 82 51" stroke="#148B4F"/>
+  <path d="M54 44 L47 39 M54 52 L62 47 M54 61 L47 56" stroke="#148B4F" stroke-width="5"/>
+  <path d="M73 39 L66 34 M73 48 L81 43 M73 57 L66 52" stroke="#148B4F" stroke-width="5"/>
+  <circle cx="93" cy="42" r="4" stroke="#0068C9" stroke-width="5"/>
+</g>
+</svg>
