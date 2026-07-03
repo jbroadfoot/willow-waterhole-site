@@ -1,9 +1,48 @@
-# Willow Waterhole — legacy Squarespace URL redirects (301)
-# Format:  /old-path   /new-path   301
-# (to be completed from the current site's URLs before launch)
-/lakes-and-trails   /explore.html   301
-/things-to-do       /visit.html     301
-/volunteer          /get-involved.html   301
-/membership         /get-involved.html   301
-/ways-to-give       /support.html   301
-/events             /events.html    301
+# Willow Waterhole — redirects (301)
+# Legacy Squarespace URLs → new site (verified against live site nav, July 2026)
+/frequently-asked-questions   /faqs.html            301
+/explore-engage               /thingstodo.html      301
+/lakes-trails                 /thingstodo.html      301
+/directions-parking           /visit.html#parking   301
+/hours                        /visit.html           301
+/outdoor-activities           /thingstodo.html      301
+/greenway-history             /about.html#history   301
+/staff-board-members          /about.html#team      301
+/partners                     /about.html#partners  301
+/financials-reports           /about.html#financials 301
+/events                       /events.html          301
+/events-1                     /events.html          301
+/spring-2026-newsletter       /news.html            301
+/newsletters                  /news.html            301
+/flood-control                /about.html#flood-control 301
+/willow-waterhole-bayou       /about.html#flood-control 301
+/houstons-flood-problem       /about.html#flood-control 301
+/mitigation-and-detention     /about.html#flood-control 301
+/harris-county-flood-control-district /about.html#flood-control 301
+/looking-ahead                /anniversary.html     301
+/prairie                      /prairie.html         301
+/coastal-prairie              /prairie.html         301
+/urbanization                 /prairie.html         301
+/reclaimed-prairie            /prairie.html         301
+/prairie-preservation         /prairie.html         301
+/ways-to-give                 /donate.html          301
+/volunteer                    /getinvolved.html     301
+/waivers                      /getinvolved.html#waiver 301
+/contact                      /about.html           301
+/contactform                  /about.html           301
+/donate-today                 /donate.html          301
+/visit-folder                 /visit.html           301
+/about-folder                 /about.html           301
+/support-1                    /getinvolved.html     301
+/contact-us                   /about.html           301
+/prairie-folder               /prairie.html         301
+/flood-control-folder         /about.html#flood-control 301
+
+# Retired v2 pages → new homes
+/explore.html                 /thingstodo.html      301
+/learn.html                   /thingstodo.html      301
+/birds.html                   /thingstodo.html#birds 301
+/partners.html                /about.html#partners  301
+
+# NOTE (pre-cutover dependencies, keep on Squarespace until replaced):
+# /membership, /pastnewsletter, /annualfund — linked absolutely in site content
