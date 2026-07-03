@@ -53,7 +53,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 
 /* HERO — video-ready (drop a <video> into .hero-media later; photo for now) */
 .hero{position:relative;min-height:72vh;display:flex;align-items:center;overflow:hidden}
-.hero-media{position:absolute;inset:0;background:url('../images/lakes-trails/willow-waterhole-triangle-lake.jpg') center/cover}
+.hero-media{position:absolute;inset:0;background:url('../images/general/westbury-lake-drone.jpg') center/cover;background-position:center 30%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(108deg,rgba(8,30,18,.74) 0%,rgba(8,40,30,.40) 46%,rgba(8,40,30,.08) 74%)}
 .hero .wrap{position:relative;z-index:2;width:100%;display:block;align-items:center}
 .hero-copy{color:#fff}
@@ -173,7 +173,7 @@ section{padding:78px 0}
 .lakes h2{font-size:clamp(1.9rem,3.4vw,2.5rem)}
 .lakes h2 em{font-style:italic;color:var(--blue)}
 .lakes .head a{color:var(--blue);font-weight:700;text-decoration:none;font-size:.92rem;white-space:nowrap}
-.lakes .sub{color:#54604b;margin-bottom:2.2rem;max-width:560px}
+.lakes .sub{color:#54604b;margin-bottom:2.2rem;max-width:680px}
 .lk{display:grid;grid-template-columns:54px 1.05fr 1.55fr 230px;gap:24px;align-items:center;padding:18px 0;border-top:1px solid #D8D0BD;text-decoration:none;color:var(--ink);transition:background .15s}
 .lk:hover{background:#EFE9DA}
 .lk:hover .lkimg img{transform:scale(1.05)}

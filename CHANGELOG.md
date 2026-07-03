@@ -1,5 +1,29 @@
 # Willow Waterhole Website — Changelog
 
+## v3.1 — 2026-07-03 · Content corrections and homepage updates
+
+Targeted patch on top of v3.0 — direct edits to existing pages, not a full rebuild.
+
+### Homepage
+- Hero image replaced with `images/general/westbury-lake-drone.jpg` (`.hero-media`, `background-position: center 30%`).
+- Ghost button now links to `prairie.html` ("Explore the Prairie").
+- Six Lakes subhead (`.lakes .sub`) widened (560px → 680px) to fix an awkward text wrap.
+- "Before you go" link now points to `visit.html#essentials`.
+
+### Boardwalk spec corrections (site-wide)
+- `half-mile` → `1/3-mile`, `20-acre` → `15-acre`, `elevated` → `concrete` everywhere describing the boardwalk — across `index.html`, `thingstodo.html`, `prairie.html`, `visit.html`, `news.html`, `events.html`, `donate.html`, and `news/2026-06-prairie-boardwalk-open.html`, including all meta descriptions and JSON-LD.
+- `prairie.html`: added boardwalk access note — Cullen Foundation Trail loop around Prairie Lake, and the Windwood Drive trailhead from the northwest.
+
+### Corrections
+- **Visit:** Clematis south lot (11300 block) no longer references Heron Lake or the Audubon Trail; north lot unchanged.
+- **About:** `TIRZ 25` corrected to `TIRZ 20`, with a note that it annexed Willow Waterhole Greenway in late 2023.
+- **About — Partners:** added Elkins Foundation, Martin Marietta, River Oaks Garden Club, and Garden Club of Houston (Funding tier); added Bellaire Southwest Rotary (Program tier).
+- **Things to Do:** Triangle Lake copy now names the Edith Smith Outdoor Classroom (stone circle seating).
+- **Things to Do:** removed the running reference from the Activities section ("Walk, hike & run" → "Walk & hike").
+- **Events:** added "The Greenway as Venue" under Seasonal & Special, covering cross-country meets and fun runs hosted at the park.
+- **FAQs & Things to Do:** fish stocking description now specifies "from 2016 to 2019."
+- **Anniversary:** added 2025 (80 Eagle/Gold Award projects, Great Blue Heron sculpture installed) and 2026 (boardwalk opened, 25th Anniversary celebrated) timeline entries.
+
 ## v3.0 — 2026-07-03 · Full-site rebuild
 
 The complete 15-page site, ready for the first Netlify deploy.
