@@ -1,5 +1,32 @@
 # Willow Waterhole Website — Changelog
 
+## v3.4 — 2026-07-06 · Visit page full rebuild: planning guide structure
+
+Full body rebuild of `visit.html` (nav, footer, and utility bar unchanged). Reframes the page from a parking-first layout into a planning guide: orientation, seasonal expectations, trip-length matching, then parking, map, and logistics.
+
+### New sections
+- **Planning Your Visit**: first-timer orientation, "how long should I stay," and best-time-to-visit cards.
+- **Seasonal Visitor Guide**: a single rotating `.season-card` (Summer 2026 content), flagged with a `<!-- SEASONAL -->` comment for quarterly updates.
+- **Choose Your Visit**: quick/half-day/full-day cards, each with a "Best lot" tip pointing to the right parking lot for that trip length.
+- **Where to Park**: new `.lot-matrix` table (lot × lakes served × best for × directions) above the four expanded lot cards, now correctly split into four distinct lots (previously Clematis was one combined card). Each lot card links out to its matching Things to Do lake anchor (and prairie.html for Gasmer) instead of duplicating lake detail.
+- **Know Before You Go** split into two groups: "Before You Arrive" (what to bring, restrooms/access) and "While You're Here" (etiquette benefit cards).
+- **Nearby Amenities** converted from prose paragraphs to a scannable labeled list.
+- **Closing CTA** simplified from a three-card row to one focused CTA ("Explore Things to Do") with a secondary "See upcoming events" link.
+
+### Removed
+- The old parking-first "What do you want to do?" four-card grid (superseded by the lot matrix + expanded cards).
+- The standalone Forest Breathing teaser (that content lives on Things to Do; this page now just gets visitors there faster).
+- The "Top 5 Moments" section (not part of the new structure; the first-timer's must-sees now live implicitly in the planning/parking cards).
+
+### Corrections
+- Clematis North and South are now described as genuinely distinct lots: North serves Willow *and* Heron Lake via Kinder Foundation and Audubon Trails; South serves Willow Lake only via the Kinder Foundation Trail, and is positioned as the quieter option.
+
+### Technical
+- New CSS added under `/* v3.4 visit page */`: `.season-card`, `.lot-matrix` (with a mobile card-collapse breakpoint at 640px), `.lot-tip`. No existing classes modified.
+- Verified all cross-links resolve: `visit.html#essentials`, `#parking`, `#map` (each present exactly once), and the four new `thingstodo.html#...-lake` anchors plus `prairie.html`.
+- Meta description updated to reflect the new planning-guide framing.
+- Build stamp bumped to v3.4 on visit.html only.
+
 ## v3.3 — 2026-07-05 · Technical audit fixes, button consistency, heading hierarchy, homepage content
 
 ### Homepage (index.html)

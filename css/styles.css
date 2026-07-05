@@ -486,3 +486,24 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 
 /* generic content section on cream */
 .band{background:var(--cream)}
+
+/* v3.4 visit page */
+.season-card{background:#fff;border-radius:12px;border-left:4px solid var(--green);padding:32px 36px;max-width:780px;margin:1.6rem auto 0}
+.season-card .s-label{font:800 .78rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem;display:block}
+.season-card h3{font-size:1.5rem;margin-bottom:.8rem}
+.season-card p{color:#4b563f;margin-bottom:.8rem}
+.season-card ul{margin:.4rem 0 .8rem 1.2rem;color:#4b563f}
+.season-card ul li{margin-bottom:.4rem}
+.lot-matrix{width:100%;border-collapse:collapse;margin:1.6rem 0 2.4rem;font-family:Nunito}
+.lot-matrix th{background:var(--green);color:#fff;font-weight:800;padding:10px 16px;text-align:left;font-size:.9rem}
+.lot-matrix td{padding:10px 16px;border-bottom:1px solid var(--line);font-size:.95rem;vertical-align:top}
+.lot-matrix tr:nth-child(even) td{background:var(--cream)}
+.lot-matrix td:first-child{font-weight:700;color:var(--ink)}
+.lot-matrix a{color:var(--blue);font-weight:700;text-decoration:none}
+.lot-matrix a:hover{text-decoration:underline}
+.lot-tip{font:700 .85rem/1 Nunito;color:var(--blue);margin-top:.8rem;display:block}
+@media(max-width:640px){
+  .lot-matrix thead{display:none}
+  .lot-matrix td{display:block;padding:6px 12px}
+  .lot-matrix tr{border:1px solid var(--line);border-radius:8px;margin-bottom:12px;display:block}
+}
