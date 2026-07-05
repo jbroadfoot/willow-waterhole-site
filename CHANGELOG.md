@@ -1,5 +1,35 @@
 # Willow Waterhole Website — Changelog
 
+## v3.3 — 2026-07-05 · Technical audit fixes, button consistency, heading hierarchy, homepage content
+
+### Homepage (index.html)
+- Secondary hero CTA changed to "See What's Happening" linking to events.html.
+- Removed the redundant standalone "Now Open" Prairie Boardwalk feature band (prairie still appears in the hero, events card, activity grid, and lakes section).
+- Added a signature label under each of the six lakes (e.g. "Best First Stop", "Premier Birding"), wrapped with the heading in a `.lk-head` cell so the four-column lake grid stays intact.
+- Unified the events module: featured card + upcoming list now share one `.up-module` cream panel under a single "What's Happening" heading.
+- Added `aria-label` to each activity icon link and matching `alt` text on each icon image.
+- OG/Twitter image switched to the new `westbury-lake-drone.jpg` hero.
+
+### Button consistency
+- 404 "Plan Your Visit", visit "Learn Forest Breathing" changed from blue to green (primary actions). Donate "Learn More" was already green. No `btn-blue` remains site-wide.
+- about.html flood-band button retitled "See Our Events" (removed the unpublished "Rooted Resilience" name), kept as ghost on the dark band.
+
+### Heading hierarchy
+- Footer column headings (Visit / Explore / Connect) changed from `<h4>` to `<div class="f-col-head">` across all pages, removing a heading-level skip; added `.f-col-head` style.
+- Benefit-card headings audited: already `<h3>` everywhere (no `<h2>` found), so no change needed.
+
+### SEO
+- Shortened over-length titles: index → "Willow Waterhole Greenspace | Houston Urban Nature" (50ch); prairie → "Prairie Boardwalk | Willow Waterhole Greenspace, Houston" (56ch).
+- Lengthened the 404 meta description to a fuller 126-character version.
+
+### Files & assets
+- Verified the three `news/` posts, the seven `images/press/` placeholder logos, and the visit park-map image all exist in the repo.
+- getinvolved.html OG/Twitter image changed from `support/27.jpg` to the more descriptive `support/support-01.jpg`.
+
+### Notes / still pending
+- index `og:title`/`twitter:title` intentionally keep the longer descriptive title; only the SEO `<title>` was shortened.
+- Real event dates, MusicFEST image, real press logos, David's TPW photos, staff/board roster, and the Houston Business Journal TIRZ piece remain outstanding (see v3.2 notes).
+
 ## v3.2 — 2026-07-04 · Content refinements, featured coverage, MusicFEST reframe, calendar fix
 
 Targeted edits plus one design rework on top of v3.1. Missing inputs are stubbed with `<!-- TODO -->` comments.
