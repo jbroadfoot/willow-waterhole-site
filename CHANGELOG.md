@@ -1,5 +1,42 @@
 # Willow Waterhole Website — Changelog
 
+## v3.2 — 2026-07-04 · Content refinements, featured coverage, MusicFEST reframe, calendar fix
+
+Targeted edits plus one design rework on top of v3.1. Missing inputs are stubbed with `<!-- TODO -->` comments.
+
+### Events & calendar
+- Event date badges changed from ordinal format ("3rd SAT") to full dates ("Sun, Jul 12" / "Sat, Jul 18") on `index.html` and `events.html`; `.up-date` restyled as a wider horizontal pill. Placeholder dates flagged with `<!-- TODO: Jay to supply real dates -->`.
+- **MusicFEST reframed** (`events.html`): heading now "MusicFEST at Willow Waterhole", Levitt-focused copy (next festival anticipated Spring 2027), "biggest day of the year" / Halloween / food-truck language removed, button changed to "Visit Levitt Houston" linking to levitthouston.org. Image swapped from the flag photo to `willow-waterhole-westbury-lake-gazebo.jpg` with a `<!-- TODO -->` for a better MusicFEST image.
+
+### Homepage
+- Added a `<!-- ROTATING -->` maintenance comment above the "In the News" strip (no layout change).
+
+### Visit page
+- Removed the orphaned standalone lead section between hero and parking; its intent folded into the parking section intro.
+- **Parking reworked from parking-first to experience-first**: new heading "What do you want to do?" with four goal-named cards (See the boardwalk / Bird or wildlife watch / Make a day of it / Just exploring), each surfacing the matching lot, address, description, and directions link. Added a high-contrast `.lotname` style and darkened the address line.
+
+### News & Stories
+- Renamed the stories feed heading to "What's Growing at the Waterhole" and reworded the hero H1 to "News & Stories from the greenway." to avoid duplication.
+- Added a **"Featured in"** press-logo strip (7 publications) and a **"Recent Coverage"** curated list (6 linked articles) with a back-to-top link. Placeholder press logos generated at `images/press/` (200×80 PNGs); flagged with `<!-- TODO -->` to swap in real logos.
+- Each news post now ends with a "See more stories" / "Upcoming events" nav block.
+
+### Anniversary
+- Added the American/Texas flags photo (Bob Schwartz Gazebo) between "Then & Now" and "The Story" (shown uncropped at a tasteful size rather than full-bleed, since the source image is portrait).
+- Timeline enriched with nine dated milestones (2005–2020) from the 2021 Southwest News article; kept the v3.1 2025/2026 entries and dropped the now-redundant duplicate 2026 card.
+
+### Sitewide polish
+- **All em-dashes removed** (87 occurrences across 14 files), replaced contextually with commas, colons, periods, or parentheses (no hyphens or en-dashes). En-dashes in year ranges (2001–2026) left intact.
+- **Divider audit**: the signature divider now only sits at a white/cream boundary. Removed from `thingstodo.html` and `visit.html` (where it sat between two colored sections); all other pages verified correct.
+- Build stamp bumped to v3.2 on every edited file.
+
+### Blocked / pending (for future patches)
+- Real event dates (Jay to supply)
+- MusicFEST image (Jay to source from Levitt/WWGC library)
+- Real publication logo files (Jay to grab from each site)
+- David's TPW photos (pending)
+- Staff & board roster (pending; `<!-- CONTENT NEEDED -->` in place on About)
+- Houston Business Journal TIRZ piece (pending publication)
+
 ## v3.1 — 2026-07-03 · Content corrections and homepage updates
 
 Targeted patch on top of v3.0 — direct edits to existing pages, not a full rebuild.
