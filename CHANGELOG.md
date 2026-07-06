@@ -1,5 +1,21 @@
 # Willow Waterhole Website — Changelog
 
+## v3.6 — 2026-07-06 · New page: Lakes & Trails Guide
+
+New standalone reference page, `lakes-trails.html`. Not in main nav and not yet linked from Things to Do (that connection is a deliberate future pass); reachable by direct URL and now listed in sitemap.xml for search discovery.
+
+### Content
+- Restores the richer per-lake content from the original Squarespace `/lakes-trails` page (Highlights, Location & Parking, and 3-6 named Spotlight Features per lake with photos), which had been condensed down when the site was rebuilt. Content supplied verbatim by Jay, with one confirmed correction: the Prairie Lake boardwalk is described as built (not "future"), matching its actual status.
+- Six lake sections in lettered order (A. Westbury, B. Triangle, C. Scout, D. Heron, E. Willow, F. Prairie), each with a quick-facts bar (distance, difficulty, parking, best-for tags), overview, highlights checklist, parking/access block, and an expandable spotlight gallery.
+- Difficulty is stated as "Easy, ADA accessible" for all six lakes, inferred directly from the intro's explicit "8 miles of accessible walking paths" claim rather than invented per-lake.
+- A few spotlight features (Naturescapes and Trail Overlook at Westbury, Stormwater Weir at Heron, Grassy Mound Overlook at Willow) don't have a dedicated close-up photo in the image library; these reuse the lake's general photo rather than a mismatched one.
+
+### Technical
+- New CSS added under `/* v3.6 lakes & trails page */`: sticky jump-nav (positioned below the main nav's 86px height to avoid double-sticky overlap), `.qf-bar` quick-facts bar, `.lake-parking` block, and `.spotlight-grid` using native `<details>/<summary>` for the expandable gallery (no JS).
+- Added to `sitemap.xml`. Footer left byte-identical to every other page (still points to `thingstodo.html#lakes`) since connecting this page into site navigation is out of scope for this pass.
+- Build stamp v3.6 on this new page; stylesheet link uses `?v=3.6`.
+- Verified: all 26 referenced images exist, zero em-dashes, HTML tag balance clean, all 6 lake anchors present exactly once.
+
 ## v3.5.1 — 2026-07-06 · Netlify cache hotfix + closing CTA consistency fix
 
 Two follow-up fixes after v3.5 shipped and the live Netlify site looked broken (unstyled text, no card layouts).

@@ -533,3 +533,32 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .start-card a{color:var(--blue);font-weight:700;font-size:.88rem;text-decoration:none}
 .start-card a:hover{text-decoration:underline}
 @media(max-width:640px){.start-grid{grid-template-columns:1fr}}
+
+/* v3.6 lakes & trails page */
+.jump-nav{position:sticky;top:86px;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(8,30,18,.06)}
+.jump-nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:0 26px}
+.jump-nav a{flex:0 0 auto;padding:16px 16px;font:700 .92rem/1 Nunito;color:#54604b;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent}
+.jump-nav a:hover{color:var(--green);border-bottom-color:var(--line)}
+@media(max-width:780px){.nav{position:static}.jump-nav{top:0}}
+
+.qf-bar{display:flex;flex-wrap:wrap;gap:22px;background:#EEF5EA;border-radius:10px;padding:18px 24px;margin:1.4rem 0 1.8rem}
+.qf-item{flex:1 1 140px}
+.qf-item b{display:block;font:800 .68rem/1 Nunito;letter-spacing:.09em;text-transform:uppercase;color:var(--green-d);margin-bottom:.3rem}
+.qf-item span{font-size:.98rem;color:var(--ink);font-weight:600}
+
+.lake-parking{background:var(--cream);border-radius:10px;padding:18px 22px;margin:1.4rem 0}
+.lake-parking p{font-size:.95rem;color:#4b563f;margin-bottom:.5rem}
+.lake-parking p:last-child{margin-bottom:0}
+.lake-parking b{color:var(--green-d)}
+
+.spotlight-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:1.4rem}
+.spotlight{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.spotlight summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:10px}
+.spotlight summary::-webkit-details-marker{display:none}
+.spotlight summary .sp-thumb{width:64px;height:64px;border-radius:6px;overflow:hidden;flex:0 0 auto}
+.spotlight summary .sp-thumb img{width:100%;height:100%;object-fit:cover}
+.spotlight summary .sp-name{font-weight:700;color:var(--green);font-size:.98rem;line-height:1.3}
+.spotlight[open] summary{border-bottom:1px solid var(--line)}
+.spotlight-body{padding:16px}
+.spotlight-body img{width:100%;height:auto;border-radius:8px;margin-bottom:.8rem;max-height:320px;object-fit:cover}
+.spotlight-body p{font-size:.95rem;color:#4b563f}
