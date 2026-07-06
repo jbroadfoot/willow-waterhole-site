@@ -1,5 +1,28 @@
 # Willow Waterhole Website — Changelog
 
+## v3.5 — 2026-07-06 · Visit page design system: planning guide with visual rhythm
+
+Second full-body rebuild of `visit.html` on the same day, replacing v3.4's structure with an explicit visual-rhythm design system (every section specifies its own layout, imagery, and CSS component).
+
+### Structure
+- **Hero**: background image swapped to the westbury-lake-drone aerial (center 30%); hero buttons removed entirely, since the essentials bar immediately below handles logistics.
+- **Planning Your Visit**: three text `.plan-card` components (cream, green top border) replacing the plain `.igrid`/`.icard` pattern.
+- **Seasonal Visitor Guide**: rebuilt as a two-column image/content split panel (`.seasonal-wrap`), image left with a floating season badge, copy and tips right. Still flagged `<!-- SEASONAL -->` for quarterly updates.
+- **Choose Your Visit**: three photographed `.visit-card` components (image top, hover zoom, trip highlights, "Start at" lot tip) replacing the text-only cards from v3.4.
+- **Best Place to Start**: new goal-first `.start-card` grid (Birdwatch / Prairie Boardwalk / Scenic Walk & Picnic / Explore the Entire Greenway), replacing v3.4's lot-matrix table and expanded lot cards entirely. Each card links to a single Things to Do anchor or prairie.html rather than the multi-link lot cards from the previous rebuild.
+- **Park Map, Know Before You Go, Nearby Amenities**: carried forward from v3.4 with minor copy tightening; amenities converted from a list back to prose per this spec.
+- **Closing CTA**: rebuilt as an image/copy split band (gazebo photo right) instead of v3.4's single centered CTA.
+
+### Removed (superseded by this version)
+- v3.4's `.lot-matrix` table and per-lot detail cards, and their CSS (`.lot-matrix`, `.lot-tip`, `.season-card`), now unused anywhere in the codebase and deleted rather than left orphaned.
+- The `thingstodo.html#prairie-lake` and `thingstodo.html#heron-lake` anchor links from the old lot cards; this version links `#birds`, `#westbury-lake`, `#lakes`, and `prairie.html` instead.
+
+### Technical
+- New CSS added under `/* v3.5 visit page components */`: `.plan-grid`/`.plan-card`, `.seasonal`/`.seasonal-wrap` family, `.visit-cards`/`.visit-card`, `.start-grid`/`.start-card`, and a `.cta-split` mobile breakpoint for the closing CTA.
+- Verified all 8 spec'd cross-links resolve: `visit.html#essentials`, `#parking`, `#map` (each present exactly once), `thingstodo.html#birds`, `#westbury-lake`, `#lakes`, and `prairie.html`.
+- Zero em-dashes; HTML tag balance clean.
+- Build stamp bumped to v3.5 on visit.html only.
+
 ## v3.4 — 2026-07-06 · Visit page full rebuild: planning guide structure
 
 Full body rebuild of `visit.html` (nav, footer, and utility bar unchanged). Reframes the page from a parking-first layout into a planning guide: orientation, seasonal expectations, trip-length matching, then parking, map, and logistics.
