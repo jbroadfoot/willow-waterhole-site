@@ -1,5 +1,30 @@
 # Willow Waterhole Website — Changelog
 
+## v3.7 — 2026-07-06 · Lakes & Trails Phase 2: Guide Notes, marker badge, asymmetric media, parking up front
+
+Refinement pass on `lakes-trails.html`. No content cut — every one of the 45 highlight bullets and all 20 spotlight cards carry over unchanged; only structure and layout changed.
+
+### Guide Notes (replaces flat checklist)
+- Each lake's highlight bullets are now grouped into a fixed shared category set (only categories with content are shown): Trails & Connections, Places to Pause, Art & Landmarks, Wildlife & Habitat, Water & Stormwater.
+- Category counts per lake: Westbury 3, Triangle 4, Scout 2, Heron 5 (the full set), Willow 4, Prairie 2.
+
+### Map marker
+- Replaced the bare stacked letter above each lake name with an inline circular badge (`.marker-badge`, deep green #2D5016) plus an "On the Park Map" label, sitting directly before the lake name.
+
+### Media layout
+- Replaced the equal-weight stacked photo pair with an asymmetric primary/locator pair: a large full-width scenic photo on top, and the aerial/map image below at reduced size in a bordered "locator card," captioned "Where [Lake Name] sits within the Greenway."
+
+### Parking moved up
+- Parking info moved from after the photos/checklist to directly under the quick-facts bar, and restructured from two prose paragraphs into a compact 3-line card: Address, Cross streets, Connects to.
+
+### Spotlight section renamed
+- "Spotlight Features" → "Explore [Lake Name]" with a one-line subhead. The expandable `<details>` cards themselves are unchanged.
+
+### Technical
+- New CSS: `.lake-marker`/`.marker-badge`/`.marker-label`, `.parking-card`, `.lake-detail-grid`/`.guide-notes`/`.guide-cat`, `.lake-media-v2`/`.lake-media-primary`/`.lake-media-locator`. Removed the now-fully-orphaned `.lake-highlights-media`/`.lake-media-stack` from v3.6.1.
+- Verified: all 45 highlight bullets accounted for post-regrouping, all 36 images resolve, HTML tag balance clean, zero em-dashes.
+- Build stamp v3.7; stylesheet cache-bust bumped to `?v=3.7`.
+
 ## v3.6.1 — 2026-07-06 · Lakes & Trails: orienting photo pair per lake
 
 Follow-up to v3.6. Each lake section had a "regular view" photo and a dedicated aerial/map photo sitting unused in the image library (11 files total) even though every lake has one of each. Added both, stacked beside the Highlights & Features checklist in a new two-column layout (`.lake-highlights-media` / `.lake-media-stack`), matching the reference orienting-photo pattern.
