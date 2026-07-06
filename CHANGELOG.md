@@ -1,5 +1,29 @@
 # Willow Waterhole Website — Changelog
 
+## v3.9 — 2026-07-06 · Lakes & Trails definitive structure: Featured Places first, sentence-case headings, wider cards
+
+Reorders and restyles the per-lake sections per the definitive spec. Same content as v3.8 (all 45 guide-note bullets and 24 spotlight cards unchanged) — this pass is structure and typography only.
+
+### Section order flipped
+Featured Places (the expandable spotlight cards) now comes right after Parking & Access, ahead of Park Details (the categorized guide notes), matching the site's "exploration first, reference second" positioning. Final per-lake order: Lake Header, Quick Facts, Overview + Map, Parking & Access, Featured Places, Park Details, Continue Exploring.
+
+### Headings renamed and fixed to sentence/title case
+- "What You'll Discover" → **Park Details**; "Explore [Lake]" → **Featured Places** (generic heading, not lake-specific, matching the spec's literal example), with a short "Tap a feature to learn more." intro line.
+- Both are now real `<h3>` elements (serif, brand green) instead of the small-caps `.eyebrow-s` treatment used elsewhere on the site.
+- Removed `text-transform:uppercase` from every lakes-trails-specific label: quick-facts field labels, the "On the Park Map" marker label, the "Find [Lake]" map label, and the Park Details category headings (Trails & Connections, Places to Pause, etc.) — all now render in their natural title case. Sitewide shared classes (`.eyebrow-s` etc., used on every other page) were left untouched.
+
+### Featured Places cards widened
+Card grid minimum width increased 220px → 260px, thumbnail image 64px → 84px, more internal padding and gap. Cards still wrap naturally into multiple rows.
+
+### Typography and spacing
+Overview paragraph: max-width capped at 52ch and line-height increased to 1.8 for readability. Increased margins between quick-facts/overview, overview/parking, and section headings throughout. No decorative dividers added — spacing changes only.
+
+### Technical
+- Removed the now-fully-orphaned `.lake-parking` class (dead since the v3.8 rename to `.parking-card`).
+- Verified: all 45 checklist bullets, 24 spotlight cards, and 20 guide-note categories intact post-reorder (correcting a miscount in the v3.8 changelog, which said 20 spotlight cards; the correct count has always been 24). All 32 images resolve, HTML tag balance clean, zero em-dashes, zero remaining ALL CAPS on lakes-trails-specific labels.
+- Build stamp v3.9; stylesheet cache-bust bumped to `?v=3.9`.
+- The six highlighted map images are still the same placeholder-with-TODO-comment approach from v3.8; no change to that status.
+
 ## v3.8 — 2026-07-06 · Lakes & Trails final structure: highlighted map, reordered sections, prev/next nav
 
 Locks in the final per-lake structure for `lakes-trails.html`. Still one scrolling guide, not six pages. No content cut — all 45 guide-note bullets and 20 spotlight cards carry over unchanged.

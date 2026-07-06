@@ -541,51 +541,49 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .jump-nav a:hover{color:var(--green);border-bottom-color:var(--line)}
 @media(max-width:780px){.nav{position:static}.jump-nav{top:0}}
 
-.qf-bar{display:flex;flex-wrap:wrap;gap:22px;background:#EEF5EA;border-radius:10px;padding:18px 24px;margin:1.4rem 0 1.8rem}
+.qf-bar{display:flex;flex-wrap:wrap;gap:22px;background:#EEF5EA;border-radius:10px;padding:18px 24px;margin:1.8rem 0 2rem}
 .qf-item{flex:1 1 140px}
-.qf-item b{display:block;font:800 .68rem/1 Nunito;letter-spacing:.09em;text-transform:uppercase;color:var(--green-d);margin-bottom:.3rem}
+.qf-item b{display:block;font:800 .74rem/1 Nunito;letter-spacing:.02em;color:var(--green-d);margin-bottom:.3rem}
 .qf-item span{font-size:.98rem;color:var(--ink);font-weight:600}
 
-.lake-parking{background:var(--cream);border-radius:10px;padding:18px 22px;margin:1.4rem 0}
-.lake-parking p{font-size:.95rem;color:#4b563f;margin-bottom:.5rem}
-.lake-parking p:last-child{margin-bottom:0}
-.lake-parking b{color:var(--green-d)}
-
-.spotlight-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;margin-top:1.4rem}
+.spotlight-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;margin-top:1.4rem}
 .spotlight{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.spotlight summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:10px}
+.spotlight summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:14px}
 .spotlight summary::-webkit-details-marker{display:none}
-.spotlight summary .sp-thumb{width:64px;height:64px;border-radius:6px;overflow:hidden;flex:0 0 auto}
+.spotlight summary .sp-thumb{width:84px;height:84px;border-radius:8px;overflow:hidden;flex:0 0 auto}
 .spotlight summary .sp-thumb img{width:100%;height:100%;object-fit:cover}
-.spotlight summary .sp-name{font-weight:700;color:var(--green);font-size:.98rem;line-height:1.3}
+.spotlight summary .sp-name{font-weight:700;color:var(--green);font-size:1.04rem;line-height:1.35}
 .spotlight[open] summary{border-bottom:1px solid var(--line)}
-.spotlight-body{padding:16px}
+.spotlight-body{padding:18px}
 .spotlight-body img{width:100%;height:auto;border-radius:8px;margin-bottom:.8rem;max-height:320px;object-fit:cover}
 .spotlight-body p{font-size:.95rem;color:#4b563f}
 
-/* v3.8 lakes & trails final structure */
-.lake-marker{display:flex;align-items:center;gap:10px;margin-bottom:.5rem}
+/* v3.9 lakes & trails definitive structure */
+.lake-marker{display:flex;align-items:center;gap:10px;margin-bottom:.6rem}
 .marker-badge{width:28px;height:28px;border-radius:50%;background:#2D5016;color:#fff;font:800 .85rem/28px 'Nunito';text-align:center;flex:0 0 auto}
-.marker-label{font:800 .72rem/1 Nunito;letter-spacing:.09em;text-transform:uppercase;color:#6b7a60}
+.marker-label{font:800 .72rem/1 Nunito;letter-spacing:.02em;color:#6b7a60}
 
-.overview-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;margin:1.4rem 0}
-.overview-map-grid>p{margin:0;color:var(--ink)}
-.map-find-label{font:800 .74rem/1 Nunito;letter-spacing:.09em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem;display:block}
+.overview-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin:1.8rem 0}
+.overview-map-grid>p{margin:0;color:var(--ink);max-width:52ch;line-height:1.8}
+.map-find-label{font:800 .74rem/1 Nunito;letter-spacing:.02em;color:var(--blue);margin-bottom:.6rem;display:block}
 .highlighted-map{position:relative;margin:0}
 .highlighted-map img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 8px 26px rgba(8,30,18,.14);display:block}
 .highlighted-map .marker-badge{position:absolute;top:12px;left:12px;box-shadow:0 3px 10px rgba(0,0,0,.35)}
 @media(max-width:780px){.overview-map-grid{grid-template-columns:1fr}}
 
-.parking-card{background:var(--cream);border-radius:10px;padding:18px 22px;margin:1.2rem 0 1.6rem;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.parking-card{background:var(--cream);border-radius:10px;padding:18px 22px;margin:1.8rem 0;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
 .parking-card p{font-size:.95rem;color:#4b563f;margin:0}
 .parking-card b{color:var(--green-d)}
 .parking-card .btn{margin-top:.5rem;padding:9px 20px;font-size:.85rem}
 
-.guide-notes{display:flex;flex-direction:column;gap:1.1rem;margin-top:1.2rem}
-.guide-cat h4{font:800 .74rem/1 Nunito;letter-spacing:.09em;text-transform:uppercase;color:var(--green);margin-bottom:.5rem}
+.lake-section-heading{margin:2.4rem 0 .3rem}
+.lake-section-intro{color:#54604b;margin-bottom:0}
+
+.guide-notes{display:flex;flex-direction:column;gap:1.3rem;margin-top:1.4rem}
+.guide-cat h4{font:800 .8rem/1 Nunito;letter-spacing:.02em;color:var(--green);margin-bottom:.5rem}
 .guide-cat .checklist{margin-top:0}
 
-.lake-continue{display:flex;justify-content:space-between;margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid var(--line)}
+.lake-continue{display:flex;justify-content:space-between;margin-top:2.8rem;padding-top:1.6rem;border-top:1px solid var(--line)}
 .lake-continue a{color:var(--blue);font-weight:700;text-decoration:none;font-size:.95rem}
 .lake-continue a:hover{text-decoration:underline}
 .lake-continue .lc-next{margin-left:auto;text-align:right}
