@@ -1,5 +1,35 @@
 # Willow Waterhole Website — Changelog
 
+## v3.8 — 2026-07-06 · Lakes & Trails final structure: highlighted map, reordered sections, prev/next nav
+
+Locks in the final per-lake structure for `lakes-trails.html`. Still one scrolling guide, not six pages. No content cut — all 45 guide-note bullets and 20 spotlight cards carry over unchanged.
+
+### Section order (per lake)
+Lake Header → Quick Facts → Overview + Map (2-col) → Parking & Access → What You'll Discover → Explore This Lake → Continue Exploring. Parking now sits right after the overview/map instead of after the guide notes, so it's not buried below a scroll of content.
+
+### Quick Facts
+- Fields renamed/split: "Distance · Trail" combined field → separate **Loop Length** and **Trail** fields.
+- **Difficulty removed** (every lake repeated "Easy, ADA accessible," adding no information); the accessibility note now lives as a small inline addition on the Trail field instead.
+
+### Overview + Map
+- Replaced the v3.7 primary-photo-plus-locator-card pair with a single "highlighted map" slot per the new spec, paired 2-column with the overview paragraph. Each map has a "Find [Lake Name]" label and the lake's marker badge overlaid in the corner.
+- **Blocked on a new asset**: the six highlighted map images (base aerial photo, current lake's shape tinted green + outlined, everything else desaturated, letter marker) don't exist yet and need real design/coordinate work I can't produce reliably. Per Jay's call, shipped with the existing per-lake aerial photo as a placeholder in that slot, each flagged with an inline `<!-- TODO -->` comment, so the rest of the page ships now. Swap in the real assets when ready — no other markup changes needed.
+- Removed the locator caption text ("Where [Lake] sits within the Greenway") that v3.6.1/v3.7 had introduced.
+
+### Parking & Access
+- Added a "Get Directions" button per lake, linking to Google Maps (reusing address queries already established on visit.html where available).
+
+### Explore This Lake
+- Subhead copy updated to "Tap a feature to learn more about the places, trails, art, and habitats that make this lake unique." Cards themselves unchanged.
+
+### Continue Exploring (new)
+- Prev/next jump-scroll links at the bottom of each lake section, in A–F order. Westbury (first) shows Next only; Prairie (last) shows Prev plus a "Back to top" link.
+
+### Technical
+- New CSS: `.overview-map-grid`, `.map-find-label`, `.highlighted-map` (with corner-badge overlay), `.lake-continue`. Removed the now-fully-superseded `.lake-media-v2`/`.lake-media-primary`/`.lake-media-locator`/`.lake-detail-grid` from v3.7.
+- Verified: all 45 checklist bullets and 20 guide-note categories accounted for post-restructure, all 32 images resolve, HTML tag balance clean, zero em-dashes.
+- Build stamp v3.8; stylesheet cache-bust bumped to `?v=3.8`.
+
 ## v3.7 — 2026-07-06 · Lakes & Trails Phase 2: Guide Notes, marker badge, asymmetric media, parking up front
 
 Refinement pass on `lakes-trails.html`. No content cut — every one of the 45 highlight bullets and all 20 spotlight cards carry over unchanged; only structure and layout changed.
