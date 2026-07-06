@@ -1,5 +1,13 @@
 # Willow Waterhole Website — Changelog
 
+## v3.6.1 — 2026-07-06 · Lakes & Trails: orienting photo pair per lake
+
+Follow-up to v3.6. Each lake section had a "regular view" photo and a dedicated aerial/map photo sitting unused in the image library (11 files total) even though every lake has one of each. Added both, stacked beside the Highlights & Features checklist in a new two-column layout (`.lake-highlights-media` / `.lake-media-stack`), matching the reference orienting-photo pattern.
+
+- Westbury, Scout, Heron, Willow, and Prairie use their dedicated `-map.jpg` aerial image; Triangle has no dedicated map file, so its `-topography.jpg` satellite image fills that role.
+- Heron's "regular view" photo is also reused as the Stormwater Weir spotlight fallback (no better dedicated image exists for that feature) — the one remaining minor duplication, flagged rather than forced into a mismatched photo.
+- Responsive: image pair stacks below the checklist on screens under 780px.
+
 ## v3.6 — 2026-07-06 · New page: Lakes & Trails Guide
 
 New standalone reference page, `lakes-trails.html`. Not in main nav and not yet linked from Things to Do (that connection is a deliberate future pass); reachable by direct URL and now listed in sitemap.xml for search discovery.
