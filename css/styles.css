@@ -533,5 +533,3 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .start-card a{color:var(--blue);font-weight:700;font-size:.88rem;text-decoration:none}
 .start-card a:hover{text-decoration:underline}
 @media(max-width:640px){.start-grid{grid-template-columns:1fr}}
-
-@media(max-width:760px){.cta-split{grid-template-columns:1fr!important}.cta-split .cta-img{display:none}}

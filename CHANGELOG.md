@@ -1,5 +1,17 @@
 # Willow Waterhole Website — Changelog
 
+## v3.5.1 — 2026-07-06 · Netlify cache hotfix + closing CTA consistency fix
+
+Two follow-up fixes after v3.5 shipped and the live Netlify site looked broken (unstyled text, no card layouts).
+
+### Root cause and fix: stale CSS cache
+- `netlify.toml` sets a 7-day `Cache-Control` on `/css/*`. With styles.css changing multiple times in one day (v3.0 through v3.5), any browser that loaded the site earlier kept serving old cached CSS against new HTML that referenced classes the cached CSS didn't define yet, rendering as plain unstyled text.
+- Fixed by adding a `?v=3.5` cache-busting query string to the `styles.css` link on all 15 pages, forcing a fresh fetch. **This version must be bumped on every future release** or the same failure will recur.
+
+### Design fix: closing CTA
+- Every `.cta` section on every other page (about, anniversary, donate, events, faqs, getinvolved, news, prairie, thingstodo) uses the same simple pattern: centered heading, one paragraph, one white button, no image. v3.5's visit.html closing CTA broke this with a one-off split image/blue-block layout that didn't match anything else on the site.
+- Replaced it with the standard `.cta`/`.wrap-narrow` pattern used everywhere else. Removed the now-orphaned `.cta-split`/`.cta-img` CSS.
+
 ## v3.5 — 2026-07-06 · Visit page design system: planning guide with visual rhythm
 
 Second full-body rebuild of `visit.html` on the same day, replacing v3.4's structure with an explicit visual-rhythm design system (every section specifies its own layout, imagery, and CSS component).
