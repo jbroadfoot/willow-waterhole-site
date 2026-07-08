@@ -1,5 +1,20 @@
 # Willow Waterhole Website — Changelog
 
+## v3.10.2 — 2026-07-08 · Discover section rebuilt
+
+Further refinement of the Discover Willow Waterhole section (the opening 65/35 section on `visit.html`), addressing the height imbalance between its two columns more directly than the v3.10.1 pass did.
+
+### Changed
+- **Removed the intro paragraph and the location map.** The section now goes straight from the heading to "Park at a Glance," and the right column is just the Main Entrance address, description, and the two directions links. Shorter on both sides, better balanced, faster to scan.
+- **"Park at a Glance" is now a 3-column grid of short stat lines** (`.glance-grid`/`.glance-stat`) instead of a tall vertical list of six full-width serif lines. Collapses to 2 columns at 820px and 1 column at 520px. Cuts the left column's height roughly in half, which is what was making the right column look sparse next to it.
+- Replaced the "View All Parking Areas" link's inline style with a `.discover-link` class, and added `align-items:start` to `.discover-section` so the two columns no longer force-stretch to match each other's height.
+
+### Technical
+- Migrated the CSS from a temporary inline `<style>` patch block into `css/styles.css` proper; the patch block is gone from the page head.
+- Removed the now-fully-orphaned `.glance-list`/`.glance-list li` and `.discover-map`/`.discover-map img` rules (confirmed unused elsewhere on the site). The regional locator image (`directions-parking-map2.png`) is no longer referenced from any page but was left in place in case it's useful again later.
+- Verified: tag balance clean, all image paths resolve, zero em-dashes in visible copy, zero "8 miles"/"eight miles"/"110-acre"/"largest lake in Houston" strings. Confirmed visually at mobile and desktop.
+- Build stamp and cache-bust bumped to v3.10.2.
+
 ## v3.10.1 — 2026-07-08 · Visit page polish pass
 
 Refinements to the v3.10 rebuild based on a design/UX review. Same section order and architecture, no content removed.
