@@ -1,5 +1,24 @@
 # Willow Waterhole Website — Changelog
 
+## v3.10 — 2026-07-08 · Visit page full redesign
+
+Complete rebuild of `visit.html` per the locked v3.10 build spec. All 10 sections rebuilt in one pass; nav and footer boilerplate unchanged.
+
+### New section structure
+Hero + fact strip → **Discover Willow Waterhole** (new: 65/35 editorial split, "Park at a Glance" list, location map + directions) → Seasonal Visitor Guide (redesigned as a single white card with image+badge, 58/42 split) → **Plan Your Time** (3 equal photo cards, no lot footer) → **Getting Here** (new: fixed 2×2 grid, replaces the old "Best Place to Start" section) → Park Map (added a caption line) → **Before You Go** (new: two-column layout with green-divider headings, replaces the old single-block "Know Before You Go") → While You're Here (etiquette items now grouped into two explicit 3-item columns) → **In the Area** (new: fixed 2×2 grid of neighborhood blocks, replaces the old single paragraph) → Closing CTA (green button on the blue band, per spec).
+
+### Content corrections applied throughout
+- Trail mileage corrected to **8.5 miles** everywhere on the page, including the footer ("eight miles" → "8.5 miles of trails").
+- Westbury Lake now reads "the largest lake in the park" — no acreage stated, no citywide claim.
+- 291 acres stated plainly, never rounded.
+
+### Technical
+- Added new CSS: `.discover-section`, `.glance-list`/`.glance-label`, `.seasonal-card` (replaces `.seasonal`/`.seasonal-wrap`/`.seasonal-img`/`.seasonal-content`), `.plan-time-grid`/`.ptime-card` (replaces `.visit-cards`/`.visit-card`), `.getting-here-grid`/`.getting-here-card` (replaces `.start-grid`/`.start-card`), `.before-you-go`/`.byg-block`, `.etiquette-grid`/`.etiquette-item`, `.in-the-area-grid`/`.ita-block`, `.cta-tall`. Removed the superseded `.plan-grid`/`.plan-card` block (confirmed unused elsewhere).
+- All literal grid layouts verified as multi-column at desktop widths via computed styles (65fr/35fr, 58fr/42fr, 3-col, 2×2), not collapsed to single-column.
+- Verified: HTML tag balance clean, all image paths resolve, zero em-dashes, zero remaining "8 miles"/"eight miles"/"110-acre"/"largest lake in Houston" strings. Confirmed visually at mobile and desktop widths.
+- Build stamp v3.10; stylesheet cache-bust bumped to `?v=3.10`.
+- `#essentials`, `#parking`, and `#map` anchors preserved (linked from nav/footer on every other page).
+
 ## v3.9 — 2026-07-06 · Lakes & Trails definitive structure: Featured Places first, sentence-case headings, wider cards
 
 Reorders and restyles the per-lake sections per the definitive spec. Same content as v3.8 (all 45 guide-note bullets and 24 spotlight cards unchanged) — this pass is structure and typography only.
