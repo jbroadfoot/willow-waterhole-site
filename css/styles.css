@@ -476,7 +476,7 @@ h2.big{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:1.1rem}
 
 /* map section */
 .mapblock{background:var(--cream);border-radius:12px;padding:30px;text-align:center}
-.mapblock img{border-radius:8px;box-shadow:0 8px 26px rgba(8,30,18,.14);margin:0 auto 1.2rem}
+.mapblock img{height:auto;border-radius:8px;box-shadow:0 8px 26px rgba(8,30,18,.14);margin:0 auto 1.2rem}
 
 /* footer extras */
 .f-translate{padding:6px 0 14px}
@@ -488,6 +488,7 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .band{background:var(--cream)}
 
 /* v3.10 visit page rebuild */
+.section-intro{max-width:660px;color:#54604b;margin-top:-.6rem;margin-bottom:0}
 .discover-section{display:grid;grid-template-columns:65fr 35fr;gap:48px;margin-top:2.2rem}
 .glance-label{font:700 .8rem/1 Nunito;letter-spacing:.06em;text-transform:uppercase;color:#54604b;margin-bottom:.7rem;display:block}
 .glance-list{list-style:none}
@@ -508,7 +509,7 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .seasonal-card .sc-content{padding-left:40px;display:flex;flex-direction:column;justify-content:center}
 .seasonal-card .sc-date{font:800 .75rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem;display:block}
 .seasonal-card .sc-content h3{font-size:1.5rem;line-height:1.3;margin-bottom:1rem;color:var(--green-ink)}
-.seasonal-card .sc-content p{color:#4b563f;font-size:1rem;margin-bottom:.8rem}
+.seasonal-card .sc-content p{color:#4b563f;font-size:.95rem;margin-bottom:.8rem}
 .seasonal-card .sc-content ul{margin:.4rem 0 0 1.1rem;color:#4b563f}
 .seasonal-card .sc-content ul li{margin-bottom:.5rem;font-size:.97rem}
 @media(max-width:768px){.seasonal-card{grid-template-columns:1fr;padding:24px}.seasonal-card .sc-content{padding-left:0;padding-top:24px}.seasonal-card .sc-media img{min-height:220px}}
@@ -519,20 +520,21 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .ptime-card .pt-img img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .ptime-card:hover .pt-img img{transform:scale(1.04)}
 .ptime-card .pt-body{padding:24px 26px 26px}
-.ptime-card .pt-time{font:800 .75rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem;display:block}
-.ptime-card h3{font-size:1.25rem;margin-bottom:.4rem;color:var(--green-ink)}
-.ptime-card .pt-meta{font-size:.88rem;color:#6b7a60;margin-bottom:1rem;display:block}
+.ptime-card .pt-time{font:800 .75rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-d);margin-bottom:.6rem;display:block}
+.ptime-card h3{font-size:1.25rem;margin-bottom:.5rem;color:var(--green-ink)}
+.ptime-card .pt-distance{font:800 .92rem/1.3 Nunito;color:var(--green-ink);margin-bottom:.15rem;display:block}
+.ptime-card .pt-desc{font-size:.85rem;color:#6b7a60;margin-bottom:1rem;display:block}
 .ptime-card ul{list-style:none;padding:0;margin:0}
 .ptime-card ul li{font-size:.95rem;color:#4b563f;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.06)}
 .ptime-card ul li:last-child{border-bottom:0}
 @media(max-width:768px){.plan-time-grid{grid-template-columns:1fr}}
 
-.getting-here-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:24px;margin-top:2rem}
+.getting-here-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:24px;margin-top:2rem;align-items:start}
 .getting-here-card{border-left:4px solid var(--blue);background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06);padding:32px}
-.getting-here-card .gh-label{font:800 .75rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:.7rem;display:block}
 .getting-here-card h3{font-size:1.25rem;color:var(--green-ink);margin-bottom:.3rem}
+.getting-here-card .gh-label{font:600 .85rem/1.3 Nunito;font-style:italic;color:#6b7a60;margin-bottom:.8rem;display:block}
 .getting-here-card .gh-lot{font:700 .85rem/1.4 Nunito;color:#54604b;margin-bottom:.9rem;display:block}
-.getting-here-card p{font-size:.97rem;color:#4b563f;margin-bottom:1.1rem}
+.getting-here-card p{font-size:.95rem;color:#4b563f;margin-bottom:1.1rem}
 .getting-here-card .gh-links a{color:var(--blue);font-weight:700;font-size:.9rem;text-decoration:none;margin-right:20px}
 .getting-here-card .gh-links a:hover{text-decoration:underline}
 @media(max-width:768px){.getting-here-grid{grid-template-columns:1fr}}
@@ -540,7 +542,7 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .before-you-go{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:2rem}
 .byg-block+.byg-block{margin-top:32px}
 .byg-block h3{border-bottom:2px solid var(--green);padding-bottom:8px;margin-bottom:14px;font-size:1.1rem;color:var(--green-ink)}
-.byg-block p{color:#54604b;font-size:.97rem}
+.byg-block p{color:#54604b;font-size:.95rem}
 @media(max-width:768px){.before-you-go{grid-template-columns:1fr}}
 
 .etiquette-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:2rem}
@@ -549,11 +551,12 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .etiquette-item p{font-size:.95rem;color:#54604b}
 @media(max-width:768px){.etiquette-grid{grid-template-columns:1fr}}
 
-.in-the-area-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:40px;margin-top:2rem}
-.ita-block h4{font:800 .78rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.in-the-area-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:40px;margin-top:2rem;align-items:start}
+.ita-block h4{font:800 .78rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);border-bottom:2px solid var(--blue);padding-bottom:8px;margin-bottom:.9rem}
 .ita-block p{color:#54604b;font-size:.95rem;margin-bottom:.8rem}
 .ita-block ul{list-style:none;margin:0;padding:0}
-.ita-block ul li{font-size:.97rem;color:#3f4a35;padding:5px 0}
+.ita-block ul li{font-size:.95rem;color:#3f4a35;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.ita-block ul li:last-child{border-bottom:0}
 @media(max-width:768px){.in-the-area-grid{grid-template-columns:1fr}}
 
 .cta.cta-tall{padding:110px 0}

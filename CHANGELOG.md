@@ -1,5 +1,21 @@
 # Willow Waterhole Website — Changelog
 
+## v3.10.1 — 2026-07-08 · Visit page polish pass
+
+Refinements to the v3.10 rebuild based on a design/UX review. Same section order and architecture, no content removed.
+
+### Fixed
+- **Grid stretch dead space**: `.getting-here-grid` and `.in-the-area-grid` used CSS Grid's default `align-items:stretch`, which forced every card in a row to match its tallest neighbor. Where content length varied, this left up to 71px of dead space at the bottom of shorter cards (most visible in "In the Area," where "Coffee & Breakfast" had a large gap below its 2-item list next to "Local Favorites"' 4 items). Fixed with `align-items:start` on both grids — desktop only, mobile was never affected since it collapses to one column.
+- **Map image distortion ("skewed map")**: root cause was the `<img>` having explicit `width`/`height` attributes with no `height:auto` in CSS. When the container rendered narrower than the declared 1100px width, the browser shrank the width but kept the height fixed, stretching the image (rendered ratio 1.40 vs. the file's true 1.55). Added `height:auto` to `.mapblock img` (shared by `visit.html` and `lakes-trails.html`) and corrected both pages' height attributes from 733 to 712 to match the source image's real aspect ratio. This was a CSS bug, not an asset problem — no new map image needed.
+
+### Refined
+- **Seasonal Visitor Guide**: tightened the intro sentence and cut the first bullet, which repeated the intro's early-morning point. Four bullets now, no redundancy.
+- **Plan Your Time cards**: the distance/description meta line was a single muted, easy-to-skip line under the title. Split into a bold, dark "About 2 miles"-style subhead plus a lighter description line below it, and darkened the time-range label (`--blue` → `--blue-d`) for a touch more contrast.
+- **Getting Here cards**: reordered fields so the place name leads (title → tagline → parking → one-sentence description → links, was label → title → parking → paragraph → links), softened the "Best for..." tagline from a loud bold-uppercase-blue label to a quiet italic caption, and cut each card's paragraph to one tight sentence. Less competition between five previously same-weight elements.
+- **In the Area**: added a divider rule under each block heading and thin dividers between list items, so it reads as a structured local guide instead of floating text blocks. No icons added, per direction.
+- **Shared section-intro class**: the five section intro paragraphs (Plan Your Time, Getting Here, Before You Go, While You're Here, In the Area) each repeated an identical inline `style="max-width:...;margin-top:-.6rem"`. Replaced with one `.section-intro` class. No visual or content change.
+- **Type scale consolidation**: unified three near-duplicate in-card body sizes (1rem/16px, .97rem/15.5px) down to .95rem across `.seasonal-card p`, `.byg-block p`, and `.getting-here-card p`, matching the size already used by `.etiquette-item p`, `.ita-block p`, and `.ptime-card ul li`. Sitewide shared `.checklist` left untouched.
+
 ## v3.10 — 2026-07-08 · Visit page full redesign
 
 Complete rebuild of `visit.html` per the locked v3.10 build spec. All 10 sections rebuilt in one pass; nav and footer boilerplate unchanged.
