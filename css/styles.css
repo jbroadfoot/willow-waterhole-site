@@ -37,6 +37,7 @@ a:focus-visible,button:focus-visible{outline:3px solid var(--blue);outline-offse
 .btn-ghost{border-color:rgba(255,255,255,.9);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.16)}
 .btn-white{background:#fff;color:var(--green)}
+.btn-white:hover{background:var(--cream)}
 
 /* utility + nav (white, for logo compliance) */
 
@@ -487,17 +488,22 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 /* generic content section on cream */
 .band{background:var(--cream)}
 
-/* v3.10 visit page rebuild */
+/* v3.10.4 visit page — Discover section: card treatment on discover-side fixes column imbalance; identity blurb + real map embed */
 .section-intro{max-width:660px;color:#54604b;margin-top:-.6rem;margin-bottom:0}
 .discover-section{display:grid;grid-template-columns:65fr 35fr;gap:48px;margin-top:2.2rem;align-items:start}
+.discover-blurb{color:#4b563f;font-size:1.05rem;line-height:1.6;max-width:52ch;margin:0 0 1.3rem}
 .glance-label{font:700 .8rem/1 Nunito;letter-spacing:.06em;text-transform:uppercase;color:#54604b;margin-bottom:.7rem;display:block}
-.glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 28px;margin-top:12px}
-.glance-stat{font-family:'Libre Baskerville',serif;font-weight:700;font-size:1.02rem;line-height:1.3;color:#2D5016;padding-bottom:10px;border-bottom:1px solid rgba(0,0,0,.08)}
-.discover-side{padding-top:2px}
+.glance-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px 28px;margin-top:12px}
+.glance-grid-4{grid-template-columns:repeat(2,1fr)}
+.glance-stat{font-family:'Libre Baskerville',serif;font-weight:700;font-size:1.02rem;line-height:1.35;color:#2D5016;padding-bottom:12px;border-bottom:1px solid rgba(0,0,0,.08);min-height:2.7em}
+.discover-side{background:var(--cream);border-radius:12px;padding:28px 30px;border:1px solid var(--line)}
+.discover-map{border-radius:10px;overflow:hidden;margin-bottom:18px;box-shadow:0 4px 16px rgba(8,30,18,.12)}
+.discover-map iframe{display:block;width:100%;height:220px;border:0}
 .discover-side h3{font-size:1.05rem;color:var(--green-ink);margin-bottom:.3rem}
 .discover-side .ds-addr{font-weight:800;color:var(--blue);display:block;margin-bottom:.5rem;font-size:1.05rem}
 .discover-side p{color:#54604b;font-size:.95rem;margin-bottom:1.2rem}
-.discover-link{display:block;margin-top:14px;color:var(--blue);font-weight:700;font-size:.92rem;text-decoration:none}
+.discover-side .btn{width:100%;text-align:center}
+.discover-link{display:block;margin-top:14px;color:var(--blue);font-weight:700;font-size:.92rem;text-decoration:none;text-align:center}
 @media(max-width:820px){.glance-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.discover-section{grid-template-columns:1fr}}
 @media(max-width:520px){.glance-grid{grid-template-columns:1fr}}
@@ -521,10 +527,11 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .ptime-card:hover .pt-img img{transform:scale(1.04)}
 .ptime-card .pt-body{padding:24px 26px 26px}
 .ptime-card .pt-time{font:800 .75rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-d);margin-bottom:.6rem;display:block}
-.ptime-card h3{font-size:1.25rem;margin-bottom:.5rem;color:var(--green-ink)}
-.ptime-card .pt-distance{font:800 .92rem/1.3 Nunito;color:var(--green-ink);margin-bottom:.15rem;display:block}
-.ptime-card .pt-desc{font-size:.85rem;color:#6b7a60;margin-bottom:1rem;display:block}
-.ptime-card ul{list-style:none;padding:0;margin:0}
+.ptime-card h3{font-size:1.25rem;margin-bottom:.6rem;color:var(--green-ink)}
+.ptime-card .pt-distance,.ptime-card .pt-desc{font-size:.92rem;color:#54604b;display:inline}
+.ptime-card .pt-distance{font-weight:800;color:var(--green-ink)}
+.ptime-card .pt-distance::after{content:" \2022 ";color:#9aa68f;font-weight:400}
+.ptime-card ul{list-style:none;padding:0;margin:1rem 0 0}
 .ptime-card ul li{font-size:.95rem;color:#4b563f;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.06)}
 .ptime-card ul li:last-child{border-bottom:0}
 @media(max-width:768px){.plan-time-grid{grid-template-columns:1fr}}
@@ -539,7 +546,7 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .getting-here-card .gh-links a:hover{text-decoration:underline}
 @media(max-width:768px){.getting-here-grid{grid-template-columns:1fr}}
 
-.before-you-go{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:2rem}
+.before-you-go{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:2rem;background:#fff;border-radius:16px;padding:44px;box-shadow:0 4px 24px rgba(8,30,18,.08)}
 .byg-block+.byg-block{margin-top:32px}
 .byg-block h3{border-bottom:2px solid var(--green);padding-bottom:8px;margin-bottom:14px;font-size:1.1rem;color:var(--green-ink)}
 .byg-block p{color:#54604b;font-size:.95rem}
@@ -551,13 +558,24 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .etiquette-item p{font-size:.95rem;color:#54604b}
 @media(max-width:768px){.etiquette-grid{grid-template-columns:1fr}}
 
-.in-the-area-grid{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:40px;margin-top:2rem;align-items:start}
-.ita-block h4{font:800 .78rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);border-bottom:2px solid var(--blue);padding-bottom:8px;margin-bottom:.9rem}
-.ita-block p{color:#54604b;font-size:.95rem;margin-bottom:.8rem}
-.ita-block ul{list-style:none;margin:0;padding:0}
-.ita-block ul li{font-size:.95rem;color:#3f4a35;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.06)}
-.ita-block ul li:last-child{border-bottom:0}
-@media(max-width:768px){.in-the-area-grid{grid-template-columns:1fr}}
+/* Explore the Neighborhood v2: icon-led cards + promoted highlight callout */
+.ita-grid-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:2rem}
+.ita-card-v2{background:#fff;border-radius:12px;padding:26px 24px;box-shadow:0 4px 20px rgba(8,30,18,.08)}
+.ita-icon{width:40px;height:40px;border-radius:50%;background:var(--sky);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--blue)}
+.ita-icon svg{width:20px;height:20px}
+.ita-card-v2 h4{font:800 .78rem/1 Nunito;letter-spacing:.08em;text-transform:uppercase;color:var(--blue);margin-bottom:.6rem}
+.ita-card-v2 p{color:#54604b;font-size:.95rem;margin-bottom:.9rem}
+.ita-card-v2 ul{list-style:none;margin:0;padding:0}
+.ita-card-v2 ul li{font-size:.95rem;color:#3f4a35;padding:7px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.ita-card-v2 ul li:last-child{border-bottom:0}
+@media(max-width:860px){.ita-grid-v2{grid-template-columns:1fr}}
+
+.ita-highlight{display:flex;gap:20px;align-items:flex-start;background:var(--sky);border-radius:12px;padding:24px 28px;margin-top:24px}
+.ita-highlight-icon{width:44px;height:44px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;color:var(--blue);flex:0 0 auto}
+.ita-highlight-icon svg{width:22px;height:22px}
+.ita-highlight h4{font-size:1.05rem;color:var(--green-ink);margin-bottom:.4rem}
+.ita-highlight p{color:#3d4a56;font-size:.95rem;margin:0}
+@media(max-width:600px){.ita-highlight{flex-direction:column}}
 
 .cta.cta-tall{padding:110px 0}
 
@@ -614,3 +632,16 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .lake-continue a{color:var(--blue);font-weight:700;text-decoration:none;font-size:.95rem}
 .lake-continue a:hover{text-decoration:underline}
 .lake-continue .lc-next{margin-left:auto;text-align:right}
+
+/* v3.11 donate page — Bloomerang/Qgiv embed wrapper */
+.donate-embed-wrap{max-width:650px;margin:48px auto 0;padding:0 20px}
+
+/* v3.11 donate page — Featured Campaign module (swappable; scoped so it doesn't reuse the unrelated, unused .split class) */
+.campaign-feature{background:var(--sand);padding:64px 0}
+.campaign-feature .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.campaign-feature .grid-2 img{border-radius:8px;box-shadow:0 8px 30px rgba(8,30,18,.14);aspect-ratio:4/3;object-fit:cover;width:100%;display:block}
+.campaign-feature p{color:#4b563f;margin:1rem 0}
+.campaign-highlights{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:1.6rem 0 1.8rem}
+.campaign-highlights .benefit h3{font-size:1.02rem}
+.campaign-highlights .benefit p{font-size:.92rem}
+@media(max-width:768px){.campaign-feature .grid-2{grid-template-columns:1fr}.campaign-highlights{grid-template-columns:1fr}}

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- WWGC build v3.10.2 · 2026-07-08 · Discover section rebuilt: map removed, facts converted to compact scannable grid, paragraph cut -->
+<!-- WWGC build v3.10.4 · 2026-07-08 · Section reorder, Discover deduplicated + real map embed, Before You Arrive card treatment, Neighborhood redesigned -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Plan Your Visit | Willow Waterhole Greenspace, Houston</title>
@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3.10.2">
+<link rel="stylesheet" href="css/styles.css?v=3.10.4">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -69,24 +69,26 @@
   <div><b>No Public Restrooms</b><span>plan ahead</span></div>
 </div></div>
 
-<!-- SECTION 2: DISCOVER WILLOW WATERHOLE — rebuilt v3.10.2: map removed, paragraph cut, facts now a compact scannable grid instead of a divided vertical list -->
+<!-- SECTION 2: DISCOVER WILLOW WATERHOLE — v3.10.4: deduplicated vs green bar (dropped 291 Acres / 8.5 miles), real embedded map replaces static image, short identity line reframes the section's purpose as orientation, not a facts repeat -->
 <section id="discover">
   <div class="wrap">
     <div class="discover-section">
       <div>
         <div class="eyebrow-s">Discover Willow Waterhole</div>
         <h2 class="big">A unique urban greenway in southwest Houston.</h2>
-        <span class="glance-label">Park at a Glance</span>
-        <div class="glance-grid">
-          <div class="glance-stat">291 Acres</div>
+        <p class="discover-blurb">Once a flood-control reservoir, now a quiet, six-lake greenway tucked into the Westbury neighborhood.</p>
+        <span class="glance-label">Also Worth Knowing</span>
+        <div class="glance-grid glance-grid-4">
           <div class="glance-stat">Six Connected Lakes</div>
-          <div class="glance-stat">8.5 Miles of ADA-Friendly Trails</div>
           <div class="glance-stat">10 Scenic Islands</div>
           <div class="glance-stat">Westbury Lake, the largest lake in the park</div>
           <div class="glance-stat">15 Acres of Native Prairie</div>
         </div>
       </div>
       <div class="discover-side">
+        <div class="discover-map">
+          <iframe src="https://www.google.com/maps?q=5300+Dryad+Dr,+Houston,+TX+77035&output=embed" width="100%" height="220" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to Willow Waterhole main entrance"></iframe>
+        </div>
         <h3>Main Entrance</h3>
         <span class="ds-addr">5300 Dryad Drive</span>
         <p>Largest parking area with direct access to Westbury Lake.</p>
@@ -97,33 +99,7 @@
   </div>
 </section>
 
-<!-- SECTION 3: SEASONAL VISITOR GUIDE -->
-<!-- SEASONAL: update ~4x/year. Current: Summer 2026. Next: Fall Migration (Sep). Change image, sc-badge, sc-date, h3, p, and ul items only. Layout stays identical. -->
-<section class="band" id="seasonal">
-  <div class="wrap">
-    <div class="eyebrow-s">Seasonal Visitor Guide</div>
-    <h2 class="big">What to expect right now.</h2>
-    <div class="seasonal-card">
-      <div class="sc-media">
-        <img src="images/get-involved/misty-lake.jpg" alt="Morning mist rising over a quiet lake at Willow Waterhole in summer" width="640" height="480" loading="lazy">
-        <span class="sc-badge">Summer</span>
-      </div>
-      <div class="sc-content">
-        <span class="sc-date">July &ndash; August</span>
-        <h3>Hot days, cool mornings, and peaceful lakes.</h3>
-        <p>Summer brings hot days, cooler mornings, active wildlife, and quiet views across the lakes.</p>
-        <ul>
-          <li>Willow and Heron Lakes are good places to watch wading birds throughout the summer.</li>
-          <li>The Prairie Boardwalk is especially beautiful in soft morning and evening light.</li>
-          <li>Evening walks become enjoyable as temperatures begin to cool.</li>
-          <li>Bring plenty of water, especially during the hottest part of the day.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 4: PLAN YOUR TIME -->
+<!-- SECTION 3: PLAN YOUR TIME — moved up per revised order: identity → what to do → what to bring → seasonal context → where to start → map → etiquette → neighborhood -->
 <section id="plan-time">
   <div class="wrap">
     <div class="eyebrow-s">Plan Your Time</div>
@@ -179,7 +155,80 @@
   </div>
 </section>
 
-<!-- SECTION 5: GETTING HERE -->
+<!-- SECTION 4: BEFORE YOU ARRIVE — moved up; now wrapped in a white card panel on the cream band so it reads as one designed unit, not two loose text columns -->
+<section class="band" id="before-you-go">
+  <div class="wrap">
+    <div class="eyebrow-s">Before You Arrive</div>
+    <h2 class="big">Know before you go.</h2>
+    <p class="section-intro">A few simple tips will help you make the most of your visit.</p>
+    <div class="before-you-go">
+      <div class="byg-block">
+        <h3>What to Bring</h3>
+        <span class="glance-label">Must-Haves</span>
+        <ul class="checklist">
+          <li>Water, especially during summer</li>
+          <li>Comfortable walking shoes</li>
+          <li>Sun protection</li>
+          <li>Bug spray</li>
+        </ul>
+        <span class="glance-label" style="margin-top:1.2rem">Nice to Have</span>
+        <ul class="checklist">
+          <li>Binoculars for birdwatching</li>
+          <li>Camera</li>
+          <li>Picnic lunch or snacks</li>
+          <li>Fishing gear (or borrow ours, email ahead)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="byg-block">
+          <h3>Restrooms</h3>
+          <p>There are no public restrooms within Willow Waterhole. Plan ahead before arriving. The nearby Dr. Shannon Walker Neighborhood Library offers indoor restrooms and is just minutes from the main entrance during normal operating hours.</p>
+        </div>
+        <div class="byg-block">
+          <h3>Accessibility</h3>
+          <p>More than 8.5 miles of paved, ADA-accessible trails connect all six lakes. The Westbury Lake Fishing Pier and Prairie Boardwalk are also accessible.</p>
+        </div>
+        <div class="byg-block">
+          <h3>Good to Know</h3>
+          <ul class="checklist">
+            <li>Park hours: Dawn to Dusk</li>
+            <li>Dogs welcome on leash</li>
+            <li>Free parking throughout the park</li>
+            <li>Please help keep the park clean</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: SEASONAL VISITOR GUIDE — moved down per revised order -->
+<!-- SEASONAL: update ~4x/year. Current: Summer 2026. Next: Fall Migration (Sep). Change image, sc-badge, sc-date, h3, p, and ul items only. Layout stays identical. -->
+<section class="band" id="seasonal">
+  <div class="wrap">
+    <div class="eyebrow-s">Seasonal Visitor Guide</div>
+    <h2 class="big">What to expect right now.</h2>
+    <div class="seasonal-card">
+      <div class="sc-media">
+        <img src="images/get-involved/misty-lake.jpg" alt="Morning mist rising over a quiet lake at Willow Waterhole in summer" width="640" height="480" loading="lazy">
+        <span class="sc-badge">Summer</span>
+      </div>
+      <div class="sc-content">
+        <span class="sc-date">July &ndash; August</span>
+        <h3>Hot days, cool mornings, and peaceful lakes.</h3>
+        <p>Summer brings hot days, cooler mornings, active wildlife, and quiet views across the lakes.</p>
+        <ul>
+          <li>Willow and Heron Lakes are good places to watch wading birds throughout the summer.</li>
+          <li>The Prairie Boardwalk is especially beautiful in soft morning and evening light.</li>
+          <li>Evening walks become enjoyable as temperatures begin to cool.</li>
+          <li>Bring plenty of water, especially during the hottest part of the day.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 6: GETTING HERE -->
 <section class="band" id="parking" style="scroll-margin-top:120px">
   <div class="wrap">
     <div class="eyebrow-s">Getting Here</div>
@@ -230,7 +279,7 @@
   </div>
 </section>
 
-<!-- SECTION 6: PARK MAP -->
+<!-- SECTION 7: PARK MAP -->
 <section id="map" style="scroll-margin-top:120px">
   <div class="wrap">
     <div class="eyebrow-s">Park Map</div>
@@ -239,53 +288,6 @@
       <img src="images/lakes-trails/willow-waterhole-map-april-2025.jpg" alt="Official Willow Waterhole Greenway map showing lettered trails, mileage, and numbered amenities" width="1100" height="712" loading="lazy">
       <p style="color:#54604b;margin-bottom:1.2rem">Download a printable map or save it to your phone before you head out.</p>
       <a class="btn btn-green" href="images/lakes-trails/willow-waterhole-map-april-2025.jpg" download>Download the Map</a>
-    </div>
-  </div>
-</section>
-
-<!-- SECTION 7: BEFORE YOU GO -->
-<section class="band" id="before-you-go">
-  <div class="wrap">
-    <div class="eyebrow-s">Before You Arrive</div>
-    <h2 class="big">Know before you go.</h2>
-    <p class="section-intro">A few simple tips will help you make the most of your visit.</p>
-    <div class="before-you-go">
-      <div class="byg-block">
-        <h3>What to Bring</h3>
-        <span class="glance-label">Must-Haves</span>
-        <ul class="checklist">
-          <li>Water, especially during summer</li>
-          <li>Comfortable walking shoes</li>
-          <li>Sun protection</li>
-          <li>Bug spray</li>
-        </ul>
-        <span class="glance-label" style="margin-top:1.2rem">Nice to Have</span>
-        <ul class="checklist">
-          <li>Binoculars for birdwatching</li>
-          <li>Camera</li>
-          <li>Picnic lunch or snacks</li>
-          <li>Fishing gear (or borrow ours, email ahead)</li>
-        </ul>
-      </div>
-      <div>
-        <div class="byg-block">
-          <h3>Restrooms</h3>
-          <p>There are no public restrooms within Willow Waterhole. Plan ahead before arriving. The nearby Dr. Shannon Walker Neighborhood Library offers indoor restrooms and is just minutes from the main entrance during normal operating hours.</p>
-        </div>
-        <div class="byg-block">
-          <h3>Accessibility</h3>
-          <p>More than 8.5 miles of paved, ADA-accessible trails connect all six lakes. The Westbury Lake Fishing Pier and Prairie Boardwalk are also accessible.</p>
-        </div>
-        <div class="byg-block">
-          <h3>Good to Know</h3>
-          <ul class="checklist">
-            <li>Park hours: Dawn to Dusk</li>
-            <li>Dogs welcome on leash</li>
-            <li>Free parking throughout the park</li>
-            <li>Please help keep the park clean</li>
-          </ul>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -329,32 +331,45 @@
   </div>
 </section>
 
-<!-- SECTION 9: IN THE AREA -->
+<!-- SECTION 9: IN THE AREA — completely redesigned: icon-led cards instead of bare bullet lists; Library note promoted to its own highlighted callout instead of a 4th grid item -->
 <section class="band" id="in-the-area">
   <div class="wrap">
     <div class="eyebrow-s">In the Area</div>
     <h2 class="big">Explore the Neighborhood</h2>
     <p class="section-intro">Whether you're fueling up before the trails or grabbing a bite afterward, these nearby favorites are just minutes from Willow Waterhole.</p>
-    <div class="in-the-area-grid">
-      <div class="ita-block">
+    <div class="ita-grid-v2">
+      <div class="ita-card-v2">
+        <div class="ita-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8z"/><path d="M17 9h1.5a2.5 2.5 0 0 1 0 5H17"/><path d="M8 3v2M11 3v2M14 3v2"/></svg>
+        </div>
         <h4>Coffee &amp; Breakfast</h4>
         <p>Start your morning nearby before exploring the park.</p>
         <ul><li>Tapester's Grill</li><li>Fioza Caf&eacute;</li></ul>
       </div>
-      <div class="ita-block">
+      <div class="ita-card-v2">
+        <div class="ita-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18"/><path d="M4 10a8 5 0 0 1 16 0"/><path d="M3 14h18"/><path d="M4 17h16"/></svg>
+        </div>
         <h4>Local Favorites</h4>
         <p>Relax after your visit with one of these neighborhood favorites.</p>
         <ul><li>Annie's Hamburgers</li><li>The Hungry Farmer BBQ</li><li>Lo Nuevo de Jalisco</li><li>A Drop of the Creator (evening patio, pizza &amp; drinks)</li></ul>
       </div>
-      <div class="ita-block">
+      <div class="ita-card-v2">
+        <div class="ita-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 12.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+        </div>
         <h4>Picnic &amp; Essentials</h4>
         <p>Forgot something? These are all just a few minutes away.</p>
         <ul><li>Kroger</li><li>Foodarama</li><li>Academy Sports + Outdoors</li></ul>
       </div>
-      <div class="ita-block">
-        <h4>Neighborhood Stop</h4>
-        <p>A favorite community destination before or after your visit.</p>
-        <ul><li>Dr. Shannon Walker Neighborhood Library: cool indoor space, public art, community programs, and a peaceful place to relax nearby.</li></ul>
+    </div>
+    <div class="ita-highlight">
+      <div class="ita-highlight-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H12v18H6.5A2.5 2.5 0 0 1 4 18.5v-13z"/><path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H12v18h5.5a2.5 2.5 0 0 0 2.5-2.5v-13z"/></svg>
+      </div>
+      <div>
+        <h4>Neighborhood Stop: Dr. Shannon Walker Neighborhood Library</h4>
+        <p>A favorite community destination before or after your visit &mdash; cool indoor space, public art, community programs, and a peaceful place to relax nearby.</p>
       </div>
     </div>
   </div>
