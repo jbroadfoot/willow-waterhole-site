@@ -1,5 +1,29 @@
 # Willow Waterhole Website — Changelog
 
+## v4.0 / v3.13 — 2026-08-04 · Events rebuild + Visit polish, news feed wired up
+
+Cleans up and lands the batch of work started 2026-07-09: `events.html` rebuilt (v4.0) with a news feed and press section, `visit.html` given a further polish pass (v3.13), and two new articles added to `news.html`.
+
+### events.html (v3.3 → v4.0)
+- Added a "Recently at Willow Waterhole" news feed section and a dedicated "In the News" press-coverage section, replacing the old MusicFEST signature block.
+- Featured slot now points to the Chalk Art Festival placeholder article instead of the Prairie Boardwalk post.
+- Replaced the bottom CTA with an email signup form (visual only — no email provider wired up yet).
+
+### visit.html (v3.10.4 → v3.13)
+- Body text sizes normalized to the sitewide 1rem baseline; Discover link underline removed; Highlights label darkened; distance/description split to separate lines; Where to Start buttons shrunk and simplified.
+- Restrooms copy and the Neighborhood Stop library card both restored to their original framing after a review pass moved the restroom detail into the library card in a way that led with amenities rather than the park's own restroom situation. Restrooms block again names the library as the nearby restroom option; the library card leads with "favorite stop," not "restrooms."
+
+### News
+- Added `news/2026-07-welcome-maya-houston.html` and `news/2026-11-colors-of-the-prairie-chalk-art-festival.html` (both marked as placeholder articles pending Danny/Jay review) to `news.html`'s feed grid and to `sitemap.xml`. Previously only reachable from `events.html`.
+- Removed leftover `events-old.html` backup file (unreferenced anywhere on the site).
+
+### Fixed
+- Three em-dashes introduced during this batch (two in `events.html`, one in the Maya Houston article) replaced with periods/commas per the site's zero-em-dash rule.
+
+### Technical
+- Verified: HTML tag balance clean, all image paths resolve, zero em-dashes in visible copy across all touched files. Confirmed visually at mobile and desktop widths via local preview server.
+- Build stamps: `events.html` → v4.0, `visit.html` → v3.13; stylesheet cache-busts bumped to match.
+
 ## v3.10.2 — 2026-07-08 · Discover section rebuilt
 
 Further refinement of the Discover Willow Waterhole section (the opening 65/35 section on `visit.html`), addressing the height imbalance between its two columns more directly than the v3.10.1 pass did.
