@@ -1,5 +1,11 @@
 # Willow Waterhole Website — Changelog
 
+## v4.3 — 2026-08-05 · TripAdvisor review link in sitewide footer
+
+### Footer (all 18 pages)
+- Added "Review us on TripAdvisor" text link to the `f-social` span, positioned between Instagram and the `#willowwaterhole` hashtag. Opens in a new tab (`target="_blank" rel="noopener noreferrer"`), style matches existing footer link treatment. No image, badge, or third-party script. Byte-identical across all 18 pages per the README footer template rule.
+- URL: `https://www.tripadvisor.com/Attraction_Review-g56003-d26979432-Reviews-Willow_Waterhole_Greenway-Houston_Texas.html`
+
 ## v4.2 — 2026-08-04 · Factual corrections pass: events, mileage, prairie species
 
 Accuracy pass across the redesigned site per corrections from Bill and the Conservancy. Corrections only, no redesign or expanded content.
