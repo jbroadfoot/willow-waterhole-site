@@ -120,10 +120,12 @@ section{padding:78px 0}
 .up-list ul{list-style:none;margin:0;padding:0;flex:1}
 .up-list li{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
 .up-list li:last-of-type{border-bottom:0}
-.up-date{flex:0 0 auto;align-self:flex-start;background:var(--sky);color:var(--blue);border-radius:8px;padding:8px 13px;text-align:center;white-space:nowrap;font-family:'Libre Baskerville',serif;font-size:.98rem;font-weight:700;letter-spacing:.01em}
+.up-date{flex:0 0 116px;width:116px;align-self:flex-start;background:var(--sky);color:var(--blue);border-radius:8px;padding:8px 10px;text-align:center;white-space:nowrap;font-family:'Libre Baskerville',serif;font-size:.93rem;font-weight:700;letter-spacing:.01em}
+.up-list li > div{text-align:left}
 .up-list li > div b{display:block;font-size:1.05rem;color:var(--ink);margin-bottom:3px}
 .up-list li > div span{font-size:.95rem;color:#5e6852}
 .up-all{margin-top:16px;text-align:center;color:var(--blue);font-weight:700;text-decoration:none;font-size:1rem;padding:10px;border-top:1px solid var(--line)}
+.up-month-sep{display:block!important;font:800 .72rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);border-top:2px solid var(--blue)!important;border-bottom:0!important;padding:10px 0 2px!important;margin-top:4px}
 
 /* In the News strip — small but prominent news mention */
 .news-strip{margin-top:34px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;padding:20px 26px;background:var(--cream);border-left:4px solid var(--green);border-radius:8px}
@@ -290,6 +292,7 @@ footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
 .phero{position:relative;min-height:56vh;display:flex;align-items:flex-end;overflow:hidden}
 .phero-media{position:absolute;inset:0;background:url('../images/prairie/gulf-coasst-prairie-grass.png') center/cover}
 .phero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,30,18,.2),rgba(8,30,18,.78))}
+.phero-light::after{background:linear-gradient(180deg,rgba(8,30,18,.08),rgba(8,30,18,.52))}
 .phero .wrap{position:relative;z-index:2;padding-bottom:46px;color:#fff}
 .phero .eyebrow{font:800 .78rem/1 Nunito;letter-spacing:.14em;text-transform:uppercase;color:#bfe3c9;margin-bottom:1rem}
 .phero h1{color:#fff;font-size:clamp(2.1rem,4.4vw,3.4rem);max-width:760px;text-shadow:0 2px 20px rgba(0,0,0,.45)}
@@ -495,6 +498,9 @@ h2.big{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:1.1rem}
 
 /* footer extras */
 .f-translate{padding:6px 0 14px}
+.f-translate-label{font:700 .74rem/1 Nunito;letter-spacing:.06em;text-transform:uppercase;color:#8fc9a0;display:inline;margin-right:.4rem}
+.f-tl{color:#bcd0ad!important;text-decoration:none;font-size:.82rem;font-weight:600}
+.f-tl:hover{color:#fff!important}
 .f-social a{color:#bcd0ad;text-decoration:none}
 .f-social a:hover{color:#fff}
 footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
