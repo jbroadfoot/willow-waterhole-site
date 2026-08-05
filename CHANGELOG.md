@@ -1,5 +1,67 @@
 # Willow Waterhole Website — Changelog
 
+## v4.2 — 2026-08-04 · Factual corrections pass: events, mileage, prairie species
+
+Accuracy pass across the redesigned site per corrections from Bill and the Conservancy. Corrections only, no redesign or expanded content.
+
+### Trail mileage reverted to 8 miles
+- Per current organizational guidance from Bill, standardized every general reference to **8 miles of trails** (or "8 miles of accessible trails" where accessibility is part of the sentence). This reverses the 8.5-mile standardization made earlier the same day in v4.1 and also clears the older "more than 8 miles" / "over 8.5 miles" hedges. 18 files touched.
+- The Discover Your Greenway campaign sentence on `about.html` now correctly reads 8 miles, matching the historical campaign language.
+
+### index.html (v3.4 → v3.5)
+- Replaced the three expired July placeholder events with the confirmed August/September 2026 lineup: Bird Walk (Sat, Aug 15), Rooted Resilience (Sat, Aug 29), and Family Fishing Clinic (Sat, Sep 12). Weekday labels verified against the 2026 calendar.
+
+### events.html (v4.0 → v4.2)
+- Featured event renamed to its official name, **Colors of the Prairie**, with the confirmed date and time (Saturday, November 7, 11:00 AM–4:00 PM) replacing the "date to be announced" placeholder.
+- Upcoming calendar populated with the confirmed fall 2026 schedule (13 entries, Aug 15 through Nov 7). No times or registration links invented for Second Chance Walk, Liver Life Walk, or Steps Against Melanoma, which were supplied without them.
+- Recurring schedule corrected: Volunteer Workday is the **second** Saturday of the month (Monthly Bird Survey remains the third).
+- Running-events wording corrected so it no longer implies major scholastic cross-country meets are still held annually.
+
+### prairie.html (v3.3 → v3.4)
+- Protected-species stat corrected from "3 rare & endangered species" to "3 protected: 1 endangered and 2 threatened," matching the per-species detail already on the page (Texas Prairie Dawn endangered; Houston Camphor Daisy and Texas Windmill Grass threatened).
+- Added the boardwalk's viewing platform and resting area alongside the outdoor classroom. Boardwalk remains described as open, ~1/3 mile, within the 15-acre Native Prairie Preserve, accessible, and supported by educational signage.
+
+### about.html (v4.1 → v4.2)
+- River Oaks Garden Club description corrected to reflect its actual role: supported the Native Prairie Preserve and helped fund the Prairie Boardwalk.
+- Confirmed the partner list includes Elkins Foundation, Martin Marietta, River Oaks Garden Club, Garden Club of Houston, TIRZ 20, and Bellaire Southwest Rotary.
+
+### Layout
+- Added `.up-grid-tall` (`align-items:start`) and applied it to the events page only. With the calendar grown from 5 to 13 entries, the default `align-items:stretch` was stretching the featured card to match, leaving 579px of dead space below its button; this drops it to 30px, in line with the homepage's 34px. Same fix pattern used for `.getting-here-grid` in v3.10.1. The homepage grid is unchanged and still stretches (609/609).
+
+### Verified / unchanged
+- Fishing stock dates confirmed already correct at 2016–2019 sitewide; not changed to 2020.
+- No aerator content exists anywhere on the site; none added or modified.
+- Financial transparency already updated to the 2026 Candid Platinum Seal in v4.1; no Gold Seal wording remains. No financial statements newer than 2023 are published on willowwaterhole.org, so nothing to update there.
+- Verified: HTML tag balance clean, all image paths resolve, zero em-dashes in visible copy, no stale mileage strings. Confirmed at 375px and 1280px via local preview.
+
+### Known gap
+- Artist and vendor registration links for Colors of the Prairie are **not yet added** — the newsletter source referenced in the corrections was not provided, and links were not invented. Marked with a TODO in `events.html`.
+
+## v4.1 / v3.4 — 2026-08-04 · About page editorial consolidation, sitewide fact cleanup
+
+Focused editorial consolidation of `about.html` (v4.1), using the current page as the base and willowwaterhole.org as the source for missing or stronger organizational content. Design and most existing copy preserved; not a redesign.
+
+### about.html
+- Hero background swapped to `images/general/willow-waterhole-sunset-lake.jpg` (moved/renamed from an uploaded `images/about/sunrise.JPG`). Fact bar verified against the rest of the site and left unchanged (all four facts confirmed accurate).
+- History section rewritten (new heading "From stormwater basin to community treasure," expanded copy covering the Discover Your Greenway capital campaign) with a new "Explore 25 Years of Willow Waterhole" button linking to `anniversary.html`.
+- Flood Control section copy refreshed (both signature lines preserved), rolling the 608M-gallon capacity into the lead paragraph and dropping the dated "$480 million" and "like Hurricane Harvey" references.
+- Staff & Board placeholder replaced with the full current roster: 4 staff, 4 board officers (as cards), 12 board of directors, and 11 advisory board members, cross-checked against willowwaterhole.org/staff-board-members.
+- Partners section reconciled against willowwaterhole.org/partners: added Harris County Precinct One (Public); Fondren, Herzstein, John P. McGovern, Powell, and Wortham Foundations (Funding); and Brays Bayou Association, Keep Houston Beautiful, Texan by Nature, Friends of Levitt Pavilion, Westbury High School, and Westbury Little League (Program). All existing partner cards kept as-is.
+- Financials & Reports section updated: replaced outdated "GuideStar Gold Seal" language with the confirmed 2026 Candid Platinum Seal of Transparency and a Charity Navigator 4-star rating, both as linked badge images (self-hosted in `images/badges/`, downloaded from the same source the live site uses). Added a donor-gratitude paragraph. The Candid/GuideStar profile link now also serves as the Form 990 access point instead of a separate document link.
+
+### index.html
+- Added a Candid Platinum Seal + Charity Navigator badge section prominently above the footer, matching About's treatment.
+
+### Sitewide fact cleanup
+- Standardized trail mileage from "eight miles"/"8 miles" to "8.5 miles" across all 18 pages that repeat the shared footer/meta boilerplate (previously only `visit.html` and `donate.html` had been corrected).
+- Replaced the outdated "GuideStar Gold Seal of Transparency" footer credit with "Candid Platinum Seal of Transparency" sitewide, matching the corrected About page content.
+
+### Technical
+- New CSS: `.pgrid-4` (4-column card variant), `.namegrid` (plain name grid), `.advlist` (2-column advisory board list), added to the existing partner-tier rule block in `css/styles.css`.
+- New assets: `images/badges/candid-platinum-seal.webp`, `images/badges/charity-navigator-4star.webp` (downloaded and renamed from Squarespace CDN, which serves them as WebP despite the live site's `.jpg`-named URLs).
+- Verified: HTML tag balance clean, all image paths resolve, zero em-dashes in visible copy across every touched file. Confirmed rendering via local preview server (About and homepage badge sections, roster, partners).
+- Build stamps: `about.html` → v4.1, `index.html` → v3.4; stylesheet cache-busts bumped to match.
+
 ## v4.0 / v3.13 — 2026-08-04 · Events rebuild + Visit polish, news feed wired up
 
 Cleans up and lands the batch of work started 2026-07-09: `events.html` rebuilt (v4.0) with a news feed and press section, `visit.html` given a further polish pass (v3.13), and two new articles added to `news.html`.

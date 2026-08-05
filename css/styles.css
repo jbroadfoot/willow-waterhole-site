@@ -103,6 +103,8 @@ section{padding:78px 0}
 .upcoming .up-head{text-align:center;margin-bottom:34px}
 .upcoming h2{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-top:.3rem}
 .up-grid{display:grid;grid-template-columns:1.55fr 1fr;gap:34px;align-items:stretch}
+/* long-list variant: stops the feature card stretching to match a tall calendar column */
+.up-grid-tall{align-items:start}
 .up-module{background:var(--cream);border-radius:16px;padding:32px 30px}
 .up-feature{display:grid;grid-template-rows:auto 1fr;background:#fff;border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 12px 32px rgba(20,40,20,.10);transition:transform .2s,box-shadow .2s}
 .up-feature:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(20,40,20,.16)}
@@ -425,6 +427,18 @@ h2.big{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:1.1rem}
 .pcard p{font-size:.9rem;color:#54604b}
 @media(max-width:860px){.pgrid{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.pgrid{grid-template-columns:1fr}}
+.pgrid-4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:860px){.pgrid-4{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.pgrid-4{grid-template-columns:1fr}}
+
+/* team roster */
+.namegrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 20px;color:#54604b;font-size:.94rem}
+@media(max-width:860px){.namegrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.namegrid{grid-template-columns:1fr}}
+.advlist{display:grid;grid-template-columns:1fr 1fr;gap:10px 30px;margin-top:.4rem}
+.advlist div{font-size:.9rem;color:#54604b}
+.advlist b{color:#2b3524}
+@media(max-width:700px){.advlist{grid-template-columns:1fr}}
 
 /* news & stories feed */
 .feed{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:2rem}
