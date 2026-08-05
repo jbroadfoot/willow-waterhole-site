@@ -1,5 +1,15 @@
 # Willow Waterhole Website — Changelog
 
+## v3.5 (anniversary) — 2026-08-05 · Anniversary page hero + Then & Now refresh
+
+### anniversary.html (v3.4 → v3.5)
+- Hero swapped from the 2004 construction photo (dingy, warehouse prominent) to the elevated greenway panorama (`willow-waterhole-greenway-panorama.jpg`, 3207×1806, iOS shot c. 2016) — shows the full lake complex and Houston skyline.
+- Then & Now section expanded from 2-panel to 3-panel: added Turtle Bridge construction photo (`willow-waterhole-turtle-bridge-construction.jpg`, 1200×825) as the middle figure between the before/after aerials. Inline `grid-template-columns:1fr 1fr 1fr` overrides the base `.thennow` 2-column grid for this page only; mobile single-column fallback unchanged.
+- Descriptive text updated from "Two views" to "Three views" framing with before/during/today sequence.
+- Caption: "During construction: bridges built before the basin filled, long before the turtles arrived."
+- Stylesheet cache-bust corrected from `?v=3.5` to `?v=4.2` to match the rest of the site.
+- New images added to `images/general/`: `willow-waterhole-greenway-panorama.jpg`, `willow-waterhole-turtle-bridge-construction.jpg`, `weir-scout-lake.jpg` (weir staged for about.html flood section, not yet wired in).
+
 ## v4.3 — 2026-08-05 · TripAdvisor review link in sitewide footer
 
 ### Footer (all 18 pages)
