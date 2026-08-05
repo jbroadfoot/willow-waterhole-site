@@ -1,5 +1,25 @@
 # Willow Waterhole Website — Changelog
 
+## v4.4 — 2026-08-05 · Stat bar dedup, divider consistency, about page polish
+
+### Stat bars — no fact appears on more than one page
+- **visit.html** unchanged — Dawn to Dusk / Free Admission / 291 Acres / 6 Lakes (the visitor-orientation anchor).
+- **anniversary.html** (v3.5 → v3.6) — 25 yrs / 8 miles of trails / 80+ Eagle & Gold Scout projects / 2001 founded. Dropped 6 lakes and 291 acres (both on visit).
+- **about.html** (v4.2 → v4.3) — 608M gallons detained / 30+ partners / 501(c)(3) / 20+ annual events. Dropped 291 acres (visit), 2001 (anniversary), 80+ Scout projects (anniversary).
+- **thingstodo.html** (v3.4 → v3.5) — 250+ birds / 7 things to do / 4 stocked fishing lakes / 1 native prairie preserve. Dropped 6 (visit), 8 miles (anniversary), 291 (visit).
+- **prairie.html** stat bar unchanged — all four facts (15 acres / 265 species / 1% / 3 protected) were already unique.
+
+### Divider consistency
+- **visit.html** (v3.14 → v3.15) — divider added after stats bar; was the only major content page missing it.
+- **thingstodo.html** — divider added after stats bar (same gap).
+- **prairie.html** (v3.4 → v3.5) — divider viewBox corrected from `0 0 1200 24` to `0 0 1200 26` and path y-coordinates updated to match the sitewide standard.
+
+### about.html polish (v4.2 → v4.3)
+- **Mission statement** — section now centered with `eyebrow-s` "Our Mission" label above; text italicized and given more vertical breathing room. Removed the inline `<b>Our mission:</b>` prefix.
+- **Board Officers → namegrid** — changed from `.pgrid.pgrid-4` with `.pcard` cards to `.namegrid` matching the Staff section. Cards were overbuilt for a name+title list; both sections now read identically.
+- **Flood section** — weir photo (`weir-scout-lake.jpg`, 800×600) added after the fstats block with caption: "The weir at Scout Lake — the concrete structure that controls water flow between Brays Bayou and the detention basin."
+- **Second divider** — added before the Financials section, marking the major break between organizational info and accountability documents.
+
 ## v3.5 (anniversary) — 2026-08-05 · Anniversary page hero + Then & Now refresh
 
 ### anniversary.html (v3.4 → v3.5)
