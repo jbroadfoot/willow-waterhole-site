@@ -375,11 +375,6 @@ h2.big{font-size:clamp(1.8rem,3.2vw,2.4rem);margin-bottom:1.1rem}
 .nav img{height:52px}
 
 /* quick-action row (homepage, under hero) */
-.quick{background:#fff;border-bottom:1px solid var(--line)}
-.quick .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding-top:16px;padding-bottom:16px}
-.quick a{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--cream);border:1px solid var(--line);border-radius:8px;padding:14px 10px;text-decoration:none;color:var(--green);font-weight:800;font-size:1rem;transition:background .15s,border-color .15s}
-.quick a:hover{background:var(--sand);border-color:var(--green)}
-.quick a span{color:var(--blue)}
 @media(max-width:640px){.quick .wrap{grid-template-columns:1fr 1fr}}
 
 /* badge (e.g. Now Open) */

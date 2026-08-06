@@ -1,5 +1,17 @@
 # Willow Waterhole Website — Changelog
 
+## v4.6 — 2026-08-06 · Homepage simplification pass
+
+### index.html (v3.5 → v3.6)
+- **Beige quick-link row removed** (Hours / Parking / Park Map / Events) — was duplicating the hero's two CTA buttons and the facts strip below it.
+- **Facts strip updated** — was Hours / Admission / Where / Dogs + a separate "Before you go →" link. Now Hours / Admission / Where / Parking ("Four free parking areas," matching the count from the newsletter's Boardwalk Trail partners article), with "Park Map →" linking directly to `visit.html#map`. Dogs moved off the homepage (stays on Visit); "Before you go" removed as too vague to signal its destination.
+- **Hero copy tightened** — dropped the second reference to hours ("free to explore every day" → "free to explore"), since hours are already in the facts strip.
+- **Membership copy** — no longer promises specific perks (guided walks, early invitations) that may not always be offered; now "Become part of the community helping Willow Waterhole grow, with updates, invitations, and opportunities to connect with the Greenway."
+- **Donation copy** — no longer implies WWGC directly maintains the lakes and trails (that's HCFCD's flood-control infrastructure); now credits prairie restoration, native trees, visitor improvements, and programs.
+- **Anniversary paragraph** — shortened, parenthetical removed. Note: this drops the "twenty-five years ago, this was flat ground" before/after framing that echoes the adjacent Before/Today aerial photos; flagged for Jay, kept as requested.
+- **TPW Magazine feature** — updated from "upcoming issue" to past tense (July 2026 issue, already out), headline capitalization matched to the requested copy, and the Read More link now points directly to `tpwmagazine.com/digital/2026/jul/` instead of the general news page.
+- Stylesheet cache-bust bumped `?v=4.4 → ?v=4.6` on this page (styles.css v4.5 also removed the now-unused `.quick` row styles, confirmed used only by index.html before removal).
+
 ## v4.5 — 2026-08-06 · events.html "Coming Up" rebuild; In the News section removed
 
 ### events.html (v4.3 → v4.5)
