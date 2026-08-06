@@ -500,4 +500,4 @@ The complete 15-page site, ready for the first Netlify deploy.
 - **Photo submission form** — anniversary page says "coming soon," email fallback in place.
 - **Seed posts batch 2** — Spring 2026 newsletter stories (Trudy/Barbara articles).
 - **Pre-cutover dependencies** on Squarespace: `/annualfund` (donate flow), `/membership`, `/pastnewsletter` — linked absolutely; replace when new flows exist.
-- Trail letter labels (Trail A–F) on Things to Do assume map lettering — verify against the April 2025 map legend.
+- Trail letter labels (Trail A–F) on Things to Do assume map lettering — verify against the April 2025 map legend..
