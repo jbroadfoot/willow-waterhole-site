@@ -1,5 +1,18 @@
 # Willow Waterhole Website — Changelog
 
+## v4.5 — 2026-08-06 · events.html "Coming Up" rebuild; In the News section removed
+
+### events.html (v4.3 → v4.5)
+- **Featured event card** — no longer paired in a side-by-side grid with the Upcoming list (was causing an awkward tall-narrow-list-next-to-fixed-height-image layout). Now a full-width horizontal band (`.up-feature.ev-feature-wide`, new CSS, scoped so index.html's homepage teaser — which still uses the original `.up-feature` grid layout — is unaffected).
+- **Upcoming list rebuilt** — was `.up-list`/`.up-date`/`.up-month-sep` (bordered date boxes, bordered month separators that doubled up against each item's own border). Replaced with new `.ev-list`/`.ev-row`/`.ev-month` classes: single column, no borders, month labels use spacing only, each event gets a one-line description pulled from the August newsletter. Old classes left untouched in the stylesheet since index.html's homepage preview still depends on them.
+- **Real content added** — event descriptions and Eventbrite registration links (Rooted Resilience, Family Fishing Clinic, National Public Lands Day VolunBEERing) sourced from the August 2026 newsletter. Note: the newsletter's day-of-week labels were wrong throughout (everything said "Friday" regardless of actual date); dates/times kept as previously verified on the site, only descriptions and links were pulled from the newsletter.
+- **Colors of the Prairie TODO resolved** — artist/vendor registration link comment removed; actual Google Form links to be added to the news/ article in the next pass (not on the compact card itself).
+- **Section 3 (Every Month)** — one-line sub-head added: "Same day, every month, easy to plan around."
+- **Section 4 (Seasonal & Special)** — one-line sub-head added: "No set schedule, these vary year to year."
+- **Section 2 (See what's new)** — added a "See more stories →" link to news.html (previously a dead end after 3 cards).
+- **Section 5 (In the News) removed entirely** — was duplicating news.html's own "Featured in / Recent Coverage" section, and the two lists had already drifted out of sync (news.html has a Kinder Foundation credit this section didn't). Press coverage now lives only on news.html.
+- Stylesheet cache-bust bumped `?v=4.4 → ?v=4.5` on this page. New CSS is additive (nothing removed/renamed that other pages depend on), so other pages remain correct at `?v=4.4` until they're touched in the next pass.
+
 ## v4.4 — 2026-08-05 · Stat bar dedup, divider consistency, about page polish
 
 ### Stat bars — no fact appears on more than one page
