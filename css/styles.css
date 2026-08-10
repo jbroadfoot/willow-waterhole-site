@@ -200,7 +200,7 @@ section{padding:78px 0}
 .lk-more{display:block;color:var(--blue);font-weight:700;font-size:.86rem;margin-top:.45rem}
 .lk .lkimg{aspect-ratio:5/3;overflow:hidden;border-radius:6px}
 .lk .lkimg img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
-@media(max-width:860px){.lk{grid-template-columns:38px 1fr}.lk .lkimg{display:none}}
+@media(max-width:860px){.lk{grid-template-columns:38px 1fr;grid-template-rows:auto auto}.lk .no{grid-row:1}.lk .lk-head{grid-row:1}.lk p{grid-column:1/-1;padding-left:0;margin-top:.5rem}.lk .lkimg{display:none}}
 
 /* Detailed lake cards (explore.html) */
 .lk-detail{display:grid;grid-template-columns:340px 1fr;gap:36px;align-items:center;padding:32px 0;border-top:1px solid #D8D0BD;scroll-margin-top:90px}
@@ -300,6 +300,7 @@ footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
 /* stat band */
 .stats{background:var(--green);color:#fff}
 .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding:24px 26px;text-align:center}
+@media(max-width:640px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:10px;padding:18px 16px}}
 .stats b{display:block;font-family:'Libre Baskerville',serif;font-size:1.8rem}
 .stats span{font-size:.84rem;color:#cfe6d4}
 .lead{font-size:1.3rem;color:#3c4734;line-height:1.7}
