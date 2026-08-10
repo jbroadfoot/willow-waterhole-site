@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- WWGC build v3.9.2 · 2026-08-04 · Trail mileage standardized to 8 miles -->
+<!-- WWGC build v4.6 · 2026-08-10 · Design fixes: spotlight grid bug fixed, font sizes normalized, jump nav centered, divider added, stats band added, map heading fixed, redundant copy removed -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lakes & Trails Guide | Willow Waterhole Greenspace, Houston</title>
@@ -34,7 +34,15 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=3.9.1">
+<link rel="stylesheet" href="css/styles.css?v=4.6">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYEP1S4L1W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LYEP1S4L1W');
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -48,6 +56,7 @@
     <li><a href="events.html">Events</a></li>
     <li><a href="getinvolved.html">Get Involved</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="news.html">News</a></li>
     <li><a class="donate" href="donate.html">Donate</a></li>
   </ul>
 </div></nav>
@@ -60,6 +69,18 @@
     <p>Explore six interconnected lakes and the trails, gardens, and wildlife habitats that surround them. With 8 miles of accessible walking paths, wayfinding signage, and dozens of amenities, Willow Waterhole offers an outdoor experience unlike any other in Houston.</p>
   </div>
 </header>
+
+<div class="stats"><div class="wrap">
+  <div><b>6</b><span>interconnected lakes</span></div>
+  <div><b>8 miles</b><span>of paved ADA trails</span></div>
+  <div><b>291 acres</b><span>of greenway</span></div>
+  <div><b>608M gallons</b><span>stormwater capacity</span></div>
+</div></div>
+
+<div class="divider" aria-hidden="true"><svg viewBox="0 0 1200 26" preserveAspectRatio="none">
+  <line x1="0" y1="9" x2="1200" y2="9" stroke="#008444" stroke-width="3"/>
+  <path d="M0,18 C100,10 200,26 300,18 C400,10 500,26 600,18 C700,10 800,26 900,18 C1000,10 1100,26 1200,18" fill="none" stroke="#0063BE" stroke-width="3"/>
+</svg></div>
 
 <!-- JUMP NAV -->
 <nav class="jump-nav" aria-label="Jump to a lake"><div class="wrap">
@@ -75,7 +96,7 @@
 <section id="map" style="scroll-margin-top:170px">
   <div class="wrap">
     <div class="eyebrow-s">Park Map</div>
-    <h2 class="big">Willow Waterhole Map: Lakes, Trails, and Amenities.</h2>
+    <h2 class="big">Map: Lakes, Trails &amp; Amenities</h2>
     <div class="mapblock">
       <img src="images/lakes-trails/willow-waterhole-map-april-2025.jpg" alt="Willow Waterhole map showing lettered trails, mileage, and numbered amenities across all six lakes" width="1100" height="712" loading="lazy">
       <a class="btn btn-green" href="images/lakes-trails/willow-waterhole-map-april-2025.jpg" download>Download the Map</a>
@@ -117,7 +138,6 @@
       <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=5300+Dryad+Dr+Houston+TX+77035" rel="noopener">Get Directions</a>
     </div>
     <h3 class="lake-section-heading">Featured Places</h3>
-    <p class="lake-section-intro">Tap a feature to learn more.</p>
     <div class="spotlight-grid">
       <details class="spotlight">
         <summary><span class="sp-thumb"><img src="images/lakes-trails/willow-waterhole-westbury-lake-bridges.jpg" alt="" width="84" height="84" loading="lazy"></span><span class="sp-name">Willow Waterhole Bridges</span></summary>
@@ -226,7 +246,6 @@
       <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=Ricecrest+St+Houston+TX" rel="noopener">Get Directions</a>
     </div>
     <h3 class="lake-section-heading">Featured Places</h3>
-    <p class="lake-section-intro">Tap a feature to learn more.</p>
     <div class="spotlight-grid">
       <details class="spotlight">
         <summary><span class="sp-thumb"><img src="images/lakes-trails/willow-waterhole-triangle-lake-outdoor-classroom.jpg" alt="" width="84" height="84" loading="lazy"></span><span class="sp-name">Outdoor Classroom</span></summary>
@@ -343,7 +362,6 @@
       <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=Ricecrest+St+Houston+TX" rel="noopener">Get Directions</a>
     </div>
     <h3 class="lake-section-heading">Featured Places</h3>
-    <p class="lake-section-intro">Tap a feature to learn more.</p>
     <div class="spotlight-grid">
       <details class="spotlight">
         <summary><span class="sp-thumb"><img src="images/lakes-trails/willow-waterhole-scout-lake-bayou-trail.jpg" alt="" width="84" height="84" loading="lazy"></span><span class="sp-name">Bayou Trail</span></summary>
@@ -422,7 +440,6 @@
       <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=11200+Clematis+Ln+Houston+TX" rel="noopener">Get Directions</a>
     </div>
     <h3 class="lake-section-heading">Featured Places</h3>
-    <p class="lake-section-intro">Tap a feature to learn more.</p>
     <div class="spotlight-grid">
       <details class="spotlight">
         <summary><span class="sp-thumb"><img src="images/lakes-trails/willow-waterhole-heron-lake-blue-heron.jpg" alt="" width="84" height="84" loading="lazy"></span><span class="sp-name">Blue Heron Sculpture</span></summary>
@@ -524,7 +541,6 @@
       <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=11200+Clematis+Ln+Houston+TX" rel="noopener">Get Directions</a>
     </div>
     <h3 class="lake-section-heading">Featured Places</h3>
-    <p class="lake-section-intro">Tap a feature to learn more.</p>
     <div class="spotlight-grid">
       <details class="spotlight">
         <summary><span class="sp-thumb"><img src="images/lakes-trails/willow-waterhole-willow-lake-wetlands.jpg" alt="" width="84" height="84" loading="lazy"></span><span class="sp-name">Wetland Shelf</span></summary>
@@ -613,7 +629,6 @@
       <a class="btn btn-green" href="https://www.google.com/maps/search/?api=1&amp;query=4700+Gasmer+Dr+Houston+TX" rel="noopener">Get Directions</a>
     </div>
     <h3 class="lake-section-heading">Featured Places</h3>
-    <p class="lake-section-intro">Tap a feature to learn more.</p>
     <div class="spotlight-grid">
       <details class="spotlight">
         <summary><span class="sp-thumb"><img src="images/prairie/1200px-texas-prairie-dawn-04.jpg" alt="" width="84" height="84" loading="lazy"></span><span class="sp-name">Texas Prairie Dawn Flower</span></summary>
@@ -688,7 +703,7 @@
       </ul></div>
       <div><div class="f-col-head">Explore</div><ul>
         <li><a href="thingstodo.html">Things to Do</a></li>
-        <li><a href="thingstodo.html#lakes">Six Lakes &amp; Trails</a></li>
+        <li><a href="lakes-trails.html">Six Lakes &amp; Trails</a></li>
         <li><a href="thingstodo.html#birds">Birds &amp; Wildlife</a></li>
         <li><a href="prairie.html">The Prairie &amp; Boardwalk</a></li>
         <li><a href="about.html#flood-control">Flood Control</a></li>

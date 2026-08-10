@@ -1,24 +1,24 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- WWGC build v3.3 · 2026-07-05 -->
+<!-- WWGC build v4.6 · 2026-08-10 · News page: spotlight + card grid + flora fauna + press list; separate article pages for full stories -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News & Stories | Willow Waterhole Greenspace, Houston</title>
+<title>News &amp; Stories | Willow Waterhole Greenspace, Houston</title>
 <link rel="icon" type="image/png" href="/favicon.png">
-<meta name="description" content="Park news, conservation stories, and event recaps from Willow Waterhole, the people and wildlife that make this place special.">
+<meta name="description" content="Park news, conservation stories, and event updates from Willow Waterhole Greenspace Conservancy in southwest Houston.">
 <link rel="canonical" href="https://www.willowwaterhole.org/news.html">
 <meta name="robots" content="index, follow">
 <meta name="theme-color" content="#008444">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Willow Waterhole Greenspace Conservancy">
-<meta property="og:title" content="News & Stories | Willow Waterhole Greenspace, Houston">
-<meta property="og:description" content="Park news, conservation stories, and event recaps from Willow Waterhole, the people and wildlife that make this place special.">
+<meta property="og:title" content="News &amp; Stories | Willow Waterhole Greenspace, Houston">
+<meta property="og:description" content="Park news, conservation stories, and event updates from Willow Waterhole Greenspace Conservancy in southwest Houston.">
 <meta property="og:url" content="https://www.willowwaterhole.org/news.html">
 <meta property="og:image" content="https://www.willowwaterhole.org/images/boardwalk/boardwalk-prairie-curve.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="News & Stories | Willow Waterhole Greenspace, Houston">
-<meta name="twitter:description" content="Park news, conservation stories, and event recaps from Willow Waterhole, the people and wildlife that make this place special.">
+<meta name="twitter:title" content="News &amp; Stories | Willow Waterhole Greenspace, Houston">
+<meta name="twitter:description" content="Park news, conservation stories, and event updates from Willow Waterhole Greenspace Conservancy in southwest Houston.">
 <meta name="twitter:image" content="https://www.willowwaterhole.org/images/boardwalk/boardwalk-prairie-curve.jpg">
 <script type="application/ld+json">
 {
@@ -30,11 +30,18 @@
   "isPartOf": {"@type": "WebSite", "name": "Willow Waterhole Greenspace Conservancy", "url": "https://www.willowwaterhole.org/"}
 }
 </script>
-<!-- Google Analytics (GA4): paste the gtag snippet below this line when the site is live -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css?v=4.4">
+<link rel="stylesheet" href="css/styles.css?v=4.6">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYEP1S4L1W"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LYEP1S4L1W');
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -48,127 +55,188 @@
     <li><a href="events.html">Events</a></li>
     <li><a href="getinvolved.html">Get Involved</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="news.html" aria-current="page">News</a></li>
     <li><a class="donate" href="donate.html">Donate</a></li>
   </ul>
 </div></nav>
+
 <!-- HERO -->
 <header class="phero" id="main" style="min-height:42vh">
   <div class="phero-media" style="background:url('images/newsletter/blue-bonnets-and-lake.jpg') center/cover"></div>
   <div class="wrap">
     <div class="eyebrow">News &amp; Stories</div>
-    <h1>News &amp; Stories from the greenway.</h1>
-    <p>Park news, conservation stories, event recaps, and the people and wildlife that make this place special.</p>
+    <h1>Stories from the Waterhole.</h1>
+    <p>Park improvements, community milestones, conservation wins, and the people who make this place what it is.</p>
   </div>
 </header>
 
 <div class="divider" aria-hidden="true"><svg viewBox="0 0 1200 26" preserveAspectRatio="none">
   <line x1="0" y1="9" x2="1200" y2="9" stroke="#008444" stroke-width="3"/>
-  <path d="M0,18 C100,10 200,26 300,18 C400,10 500,26 600,18 C700,10 800,26 900,18 C1000,10 1100,26 1200,18" fill="none" stroke="#0063BE" stroke-width="3"/>
+  <path d="M0,18 C100,10 200,26 300,18 C700,10 800,26 900,18 C1000,10 1100,26 1200,18" fill="none" stroke="#0063BE" stroke-width="3"/>
 </svg></div>
 
-
-<!-- FEED -->
-<section>
+<!-- SPOTLIGHT -->
+<section style="padding:56px 0 0">
   <div class="wrap">
-    <div class="eyebrow-s">Latest</div>
-    <h2 class="big">What's Growing at the Waterhole</h2>
+    <div class="eyebrow-s" style="margin-bottom:16px">Featured</div>
+    <article class="news-spotlight">
+      <div class="news-spotlight-img">
+        <img src="images/news/colors-of-the-prairie-logo.png" alt="Colors of the Prairie chalk art festival — Willow Waterhole Greenspace Conservancy" width="900" height="500" loading="eager">
+      </div>
+      <div class="news-spotlight-body">
+        <span class="pdate">Coming This Fall &middot; November 7</span>
+        <h2>Colors of the Prairie: A New Tradition Begins</h2>
+        <p>This fall, Willow Waterhole hosts the inaugural Colors of the Prairie — a free chalk art festival celebrating the beauty of our native prairies, wetlands, birds, and wildlife. Artists transform the trails into colorful murals while visitors enjoy educational exhibits, native plant giveaways, food vendors, live music, and a Kids&rsquo; Chalk Zone.</p>
+        <p class="up-meta" style="margin-bottom:1.2rem">Saturday, November 7 &middot; 11:00 AM&ndash;4:00 PM &middot; Free admission</p>
+        <div class="news-btn-row">
+          <a class="btn btn-green" href="news/2026-11-colors-of-the-prairie.html">Learn More</a>
+          <a class="btn btn-green" href="https://forms.gle/GQURYEmguPSkpxeC7" rel="noopener">Artist Registration</a>
+          <a class="btn btn-green" href="https://forms.gle/pF7exURK9vZtUBaq9" rel="noopener">Vendor Registration</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- NEWS CARDS -->
+<section style="padding:56px 0">
+  <div class="wrap">
+    <div class="eyebrow-s" style="margin-bottom:24px">Latest News</div>
     <div class="feed">
-      <a class="post-card" href="news/2026-11-colors-of-the-prairie-chalk-art-festival.html">
-        <span class="imgwrap"><img src="images/events/chalkart.jpg" alt="Chalk artists creating large-scale artwork on the trail during a past festival" width="600" height="375" loading="lazy"></span>
+
+      <a class="post-card" href="news/2026-rooted-resilience.html">
+        <span class="imgwrap"><img src="images/events/donald-perkins-trail-open.jpg" alt="Community gathering at Willow Waterhole" width="600" height="375" loading="lazy"></span>
         <div class="b">
-          <span class="pdate">Coming This Fall</span>
-          <h3>Colors of the Prairie: Chalk Art Festival</h3>
-          <p>Artists transform the Willow Waterhole Greenway into a colorful outdoor gallery this November.</p>
+          <span class="pdate">Community Event &middot; August 29</span>
+          <h3>Rooted Resilience: A Night of Stories</h3>
+          <p>An evening of storytelling at Drop of the Creator — community members sharing how extreme weather and a changing Houston shape everyday life.</p>
           <span class="more">Read the story &rarr;</span>
         </div>
       </a>
+
+      <a class="post-card" href="news/2026-musicfest.html">
+        <span class="imgwrap"><img src="images/news/musicfest2026.png" alt="MusicFEST 2026 at Willow Waterhole" width="600" height="375" loading="lazy"></span>
+        <div class="b">
+          <span class="pdate">Community Event &middot; Spring 2026</span>
+          <h3>MusicFEST Returns for Its 12th Year</h3>
+          <p>A full day of free live music, family activities, and community spirit — plus a major announcement about the future of the Greenway.</p>
+          <span class="more">Read the story &rarr;</span>
+        </div>
+      </a>
+
+      <a class="post-card" href="news/2026-boardwalk-partners.html">
+        <span class="imgwrap"><img src="images/boardwalk/boardwalk-prairie-curve.jpg" alt="The Prairie Boardwalk curving through native grasses" width="600" height="375" loading="lazy"></span>
+        <div class="b">
+          <span class="pdate">Park Improvements &middot; 2026</span>
+          <h3>Celebrating the Partners Behind the Boardwalk</h3>
+          <p>A thank-you tour brought together the generous funders who made the Native Prairie Preserve Boardwalk a reality.</p>
+          <span class="more">Read the story &rarr;</span>
+        </div>
+      </a>
+
       <a class="post-card" href="news/2026-07-welcome-maya-houston.html">
         <span class="imgwrap"><img src="images/events/mayahouston.png" alt="Maya Houston, Impact Director at Willow Waterhole Greenspace Conservancy" width="600" height="375" loading="lazy"></span>
         <div class="b">
-          <span class="pdate">July 2026</span>
+          <span class="pdate">Organization News &middot; July 2026</span>
           <h3>Welcome Maya Houston as Impact Director</h3>
-          <p>Willow Waterhole welcomes veteran nonprofit leader Maya Houston as Impact Director, helping lead fundraising, partnerships, and the Conservancy's next chapter of growth.</p>
+          <p>Veteran nonprofit leader Maya Houston joins the Conservancy to lead fundraising, partnerships, and the next chapter of growth.</p>
           <span class="more">Read the story &rarr;</span>
         </div>
       </a>
-      <a class="post-card" href="news/2026-06-prairie-boardwalk-open.html">
-        <span class="imgwrap"><img src="images/boardwalk/boardwalk-prairie-curve.jpg" alt="The Prairie Boardwalk curving through native grasses" width="600" height="375" loading="lazy"></span>
-        <div class="b">
-          <span class="pdate">June 2026</span>
-          <h3>The Prairie Boardwalk Is Open</h3>
-          <p>A 1/3-mile concrete walk into one of the last coastal prairies in Texas, without a single footstep on the fragile ground itself.</p>
-          <span class="more">Read the story &rarr;</span>
-        </div>
-      </a>
+
       <a class="post-card" href="news/2026-05-texas-parks-wildlife-feature.html">
         <span class="imgwrap"><img src="images/general/tpw-magazine-cover.jpg" alt="Texas Parks &amp; Wildlife magazine" width="600" height="375" loading="lazy"></span>
         <div class="b">
-          <span class="pdate">May 2026</span>
+          <span class="pdate">In the News &middot; May 2026</span>
           <h3>Willow Waterhole Featured in Texas Parks &amp; Wildlife</h3>
-          <p>A first for the Conservancy: our story shared with Texas's outdoor community in the state's flagship outdoors magazine.</p>
-          <span class="more">Read the story &rarr;</span>
+          <p>Our story shared with Texas&rsquo;s outdoor community in the state&rsquo;s flagship outdoor magazine — a first for the Conservancy.</p>
+          <span class="more">Read the feature &rarr;</span>
         </div>
       </a>
-      <a class="post-card" href="news/2025-11-donald-perkins-trail.html">
+
+      <a class="post-card" href="news/2025-donald-perkins-trail.html">
         <span class="imgwrap"><img src="images/events/donald-perkins-trail-open.jpg" alt="Neighbors gathered at the Donald Perkins Trail dedication" width="600" height="375" loading="lazy"></span>
         <div class="b">
-          <span class="pdate">2025</span>
+          <span class="pdate">Park Improvements &middot; 2025</span>
           <h3>The Donald Perkins Trail Opens</h3>
           <p>A new trail connects the heart of Westbury to the greenway, honoring a dedicated public servant and city planner.</p>
           <span class="more">Read the story &rarr;</span>
         </div>
       </a>
+
     </div>
   </div>
 </section>
 
-<!-- FEATURED IN / RECENT COVERAGE -->
-<section>
+<!-- FLORA & FAUNA -->
+<section class="band">
   <div class="wrap">
-    <div class="eyebrow-s">Featured in</div>
-    <!-- TODO: Jay to replace placeholder logos with real logo files from each publication -->
-    <div class="press-strip">
-      <img src="images/press/tpw-magazine.png" alt="Texas Parks &amp; Wildlife">
-      <img src="images/press/houston-chronicle.png" alt="Houston Chronicle">
-      <img src="images/press/kinder-foundation.png" alt="Kinder Foundation">
-      <img src="images/press/community-impact.png" alt="Community Impact">
-      <img src="images/press/houston-audubon.png" alt="Houston Audubon">
-      <img src="images/press/buzz-magazines.png" alt="The Buzz Magazines">
-      <img src="images/press/forward-times.png" alt="Forward Times">
-    </div>
+    <div class="eyebrow-s">Flora &amp; Fauna</div>
+    <h2 class="big">Life at the Waterhole.</h2>
+    <p class="section-intro">Meet the plants and wildlife that make Willow Waterhole one of Houston&rsquo;s most remarkable urban ecosystems.</p>
+    <div class="feed" style="margin-top:2rem">
 
-    <h2 class="big" style="margin-top:2.8rem">Recent Coverage</h2>
-    <!-- TODO: Jay to supply publication dates where missing -->
+      <div class="post-card">
+        <span class="imgwrap"><img src="images/news/osprey.jpg" alt="Osprey perched at Willow Waterhole" width="600" height="375" loading="lazy"></span>
+        <div class="b">
+          <span class="pdate">Birds &amp; Wildlife</span>
+          <h3>Osprey</h3>
+          <p>If you hear a loud, musical chirping along the lakes, it is probably an osprey — one of the Greenway&rsquo;s most striking regular visitors. These remarkable birds hunt by hovering over the water and plunging feet-first to catch fish with their powerful talons.</p>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <span class="imgwrap"><img src="images/news/cottonwood-tree.jpg" alt="Cottonwood tree at Willow Waterhole" width="600" height="375" loading="lazy"></span>
+        <div class="b">
+          <span class="pdate">Native Plants</span>
+          <h3>Cottonwood Tree</h3>
+          <p>Cottonwoods grow up to 80 feet tall and turn a brilliant yellow each fall. Only female trees produce the familiar cotton-like seeds that drift through the air each spring. Their roots stabilize banks, their shade cools the water, and their leaves enrich the soil.</p>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <span class="imgwrap"><img src="images/news/mussel.jpg" alt="Freshwater mussel at Willow Waterhole" width="600" height="375" loading="lazy"></span>
+        <div class="b">
+          <span class="pdate">Aquatic Life</span>
+          <h3>Freshwater Mussels</h3>
+          <p>Quietly resting in the sediment of our lakes, freshwater mussels filter algae, recycle nutrients, and create habitat for invertebrates and small fish. A single adult can filter several gallons of water each day — and their presence signals a healthy ecosystem.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRESS COVERAGE -->
+<section style="padding:56px 0">
+  <div class="wrap">
+    <div class="eyebrow-s">In the Press</div>
+    <h2 class="big">Recent Coverage</h2>
     <ul class="coverage">
       <li><b>Texas Parks &amp; Wildlife</b><a href="https://tpwmagazine.com/digital/2026/jul/" rel="noopener">Urban Trails Feature</a><span class="cov-date">July 2026</span></li>
-      <li><b>Houston Chronicle</b><a href="https://www.houstonchronicle.com/lifestyle/home-garden/article/15M-project-to-bring-trails-fishing-pier-and-17083909.php" rel="noopener">How Willow Waterhole became a beautiful flood control greenspace</a></li>
-      <li><b>Community Impact</b><a href="https://communityimpact.com/bellaire-meyerland-west-university/development/new-amenities-advance-at-willow-waterhole-as-talks-continue-over-adjacent-music-venue/" rel="noopener">New amenities advance at Willow Waterhole</a></li>
-      <li><b>Kinder Foundation</b><a href="https://kinderfoundation.org/major-gifts/urban-green-space/willow-waterhole-greenway/" rel="noopener">Willow Waterhole Greenway</a></li>
+      <li><b>Houston Chronicle</b><a href="https://www.houstonchronicle.com/lifestyle/home-garden/article/15M-project-to-bring-trails-fishing-pier-and-17083909.php" rel="noopener">How Willow Waterhole became a beautiful flood control greenspace</a><span class="cov-date">April 2022</span></li>
+      <li><b>Community Impact</b><a href="https://communityimpact.com/bellaire-meyerland-west-university/development/new-amenities-advance-at-willow-waterhole-as-talks-continue-over-adjacent-music-venue/" rel="noopener">New amenities advance at Willow Waterhole</a><span class="cov-date">March 2023</span></li>
+      <li><b>Kinder Foundation</b><a href="https://kinderfoundation.org/major-gifts/urban-green-space/willow-waterhole-greenway/" rel="noopener">Willow Waterhole Greenway</a><span class="cov-date">2021</span></li>
       <li><b>The Buzz Magazines</b><a href="https://thebuzzmagazines.com/articles/2023/04/new-tune-willow-waterhole" rel="noopener">A new tune at Willow Waterhole</a><span class="cov-date">April 2023</span></li>
-      <li><b>Defender Network</b><a href="https://defendernetwork.com/news/local-state/houston-flood-control-success/" rel="noopener">Houston's Willow Waterhole: A model for flood control</a></li>
+      <li><b>Defender Network</b><a href="https://defendernetwork.com/news/local-state/houston-flood-control-success/" rel="noopener">Houston&rsquo;s Willow Waterhole: A model for flood control</a><span class="cov-date">2022</span></li>
     </ul>
-    <p style="margin-top:2.2rem;text-align:center"><a href="#main" style="color:var(--blue);font-weight:700;text-decoration:none">Back to top &uarr;</a></p>
   </div>
 </section>
 
-<!-- NEWSLETTER EVOLUTION -->
-<section class="band">
-  <div class="wrap-narrow" style="text-align:center">
-    <div class="eyebrow-s">Our Newsletter, Evolved</div>
-    <h2 class="big">From quarterly PDF to living stories.</h2>
-    <p style="color:#4b563f;margin-bottom:1rem">We're moving from a quarterly newsletter to an ongoing collection of stories you can read anytime, about the park, its wildlife, its people, and the work of protecting this place.</p>
-    <p style="color:#4b563f">Past newsletters remain available in <a href="https://www.willowwaterhole.org/pastnewsletter" rel="noopener">our archive</a>, and more stories from the Spring 2026 newsletter are on their way to this page.</p>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
+<!-- EMAIL SIGNUP -->
+<section class="news">
   <div class="wrap-narrow">
-    <h2>Stay in the loop.</h2>
-    <p>Follow us for new stories, park news, and what's coming up at the Waterhole.</p>
-    <a class="btn btn-white" href="https://www.facebook.com/willowwaterhole/" rel="noopener">Follow on Facebook</a>
+    <div class="eyebrow-s">Stay Connected</div>
+    <h2>Never miss what&rsquo;s happening.</h2>
+    <p>News, events, and updates from the Conservancy, straight to your inbox.</p>
+    <form class="nf" action="#" onsubmit="return false;">
+      <input type="email" placeholder="Your email address" aria-label="Email address" required>
+      <button type="submit" class="btn btn-green">Subscribe</button>
+    </form>
+    <p style="margin-top:1rem;font-size:.92rem;color:#6b7763">One or two emails each month. Unsubscribe anytime. Past newsletters in <a href="https://www.willowwaterhole.org/pastnewsletter" rel="noopener">our archive</a>.</p>
   </div>
 </section>
+
 <footer>
   <div class="wrap">
     <div class="fg">
@@ -195,7 +263,7 @@
         <li><a href="getinvolved.html">Volunteer</a></li>
         <li><a href="getinvolved.html#waiver">Volunteer Waiver</a></li>
         <li><a href="getinvolved.html#member">Become a Member</a></li>
-        <li><a href="news.html">News &amp; Stories</a></li>
+        <li><a href="news.html" aria-current="page">News &amp; Stories</a></li>
         <li><a href="donate.html">Donate</a></li>
       </ul></div>
     </div>
@@ -206,7 +274,6 @@
     </div>
   </div>
 </footer>
-
 <script src="js/main.js" defer></script>
 </body>
 </html>
