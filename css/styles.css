@@ -96,7 +96,7 @@ section{padding:78px 0}
 .intro h2{font-size:clamp(1.9rem,3.4vw,2.5rem);max-width:740px;margin:0 auto 1rem;line-height:1.25}
 .intro p{max-width:620px;margin:0 auto;color:#4b563f;font-size:1.22rem}
 .intro-photo{max-width:1100px;margin:38px auto 0;padding:0 24px}
-.intro-photo img{width:100%;height:auto;max-height:380px;object-fit:cover;display:block;border-radius:10px;box-shadow:0 18px 40px rgba(20,40,20,.18)}
+.intro-photo img{width:100%;height:auto;max-height:200px;object-fit:cover;display:block;border-radius:10px;box-shadow:0 18px 40px rgba(20,40,20,.18)}
 
 /* UPCOMING EVENTS — inline section, Arboretum-style */
 .upcoming{padding:56px 0 18px;background:#fff}
@@ -619,7 +619,7 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .jump-nav a:hover{color:var(--green);border-bottom-color:var(--line)}
 @media(max-width:780px){.nav{position:static}.jump-nav{top:0}}
 
-.qf-bar{display:flex;flex-wrap:wrap;gap:22px;background:#EEF5EA;border-radius:10px;padding:18px 24px;margin:1.8rem 0 2rem}
+.qf-bar{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;background:#EEF5EA;border-radius:10px;padding:18px 24px;margin:0 0 1.4rem}
 .qf-item{flex:1 1 140px}
 .qf-item b{display:block;font:800 .82rem/1 Nunito;letter-spacing:.02em;color:var(--green-d);margin-bottom:.3rem}
 .qf-item span{font-size:.98rem;color:var(--ink);font-weight:600}
@@ -641,9 +641,9 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 .marker-badge{width:28px;height:28px;border-radius:50%;background:#2D5016;color:#fff;font:800 .85rem/28px 'Nunito';text-align:center;flex:0 0 auto}
 .marker-label{font:800 .72rem/1 Nunito;letter-spacing:.02em;color:#6b7a60}
 
-.overview-map-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start;margin:1.8rem 0}
+.overview-map-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:44px;align-items:start;margin:1.8rem 0}
 .overview-map-grid>p{margin:0;color:var(--ink);max-width:52ch;line-height:1.8}
-.map-find-label{font:800 .74rem/1 Nunito;letter-spacing:.02em;color:var(--blue);margin-bottom:.6rem;display:block}
+.map-find-label{font:800 .8rem/1 Nunito;letter-spacing:.02em;color:var(--blue);margin-bottom:.6rem;display:block}
 .highlighted-map{position:relative;margin:0}
 .highlighted-map img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 8px 26px rgba(8,30,18,.14);display:block}
 .highlighted-map .marker-badge{position:absolute;top:12px;left:12px;box-shadow:0 3px 10px rgba(0,0,0,.35)}
@@ -708,16 +708,6 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
   .ev-feature-wide .up-img{min-height:220px}
 }
 
-/* v4.6 events page — Year-Round programs section */
-.ev-programs{margin-top:2rem;border-top:1px solid var(--line)}
-.ev-program-row{display:grid;grid-template-columns:220px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);align-items:start}
-.ev-program-row h3{font-size:1.05rem;margin-bottom:4px;color:var(--ink)}
-.ev-program-when{font:700 .8rem/1.3 Nunito;color:var(--blue);letter-spacing:.03em}
-.ev-program-row p{font-size:.97rem;color:#4b563f;line-height:1.6;margin:0}
-.ev-program-row p a{color:var(--blue)}
-@media(max-width:640px){
-  .ev-program-row{grid-template-columns:1fr;gap:8px}
-}
 
 /* v4.6 events — schedule label inside benefit cards */
 .benefit .ev-when{display:block;font:700 .78rem/1 Nunito;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem}
