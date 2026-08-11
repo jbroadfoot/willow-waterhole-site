@@ -200,7 +200,13 @@ section{padding:78px 0}
 .lk-more{display:block;color:var(--blue);font-weight:700;font-size:.86rem;margin-top:.45rem}
 .lk .lkimg{aspect-ratio:5/3;overflow:hidden;border-radius:6px}
 .lk .lkimg img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
-@media(max-width:860px){.lk{grid-template-columns:38px 1fr;grid-template-rows:auto auto}.lk .no{grid-row:1}.lk .lk-head{grid-row:1}.lk p{grid-column:1/-1;padding-left:0;margin-top:.5rem}.lk .lkimg{display:none}}
+@media(max-width:860px){
+  .lk{grid-template-columns:38px 1fr;grid-template-rows:auto auto}
+  .lk .no{grid-column:1;grid-row:1;align-self:center}
+  .lk .lk-head{grid-column:2;grid-row:1}
+  .lk p{grid-column:1/-1;grid-row:2;margin-top:.4rem}
+  .lk .lkimg{display:none}
+}
 
 /* Detailed lake cards (explore.html) */
 .lk-detail{display:grid;grid-template-columns:340px 1fr;gap:36px;align-items:center;padding:32px 0;border-top:1px solid #D8D0BD;scroll-margin-top:90px}
@@ -615,10 +621,10 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
 
 /* v3.6 lakes & trails page */
 .jump-nav{position:sticky;top:86px;z-index:50;background:#fff;border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(8,30,18,.06)}
-.jump-nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:0 26px;justify-content:center}
+.jump-nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:0 16px;justify-content:flex-start}
 .jump-nav a{flex:0 0 auto;padding:16px 18px;font:700 .97rem/1 Nunito;color:#54604b;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent}
 .jump-nav a:hover{color:var(--green);border-bottom-color:var(--line)}
-@media(max-width:780px){.nav{position:static}.jump-nav{top:0}}
+@media(max-width:780px){.jump-nav{top:86px}}
 
 .qf-bar{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px;background:#EEF5EA;border-radius:10px;padding:18px 24px;margin:0 0 1.4rem}
 .qf-item{flex:1 1 140px}
@@ -740,3 +746,37 @@ footer a[href^="tel"],footer a[href^="mailto"]{color:#bcd0ad}
   .news-spotlight{grid-template-columns:1fr}
   .news-item{grid-template-columns:1fr}
 }
+
+
+/* ── Mobile fixes pass 2026-08-10 ── */
+@media(max-width:640px){.benefits .grid{grid-template-columns:1fr;gap:24px}}
+@media(max-width:640px){section{padding:54px 0}}
+@media(max-width:520px){.wrap,.wrap-narrow{padding-left:20px;padding-right:20px}}
+@media(max-width:520px){
+  .up-module{padding:22px 18px}
+  .up-list{padding:20px 18px}
+  .up-list li{flex-direction:column;gap:5px}
+  .up-date{width:auto;flex-basis:auto}
+}
+@media(max-width:768px){
+  .split{grid-template-columns:1fr;gap:28px}
+  .split [style*="padding-left:26px"]{padding-left:0!important}
+  .split [style*="padding-right:26px"]{padding-right:0!important}
+}
+@media(max-width:700px){
+  .species .grid{grid-template-columns:1fr}
+}
+@media(max-width:520px){.ev-list{padding:22px 18px}}
+@media(max-width:520px){
+  .news-spotlight-img{min-height:220px}
+  .news-spotlight-body{padding:26px 22px}
+}
+.f-tl{display:inline-block;padding:6px 4px}
+.f-social a{display:inline-block;padding:6px 4px}
+@media(max-width:380px){.actgrid{grid-template-columns:repeat(2,1fr);gap:12px}}
+.involve-split{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:768px){.involve-split{grid-template-columns:1fr;gap:28px}}
+@media(max-width:768px){.involve-split img{max-height:300px;width:100%;object-fit:cover;border-radius:10px}}
+.early-gallery{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-items:start}
+@media(max-width:800px){.early-gallery{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:520px){.early-gallery{grid-template-columns:repeat(2,1fr)}}
