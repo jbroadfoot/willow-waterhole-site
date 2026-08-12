@@ -1,0 +1,37 @@
+WWGC build v5.5
+2026-08-12
+News-consistency pass — remaining audit findings resolved:
+
+1. FOOTERS UNIFIED: 6 of 7 news articles had stripped-down 1-2 column footers with no seal, no
+   Visit/Explore columns, no translate row. All 7 now carry the full canonical footer (logo + Visit +
+   Explore + Connect columns, 4-language translate row, Candid Platinum seal, TripAdvisor) with correct
+   ../ subfolder paths. Matches the 13 main pages.
+
+2. ARTICLE SCHEMA ADDED: 6 of 7 articles were missing JSON-LD Article structured data (only TPW had it).
+   Added accurate per-article schema (own headline, description, canonical URL, image, datePublished) to
+   all six. All 7 now have valid, parseable Article schema — Google News / rich-result eligible.
+
+3. NAV FIXED: TPW article was missing the "News" nav item (6 items vs 7 everywhere). Added; all 7 now match.
+
+4. TITLE NORMALIZED: TPW <title> was 75 chars (Google truncates ~60). Shortened to 53:
+   "Featured in Texas Parks & Wildlife | Willow Waterhole".
+
+5. SITEMAP: audit flagged homepage as missing, but this was a FALSE ALARM — sitemap correctly lists the
+   root path <loc>.../</loc> (priority 1.0), which is the proper way to list a homepage (not /index.html).
+   No change needed.
+
+Build comments bumped to v5.5 on all 7 news articles (content changed). Cache-bust ?v=5.5 across all 20 pages.
+
+=========================================================================
+FULL AUDIT NOW CLEARED. Status of all findings:
+- Trail mileage inconsistency ............. FIXED (v5.4)
+- Stats-bar copy (islands/pier/$12M) ...... FIXED (v5.3)
+- News lede oversized ..................... FIXED (v5.2)
+- News footers inconsistent ............... FIXED (v5.5)
+- News articles missing schema ............ FIXED (v5.5)
+- TPW nav missing News .................... FIXED (v5.5)
+- TPW title too long ...................... FIXED (v5.5)
+- Homepage in sitemap ..................... was already correct (false alarm)
+
+Strong baseline confirmed earlier (unchanged): 1 h1/page, all alt text present, lang+viewport everywhere,
+canonical+OG+meta on every page, thorough 301 redirects, security headers, zero broken image refs, GA sitewide.
