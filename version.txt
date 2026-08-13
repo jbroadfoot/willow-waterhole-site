@@ -1,37 +1,27 @@
-WWGC build v5.5
+WWGC build v5.6
 2026-08-12
-News-consistency pass — remaining audit findings resolved:
+Events + Anniversary refinements:
 
-1. FOOTERS UNIFIED: 6 of 7 news articles had stripped-down 1-2 column footers with no seal, no
-   Visit/Explore columns, no translate row. All 7 now carry the full canonical footer (logo + Visit +
-   Explore + Connect columns, 4-language translate row, Candid Platinum seal, TripAdvisor) with correct
-   ../ subfolder paths. Matches the 13 main pages.
+ANNIVERSARY (anniversary.html):
+- Early-photo gallery was 5 images in one row (repeat(5,1fr)) — too small to see. Now 6 images in
+  2 rows of 3 (repeat(3,1fr)), each ~66% larger. Added "Music in the Park (2011)" as the 6th image
+  (new file images/anniversary/music-in-the-park-2011.jpg, optimized from 1.6MB/3624px to 146KB/1200px).
 
-2. ARTICLE SCHEMA ADDED: 6 of 7 articles were missing JSON-LD Article structured data (only TPW had it).
-   Added accurate per-article schema (own headline, description, canonical URL, image, datePublished) to
-   all six. All 7 now have valid, parseable Article schema — Google News / rich-result eligible.
+EVENTS (events.html):
+- Featured area now shows TWO cards side by side: Colors of the Prairie (flagship) + Family Fishing
+  Clinic (was buried in the list). New .ev-feature-grid (2-col, stacks on mobile). Was one wide card.
+- Added small muted category tags to every event in the list (Birding / Volunteer / Family / Festival /
+  Fundraiser Walk / Community) — text pills, one subtle tint each, no busy rainbow. New .ev-tag CSS.
+- Removed the .ev-row:hover slide/border movement (desktop-only, didn't aid comprehension).
 
-3. NAV FIXED: TPW article was missing the "News" nav item (6 items vs 7 everywhere). Added; all 7 now match.
+IMAGE REDUNDANCY (audit finding, informational):
+- donald-perkins-trail-open.jpg was the most-reused photo (events hero + donate + getinvolved + news x2 +
+  its article). Events hero left unchanged for now per your call (no current library image fits events).
+- Lakes photos reappearing on Lakes & Trails + Things to Do is expected (same subjects, different framing).
 
-4. TITLE NORMALIZED: TPW <title> was 75 chars (Google truncates ~60). Shortened to 53:
-   "Featured in Texas Parks & Wildlife | Willow Waterhole".
+FLAGS (need your eyes — can't verify image contents from here):
+- Family Fishing card uses images/activities/pier2.jpg (picked by filename). Swap if it's not a fishing shot.
+- Family Fishing card links to Eventbrite (no article exists); Colors links to its news article. Cards click differently.
 
-5. SITEMAP: audit flagged homepage as missing, but this was a FALSE ALARM — sitemap correctly lists the
-   root path <loc>.../</loc> (priority 1.0), which is the proper way to list a homepage (not /index.html).
-   No change needed.
-
-Build comments bumped to v5.5 on all 7 news articles (content changed). Cache-bust ?v=5.5 across all 20 pages.
-
-=========================================================================
-FULL AUDIT NOW CLEARED. Status of all findings:
-- Trail mileage inconsistency ............. FIXED (v5.4)
-- Stats-bar copy (islands/pier/$12M) ...... FIXED (v5.3)
-- News lede oversized ..................... FIXED (v5.2)
-- News footers inconsistent ............... FIXED (v5.5)
-- News articles missing schema ............ FIXED (v5.5)
-- TPW nav missing News .................... FIXED (v5.5)
-- TPW title too long ...................... FIXED (v5.5)
-- Homepage in sitemap ..................... was already correct (false alarm)
-
-Strong baseline confirmed earlier (unchanged): 1 h1/page, all alt text present, lang+viewport everywhere,
-canonical+OG+meta on every page, thorough 301 redirects, security headers, zero broken image refs, GA sitewide.
+Build comments bumped v5.6 on anniversary.html + events.html. Cache-bust ?v=5.6 across all 20 pages.
+Still open from earlier: Events hero photo (deferred — no fitting library image).
