@@ -44,5 +44,7 @@
 /birds.html                   /thingstodo.html#birds 301
 /partners.html                /about.html#partners  301
 
-# NOTE (pre-cutover dependencies, keep on Squarespace until replaced):
-# /membership, /pastnewsletter, /annualfund — linked absolutely in site content
+# Former pre-cutover dependencies — now resolved (v6.7)
+/membership                   /membership.html      301
+/annualfund                   /donate.html          301
+/pastnewsletter               /newsletters.html     301

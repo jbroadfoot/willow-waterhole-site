@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- WWGC build v5.5 &middot; 2026-08-12 &middot; News consistency: full footer unified across all 7 articles, JSON-LD Article schema added, nav "News" item + title normalized -->
+<!-- WWGC build v6.9 &middot; 2026-08-16 &middot; Greenway Stories: four evergreen articles added, sourced from the legacy Squarespace flood-control and prairie pages. New section on news.html; hero "Park improvements" -> "Greenway improvements"; .photo-credit, .story-note and .imgwrap--logo added to css/styles.css; sitemap updated. v6.8 &middot; 2026-08-16 &middot; Membership links repointed to membership.html (23); 20 proper-name uses of "greenway" capitalized (generic uses left lowercase); Donate names Willow Waterhole Greenspace Conservancy as recipient; membership Join heading no longer duplicates the Bloomerang form heading; text-wrap balance/pretty and .nw added to css/styles.css; root styles.css duplicate deleted. v6.7 &middot; 2026-08-15 &middot; Squarespace cutover: new membership.html replaces the old /membership page; donate.html bottom CTA now targets the on-page #donate-form; news.html dead newsletter-archive link removed; FAQ membership answer points to membership.html; sitemap and _redirects updated. Zero visitor-facing links to the old site remain. about.html mission restyled (Option A). v6.6 &middot; 2026-08-15 &middot; Round 5 consistency cleanup: proper-name capitalization of Greenway, repetition removed from the homepage news block and the Westbury card, TPW attribution reworded, and the standalone lead paragraphs removed from Get Involved and Donate. v6.4 &middot; 2026-08-15 &middot; Round 4: anniversary hero and 2001 timeline reworded off "built by the community"; boardwalk article trail figure corrected to about eight miles ADA-accessible; Get Involved hero; donate.html Park -> Greenway (3); four JSON-LD place descriptions Greenspace -> Greenway. v6.3 &middot; 2026-08-15 &middot; Round 3: terminology and metadata cleanup. Visible "park" changed to "Greenway" only where it stands in for the proper name; page titles, og/twitter titles and the two JSON-LD place names changed Willow Waterhole Greenspace -> Willow Waterhole Greenway. Meta descriptions unchanged (SEO surface). Conservancy name untouched. v6.2 &middot; 2026-08-15 &middot; Footer brand column rebuilt as an identity card: separate Willow Waterhole Greenway and Willow Waterhole Greenspace Conservancy blocks, each with a white name line and a one-line description, replacing the single dense paragraph. New .f-ident / .f-ident-name classes; .fg img bottom margin 12px -> 18px. Cache-bust ?v=5.7 -> ?v=6.2. -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Celebrating the Boardwalk Partners | Willow Waterhole</title>
@@ -35,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/styles.css?v=5.7">
+<link rel="stylesheet" href="../css/styles.css?v=6.9">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYEP1S4L1W"></script>
 <script>
@@ -66,7 +66,7 @@
   <div class="wrap-narrow" style="padding-top:56px">
     <a href="../news.html" style="color:var(--blue);font:700 .9rem/1 Nunito;text-decoration:none">&larr; News &amp; Stories</a>
     <div style="margin-top:28px">
-      <span class="pdate">Park Improvements &middot; April 2026</span>
+      <span class="pdate">Greenway Improvements &middot; April 2026</span>
       <h1 style="margin:.5rem 0 1.2rem">Celebrating the Partners Behind the Boardwalk Trail</h1>
       <img src="../images/boardwalk/boardwalk-prairie-curve.jpg" alt="The Prairie Boardwalk curving through native grasses at Willow Waterhole" width="900" height="500" loading="eager" style="width:100%;height:auto;border-radius:8px;margin-bottom:2rem;display:block;object-fit:cover;max-height:420px">
       <p class="lead">On April 8, the Willow Waterhole Greenspace Conservancy hosted a thank-you tour for the organizations whose generosity made the new Boardwalk Trail at the Native Prairie Preserve a reality.</p>
@@ -75,7 +75,7 @@
       <p>The Boardwalk Trail allows visitors to experience a rare native coastal prairie, of which only 1% remains today due to urbanization and agricultural use. When the site was identified by HCFCD, more than 265 native plant species were found within the 15-acre preserve, including one endangered species (Texas Prairie Dawn) and two threatened species (Houston Camphor Daisy and Texas Windmill Grass).</p>
       <p>The ADA-accessible trail features educational signage, a viewing platform, a resting area, and an outdoor classroom, allowing visitors to experience the prairie without a single footstep on its fragile ground.</p>
       <h2>Completing a Larger Vision</h2>
-      <p>The Boardwalk Trail completes a series of major accessibility improvements made possible by the Conservancy&rsquo;s $12 million Discover Your Greenway capital campaign. Other projects included about 9 miles of hiking and biking trails, four new parking areas, five safe street crossings, a fishing pier, wayfinding signage, park benches and tables, security enhancements, and hundreds of new trees.</p>
+      <p>The Boardwalk Trail completes a series of major accessibility improvements made possible by the Conservancy&rsquo;s $12 million Discover Your Greenway capital campaign. Other projects included about eight miles of ADA-accessible trails, four new parking areas, five safe street crossings, a fishing pier, wayfinding signage, benches and tables, security enhancements, and hundreds of new trees.</p>
       <p>Thank you to all the donors, volunteers, advisors, community leaders, and contractors who made these projects a reality.</p>
       <p style="margin-top:2.5rem"><a href="../news.html" style="color:var(--blue);font-weight:700;text-decoration:none">&larr; Back to News &amp; Stories</a></p>
     </div>
@@ -87,7 +87,14 @@
     <div class="fg">
       <div>
         <img src="../images/general/wwgclargelogo.png" alt="Willow Waterhole Greenspace Conservancy" width="180" height="43" loading="lazy">
-        <p>A 291-acre urban greenway with six lakes, miles of trails, and a native coastal prairie preserve in southwest Houston. A 501(c)(3) nonprofit since 2001.</p>
+        <div class="f-ident">
+          <span class="f-ident-name">Willow Waterhole Greenway</span>
+          <p>291 acres of lakes, trails, and native coastal prairie in southwest Houston.</p>
+        </div>
+        <div class="f-ident">
+          <span class="f-ident-name">Willow Waterhole Greenspace Conservancy</span>
+          <p>The nonprofit working with public and community partners to conserve, enhance, and activate the Greenway.</p>
+        </div>
         <p style="margin-top:.7rem">5300 Dryad Drive, Houston TX 77035<br><a href="tel:2819901459">(281) 990-1459</a> &middot; <a href="mailto:info@willowwaterhole.org">info@willowwaterhole.org</a></p>
       </div>
       <div><div class="f-col-head">Visit</div><ul>
@@ -107,7 +114,7 @@
       <div><div class="f-col-head">Connect</div><ul>
         <li><a href="../getinvolved.html">Volunteer</a></li>
         <li><a href="../getinvolved.html#waiver">Volunteer Waiver</a></li>
-        <li><a href="../getinvolved.html#member">Become a Member</a></li>
+        <li><a href="../membership.html">Become a Member</a></li>
         <li><a href="../news.html">News &amp; Stories</a></li>
         <li><a href="../donate.html">Donate</a></li>
       </ul></div>

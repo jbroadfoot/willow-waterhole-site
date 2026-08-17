@@ -1,27 +1,579 @@
-WWGC build v5.6
-2026-08-12
-Events + Anniversary refinements:
+WWGC build v6.9
+2026-08-16
+Round 2: Conservancy visibility. Bill Burhans' general comment was that the word
+Conservancy is rarely seen, which hurts promotion and fundraising. This round names
+the organization in the four places a visitor is most likely to be deciding whether
+to support it, corrects the remaining "built by the community" claims, and adds the
+footer line held back from v6.0.
 
-ANNIVERSARY (anniversary.html):
-- Early-photo gallery was 5 images in one row (repeat(5,1fr)) — too small to see. Now 6 images in
-  2 rows of 3 (repeat(3,1fr)), each ~66% larger. Added "Music in the Park (2011)" as the 6th image
-  (new file images/anniversary/music-in-the-park-2011.jpg, optimized from 1.6MB/3624px to 146KB/1200px).
+ALL 20 HTML FILES CHANGED, PLUS styles.css. Six pages have content edits; the other
+fourteen change only in the footer. styles.css gains 3 new rules and one margin change,
+so the cache-bust string moves ?v=5.7 -> ?v=6.2 across all 20 pages.
 
-EVENTS (events.html):
-- Featured area now shows TWO cards side by side: Colors of the Prairie (flagship) + Family Fishing
-  Clinic (was buried in the list). New .ev-feature-grid (2-col, stacks on mobile). Was one wide card.
-- Added small muted category tags to every event in the list (Birding / Volunteer / Family / Festival /
-  Fundraiser Walk / Community) — text pills, one subtle tint each, no busy rainbow. New .ev-tag CSS.
-- Removed the .ev-row:hover slide/border movement (desktop-only, didn't aid comprehension).
+CONSERVANCY NAMED
+index.html
+- Get Involved subhead REPLACED, not added to. Was "Willow Waterhole is free to everyone
+  because of neighbors who give their time and support." Now "Willow Waterhole Greenspace
+  Conservancy brings together volunteers, members, donors, and partners to help care for
+  and improve the Greenway." The two lines said overlapping things and stacking them made
+  the block top-heavy.
+getinvolved.html
+- Lead now reads "are supported by Willow Waterhole Greenspace Conservancy and community
+  volunteers", establishing the full organization name once near the top. Keeps the v6.0
+  accuracy correction intact.
+donate.html
+- Lead rewritten to name the recipient: "Your gift to Willow Waterhole Greenspace
+  Conservancy supports conservation, education, community programs, visitor improvements,
+  and stewardship across the Greenway." No longer implies the Conservancy maintains all
+  park infrastructure. The opening hook ("and it stays that way because of people who care
+  about this place") was kept; it is the reason to give and this is the page where that
+  matters most.
 
-IMAGE REDUNDANCY (audit finding, informational):
-- donald-perkins-trail-open.jpg was the most-reused photo (events hero + donate + getinvolved + news x2 +
-  its article). Events hero left unchanged for now per your call (no current library image fits events).
-- Lakes photos reappearing on Lakes & Trails + Things to Do is expected (same subjects, different framing).
+FOOTER (all 20 files + styles.css)
+- The brand column is now an identity card, not body copy. v5.6 had one dense paragraph;
+  an interim draft merged the Conservancy line into it and produced seven unbroken lines
+  next to three scannable nav columns. Now two labelled blocks:
 
-FLAGS (need your eyes — can't verify image contents from here):
-- Family Fishing card uses images/activities/pier2.jpg (picked by filename). Swap if it's not a fishing shot.
-- Family Fishing card links to Eventbrite (no article exists); Colors links to its news article. Cards click differently.
+    Willow Waterhole Greenway
+    291 acres of lakes, trails, and native coastal prairie in southwest Houston.
 
-Build comments bumped v5.6 on anniversary.html + events.html. Cache-bust ?v=5.6 across all 20 pages.
-Still open from earlier: Events hero photo (deferred — no fitting library image).
+    Willow Waterhole Greenspace Conservancy
+    The nonprofit working with public and community partners to conserve, enhance, and
+    activate the Greenway.
+
+- Fixes an ambiguity in the v5.6 copy, which read "A 291-acre urban greenway... A 501(c)(3)
+  nonprofit since 2001" and could be taken to mean the Greenway is the nonprofit. Place and
+  organization are now named and defined separately.
+- Present tense throughout. WWGC is described as currently operating.
+- NEW CSS (4 lines, added beside the existing footer block):
+    .f-ident{margin-bottom:1.1rem}
+    .f-ident-name{display:block;color:#fff;font-weight:800;font-size:.95rem;line-height:1.35;
+                  margin-bottom:.2rem}
+    .f-ident p{line-height:1.5}
+  and .fg img margin-bottom 12px -> 18px, for separation under the logo. That selector only
+  matches the footer logo, so nothing else on the site moves.
+- Name lines are white (#fff) against #bcd0ad body text. Normal case, not uppercase, so they
+  do not read as a fourth column header alongside VISIT / EXPLORE / CONNECT.
+- FIRST CSS CHANGE SINCE v5.6, so the cache-bust string moved ?v=5.7 -> ?v=6.2 on all 20 pages.
+- "501(c)(3)" intentionally not repeated here. The fbase line at the bottom of the same footer
+  already reads "A 501(c)(3) nonprofit organization"; v5.6 stated it twice.
+- The logo image also reads "Willow Waterhole Greenspace Conservancy". The name repeats as text
+  by choice: people do not read logos, and this is the only crawlable instance of the name in
+  the footer.
+- NOTE: the Greenway description says "291 acres of lakes, trails, and native coastal prairie".
+  It no longer states SIX lakes or "miles of" trails. Six lakes is a locked fact and a concrete
+  hook. One-word fix if wanted: "291 acres of six lakes, miles of trails, and native coastal
+  prairie in southwest Houston."
+- There is no build script. The footer is hardcoded in three variants: 12 root pages, news.html
+  (identical but for aria-current), and 7 news articles (../ relative paths). All three verified
+  identical within their group.
+
+"BUILT BY THE COMMUNITY" CORRECTED
+about.html
+- Hero: "one of Houston's most remarkable parks, built by the community, for the community"
+  -> "one of Houston's most remarkable urban greenways, shaped by 25 years of community
+  vision and stewardship."
+- History p1: "build a major public park on top of working flood infrastructure" ->
+  "create a major public greenway on working flood-control infrastructure." Kept "on"
+  rather than "alongside" so the following clause, "let one piece of ground do two things
+  at once", still makes sense. Alongside would put them side by side.
+- History p2: "made it real" -> "helped shape what visitors experience today", and the
+  trailing "built by the people who live beside it" removed.
+
+"MOST REMARKABLE PARKS" -> "MOST REMARKABLE URBAN GREENWAYS" (3 files)
+This line appears in three places and had to move together or the same signature sentence
+would read three different ways.
+  about.html       hero paragraph
+  anniversary.html H1
+  index.html       anniversary teaser (.anniv-sub)
+
+PARK -> GREENWAY (2 edits, the siblings flagged in v6.0)
+thingstodo.html
+- Turtle Bridge card: "The park's most loved spot" -> "The Greenway's most loved spot"
+- Roseate Spoonbill card: "The park's showstopper" -> "The Greenway's showstopper"
+
+STILL DELIBERATELY UNCHANGED
+- All metadata. <title>, meta description, og:/twitter: tags and schema keep "park"
+  language. These are search surfaces. Note that all 49 bare "Willow Waterhole Greenspace"
+  strings live in metadata only; body copy has zero. Nothing to fix there.
+- "Park Map" in nav, footer, buttons and the "On the Park Map" lake markers.
+- "Park Details" headings on lakes-trails.html.
+- Generic category use elsewhere: "a different kind of Houston park", "urban park".
+- Proper nouns: Texas Parks & Wildlife, Houston Parks Board, Memorial Park Conservancy.
+- Schema.org "@type": "Park".
+- Anything about parking a vehicle.
+
+STILL OPEN (Round 3, blocked on Bill)
+- Scout Lake loop shows 0.4 mi; confirmed per-lake figure is 0.5.
+- "Ellis Island" in the Westbury trail list is not on the confirmed named-trail list.
+- 2024 accessibility milestone for the anniversary.html timeline (four open questions).
+- Breakfast spots for visit.html: New York Bagel Shop, IHOP, First Watch.
+- West side of Triangle Lake.
+- Westbury Lake loop reads 2.2 mi while the stats bar says 3.5 miles of trails at Westbury.
+  Loop vs total, probably not a conflict, but worth confirming.
+
+KNOWN DOC ERROR, NOT YET FIXED
+- README.md states pages are "generated from a template to keep nav/footer identical."
+  They are not; there is no build step. This is what made the footer look like a one-line
+  change when it was actually 20 files in 3 variants. Worth a two-line correction.
+
+
+================================================================================
+ROUND 3 (v6.3) -- terminology and metadata cleanup
+================================================================================
+
+A. VISIBLE "PARK" -> "GREENWAY" (12 edits, 5 files)
+Only where "park" was standing in as the proper name for Willow Waterhole.
+  visit.html        "Park hours: Dawn to Dusk" -> "Greenway hours"
+                    "Free parking throughout the park" -> "the Greenway"
+                    "Please help keep the park clean" -> "the Greenway clean"
+                    "Dogs are welcome throughout the park." -> "the Greenway."
+  getinvolved.html  "beauty of the park" -> "of the Greenway"
+                    "have shaped this park" -> "have shaped the Greenway"
+                    "keeps this park free and growing" -> "keeps the Greenway"
+                    button "Support the Park" -> "Support the Greenway"
+  about.html        "The team behind the park." -> "behind the Greenway."
+  lakes-trails.html "recognizable features of the Park" -> "of the Greenway"
+                    "A defining feature of the park" -> "of the Greenway"
+  404.html          "The park, however, is very real." -> "The Greenway,"
+
+NEWS CATEGORY (4 instances, 3 files)
+  "Park Improvements" -> "Greenway Improvements" in news.html (x2),
+  news/2025-donald-perkins-trail.html, news/2026-boardwalk-partners.html.
+
+B. STILL UNCHANGED
+  Park Map; "a different kind of Houston park"; comparisons to other Houston parks;
+  FAQ questions in natural visitor language ("Is the park accessible?"); Texas Parks &
+  Wildlife; Houston Parks Board; Memorial Park Conservancy; parking references;
+  schema.org "@type": "Park".
+
+C+D. "WILLOW WATERHOLE GREENSPACE" -> "WILLOW WATERHOLE GREENWAY" (43 instances)
+Applies to the place name only. "Willow Waterhole Greenspace Conservancy" untouched
+in all 16 places it appears.
+  17  <title> tags -- 13 root pages plus 4 news articles (welcome-maya-houston,
+      colors-of-the-prairie, musicfest, rooted-resilience). The other 3 articles
+      already read "| Willow Waterhole".
+  13  og:title
+  13  twitter:title
+   2  JSON-LD "name" (about.html, index.html). "@type": "Park" kept.
+
+CORRECTION TO THE v6.3 NOTE ABOVE
+  Those 4 remaining instances were JSON-LD "description" fields, not <meta name=
+  "description"> tags. No meta description ever contained the bare place name. All
+  four JSON-LD descriptions were changed in v6.4 (see Round 4 below).
+  Worth noting: no page title contains the word "park" at all, so the titles were
+  never carrying the "parks in Houston" search intent -- the descriptions are.
+
+E. ABOUT DESCRIPTION (3 instances: meta, og, twitter)
+  Was: "...behind Willow Waterhole, a 291-acre greenway built by the community since
+  2001." That conflicted with the Round 2 correction to the visible page copy.
+  Now: "The story, mission, flood-control function, team, and partners behind Willow
+  Waterhole Greenway, a 291-acre urban greenspace shaped by community stewardship."
+  Avoids "25 years" so it does not go stale after the anniversary year.
+
+2024 ANNIVERSARY MILESTONE
+  anniversary.html -- inserted into the "From plan to place" timeline between 2020 and
+  2025, which previously had a five-year gap:
+  "2024: Accessibility -- $12 million in improvements added ADA trails, parking, five
+  safe street crossings, a fishing pier, trees, and security upgrades."
+
+EXPLORE THE NEIGHBORHOOD -- all three cards alphabetized (visit.html)
+  Coffee & Breakfast   Fioza Cafe, First Watch, IHOP, New York Bagel Shop,
+                       Tapester's Grill   (3 new entries added)
+  Local Favorites      A Drop of the Creator, Annie's Hamburgers, Lo Nuevo de Jalisco,
+                       The Hungry Farmer BBQ
+  Picnic & Essentials  Academy Sports + Outdoors, Foodarama, Kroger
+  Sorted literally on the first visible character. "The Hungry Farmer BBQ" files under
+  T and "A Drop of the Creator" under A, because visitors scan the first letter they
+  see rather than applying library rules.
+
+FLAGGED, NOT CHANGED -- needs a decision
+  anniversary.html timeline, 2001 entry, still reads "build a major public park on top
+  of new flood-control basins." Round 2 changed the identical sentence on about.html to
+  "create a major public greenway on working flood-control infrastructure." The same
+  historical claim now reads two different ways on two pages. Not touched here because
+  it was not on the Round 3 list.
+
+STILL OPEN -- blocked on Bill
+  Scout Lake loop shows 0.4 mi; confirmed per-lake figure is 0.5.
+  "Ellis Island" in the Westbury trail list is not on the confirmed named-trail list.
+  West side of Triangle Lake.
+  Westbury Lake loop reads 2.2 mi while the stats bar says 3.5 miles of trails there.
+
+
+================================================================================
+ROUND 4 (v6.4) -- final Bill Burhans pass
+================================================================================
+
+anniversary.html
+- Hero: "Look what the community built." -> "Look what a shared vision made possible."
+  Last remaining instance of the "built by the community" claim Bill flagged.
+- 2001 timeline entry: "founds the Conservancy with a bold idea: build a major public
+  park on top of new flood-control basins" -> "founded the Conservancy with a bold idea:
+  create a major public greenway on new flood-control infrastructure." This closes the
+  inconsistency flagged in v6.3, where about.html and anniversary.html told the same
+  founding story two different ways. Tense also corrected to past.
+
+news/2026-boardwalk-partners.html
+- "about 9 miles of hiking and biking trails" -> "about eight miles of ADA-accessible
+  trails". The 9-mile figure is the total; 8 is the ADA-accessible portion, and this
+  sentence is describing the accessibility project specifically.
+- "park benches and tables" -> "benches and tables".
+
+getinvolved.html
+- Hero: "Willow Waterhole is free to everyone because of neighbors..." -> "Willow
+  Waterhole thrives because of neighbors..."
+
+donate.html (3 edits)
+- "Care for the Park" -> "Care for the Greenway"
+- "support the park's most pressing needs right now" -> "the Greenway's"
+- "Park Care" -> "Greenway Care"
+
+JSON-LD PLACE DESCRIPTIONS (4 files)
+Bare "Willow Waterhole Greenspace" as the place name, now "Willow Waterhole Greenway":
+  events.html        "Events, news, and stories from..."
+  lakes-trails.html  "A lake-by-lake guide to the six lakes and trails at... in Houston."
+  visit.html         "Hours, parking, park map, and visit planning for... in Houston."
+  news.html          "News and stories from..."   (not on the supplied list; same pattern)
+"park map" kept lowercase inside the visit.html description, per the Park Map exception.
+
+VERIFIED AFTER THIS ROUND
+- Zero bare "Willow Waterhole Greenspace" remain anywhere in page content.
+- All 16 "Willow Waterhole Greenspace Conservancy" instances intact.
+- schema.org "@type": "Park" untouched.
+- Park Map, generic visitor uses of "park", FAQ phrasing, and proper names untouched.
+
+STILL OPEN -- blocked on Bill
+  Scout Lake loop shows 0.4 mi; confirmed per-lake figure is 0.5.
+  "Ellis Island" in the Westbury trail list is not on the confirmed named-trail list.
+  West side of Triangle Lake.
+  Westbury Lake loop reads 2.2 mi while the stats bar says 3.5 miles of trails there.
+
+HOUSEKEEPING STILL OUTSTANDING
+  CHANGELOG.md has not been updated since v4.6. Everything from v6.0 to v6.4 lives only
+  in this file and in the per-page build comments.
+  README.md still states pages are "generated from a template to keep nav/footer
+  identical." There is no build step; the footer is hardcoded in 20 files, 3 variants.
+
+
+================================================================================
+ROUND 5 (v6.5) -- copy consistency cleanup
+================================================================================
+Targeted fixes only. No broad search-and-replace, no rewriting of surrounding copy.
+
+CAPITALIZATION -- "Greenway" as the proper name (6 edits)
+  index.html        h2 "Stories from the greenway." -> "the Greenway."
+  about.html        "The greenway is a working stormwater detention system" -> "The Greenway"
+  anniversary.html  "The greenway in its first decade." -> "The Greenway"
+  anniversary.html  "Fun Runs began at the greenway." -> "at the Greenway."
+  news.html         "connects the heart of Westbury to the greenway" -> "the Greenway"
+  news/2026-05-texas-parks-wildlife-feature.html
+                    "placed the greenway on the Great Texas Coastal Birding Trail" -> "the Greenway"
+
+REPETITION
+  index.html news block. The heading, description and button all said "stories", and
+  "Greenway" appeared twice in two consecutive lines. Description is now
+  "News, wildlife, community milestones, and the people shaping Willow Waterhole."
+  Heading and button unchanged.
+  thingstodo.html Westbury card: "...and the largest, most visited lake in the Greenway"
+  -> "...and its largest, most visited lake." Greenway appeared twice in one sentence.
+
+TPW ARTICLE -- attribution
+  "Now the park built on that partnership is being introduced to readers across the state."
+  -> "Now Willow Waterhole is being introduced to readers across the state."
+  The old wording could be read as the partnership having built the park.
+
+PAGE FLOW -- standalone lead paragraphs removed
+  getinvolved.html and donate.html each had a <section style="padding-bottom:40px">
+  containing a single p.lead between the hero and the first content band. Both sections
+  were removed entirely, which also removes their padding, so no CSS change was needed.
+  The divider now runs straight into the first band, matching anniversary.html,
+  lakes-trails.html and thingstodo.html, which already do this.
+
+CONSEQUENCES OF THOSE TWO REMOVALS -- worth knowing
+  - Get Involved: the full name "Willow Waterhole Greenspace Conservancy" no longer
+    appears near the top of the page. One mention remains, in the partner-program copy
+    further down. This partially reverses Round 2 item 2.
+  - Donate: the donation recipient is no longer named above the fold. One "the
+    Conservancy" mention remains mid-page. This partially reverses Round 2 item 3, which
+    existed to make clear who receives the gift. The Bloomerang/Qgiv embed presumably
+    carries the legal name, but that is worth confirming on the live page.
+  - "Public investment" as a phrase now appears nowhere on the site. The substance is
+    still covered on about.html ("The Harris County Flood Control District engineers and
+    maintains the infrastructure", "Engineered and maintains the detention basins the
+    greenway is built on") and in faqs.html.
+
+ALSO FIXED (v6.6) -- about.html financial-transparency paragraph
+  This was the last surviving version of the claim Bill objected to, and it made it three
+  times in one paragraph: "built and sustained by its community", "could build something
+  lasting", and "why this greenway exists". The last was the strongest form anywhere on the
+  site, crediting donors and volunteers with the Greenway existing at all. It also said
+  "every trail, lake, and gathering place" -- the lakes are HCFCD detention basins.
+  Was: "Willow Waterhole is built and sustained by its community. Every trail, lake, and
+  gathering place reflects the generosity of donors, foundations, and volunteers who believed
+  a neighborhood could build something lasting. Their support is why this greenway exists,
+  and why it keeps growing."
+  Now: "Willow Waterhole is sustained by its community. Every trail, gathering place, and
+  restored acre reflects the generosity of donors, foundations, and volunteers who believed
+  a neighborhood could build something lasting. Their support is why the Greenway keeps
+  growing."
+  "could build something lasting" kept: that describes what the neighborhood believed, not
+  a construction claim, and it is the one warm line in an otherwise compliance-toned block
+  ahead of the Request Financials button. This also resolves one of the lowercase
+  "greenway" instances, leaving 26.
+
+FLAGGED, NOT CHANGED
+  1. 27 standalone lowercase "greenway" remain in page content, 18 of them on about.html
+     alone, mostly in the repeated partner-card line "A funding partner supporting the
+     greenway's continued growth and restoration." Round 5 fixed the six that were listed.
+     The rest were not on the list and were left alone. If Greenway is a proper name, these
+     are the same error at scale; if the lowercase common noun is acceptable in generic
+     description, then several of the six just changed may be inconsistent with them.
+     Needs one decision, then a single pass.
+  2. index.html has two lowercase instances inside alt/aria text ("Bike the greenway").
+
+
+================================================================================
+ROUND 6 (v6.7) -- Squarespace cutover + About mission
+================================================================================
+
+NEW PAGE: membership.html
+  The Get Involved "Become a Member" button pointed at willowwaterhole.org/membership,
+  throwing visitors back into Squarespace on one of the site's three main support actions.
+  New page structure and metadata cloned from donate.html. Sections: hero, What Your
+  Membership Supports (4 cards), Member Benefits (3 items + image), Join (Qgiv embed),
+  Other Ways to Help, CTA. Not added to the main nav; reached via Get Involved, the FAQ,
+  and the footer's existing Become a Member link.
+
+  The Join section embeds the live Qgiv/Bloomerang membership form:
+    data-embed-id  80139
+    data-embed     https://secure.qgiv.com/for/willowwaterholegreenspaceconservancy/embed/80139/
+  This is a DIFFERENT form from the general donation embed on donate.html (80141,
+  generaldonation_wwgc), so memberships are recorded as memberships rather than as one-time
+  gifts. The form supplies its own tiers: Individual $50, Family $100, Supporting $250,
+  Prairie Patron $500, Greenway Patron $1,000, Conservancy Patron $5,000. The page copy
+  deliberately does not restate those amounts, so pricing lives in one place and cannot
+  drift out of sync with Bloomerang.
+
+  Copy note: the old page said membership supports work "within Willow Waterhole Greenway,
+  a nonprofit park conservancy" -- calling the Greenway a nonprofit. That is the exact
+  entity confusion Bill raised. The new copy names the Conservancy as the organization and
+  the Greenway as the place. Trail figure carried over as "about eight miles of
+  ADA-accessible trails" to match locked facts.
+
+THE OTHER TWO SQUARESPACE DEPENDENCIES
+  donate.html  Bottom "Donate Today" pointed to /annualfund. Now targets #donate-form,
+               the Qgiv form already on the page. No reason to leave the site.
+  news.html    "Past newsletters in our archive" linked to /pastnewsletter. Link removed,
+               surrounding sentence kept. A newsletters.html archive was NOT built: there
+               is no newsletter content in the repo to put on it. Building an empty shell
+               would be worse than the current state. Needs the actual newsletter files
+               (PDFs or migrated HTML) first.
+
+LINK UPDATES
+  getinvolved.html  Become a Member -> membership.html (was absolute Squarespace URL)
+  faqs.html         "How do I become a member?" -> membership.html (was getinvolved.html#member)
+
+  NOT changed: the footer "Become a Member" link on all 21 pages still points to
+  getinvolved.html#member, as do the member cards on index.html and donate.html. These are
+  not broken -- they land on the Get Involved membership section, which now links onward to
+  membership.html. Repointing them straight at membership.html is a reasonable follow-up but
+  it is a 21-file footer edit, so it was left for a decision.
+
+SITEMAP + REDIRECTS
+  sitemap.xml   membership.html added at priority 0.8.
+  _redirects    The note reading "pre-cutover dependencies, keep on Squarespace until
+                replaced" is gone, replaced by real 301s:
+                  /membership     -> /membership.html
+                  /annualfund     -> /donate.html#donate-form
+                  /pastnewsletter -> /news.html
+
+QA
+  grep for href="https://www.willowwaterhole.org/ across all 21 pages now returns only
+  rel="canonical" and og:url tags. Zero visitor-facing links to the old site.
+
+ABOUT -- MISSION SECTION
+  The mission statement was .lead italic Nunito, styled less prominently than every other
+  significant line on the page, and it sat above roughly 146px of dead space (an orphaned
+  1.5rem .lead margin + 44px section padding + the next section's 78px) against only 48px
+  above it. Now set in Libre Baskerville green at 1.5rem via the existing .disp class, with
+  section padding 64px 0 0 so the following section supplies the gap. Eyebrow unchanged, for
+  consistency with every other section label.
+
+STILL OPEN -- blocked on Bill
+  Scout Lake loop shows 0.4 mi; confirmed per-lake figure is 0.5.
+  "Ellis Island" in the Westbury trail list is not on the confirmed named-trail list.
+  West side of Triangle Lake.
+  Westbury Lake loop reads 2.2 mi while the stats bar says 3.5 miles of trails there.
+
+
+================================================================================
+ROUND 7 (v6.8) -- consistency batch
+================================================================================
+
+*** STYLESHEET PATH CORRECTED -- READ THIS ***
+  The repo carried TWO identical copies of styles.css: one at the root, one at css/.
+  Every page links to css/styles.css. The root copy was orphaned, and it is the one
+  that had been receiving edits, which is why it had to be hand-copied into css/ each
+  round. All edits now live in css/styles.css and the root duplicate is deleted from
+  this build. Delete any stale root styles.css from the repo so it cannot be edited by
+  mistake. No manual copy step is needed from here on.
+  Cache-bust ?v=6.2 -> ?v=6.8 on all 21 pages.
+
+MEMBERSHIP LINKS (23)
+  All footer "Become a Member" links (21 pages) plus the member cards on index.html and
+  donate.html now point to membership.html instead of getinvolved.html#member. Removes
+  the two-hop path to the join form and a circular link in membership.html's own footer.
+  The #member anchor on getinvolved.html remains in place, now unreferenced.
+
+CAPITALIZATION -- 20 changed, 6 deliberately left alone
+  Capitalized where "Greenway" is the proper name: 17 on about.html (partner cards,
+  HCFCD/City/Kinder/Levitt/Westbury copy), the anniversary photo alt text, the index
+  bike aria-label, and visit.html's "The full Greenway, one map."
+  LEFT LOWERCASE, on purpose -- these are indefinite/generic uses and a blanket replace
+  would have broken sentences written in Rounds 2 and 4:
+    about.html        "create a major public greenway on working flood-control..."
+    anniversary.html  "create a major public greenway on new flood-control..."
+    visit.html        "A unique urban greenway in southwest Houston."
+    thingstodo.html   "into one walkable greenway"
+  Also skipped: the willow-waterhole-greenway-panorama.jpg filename and the
+  kinderfoundation.org URL slug on news.html.
+
+DONATE -- RECIPIENT NAMED AGAIN
+  "your support helps the Conservancy do more" -> "your support helps Willow Waterhole
+  Greenspace Conservancy do more". Restores the full-name identification lost when the
+  standalone lead paragraph was removed in v6.5.
+
+MEMBERSHIP PAGE -- JOIN SECTION
+  H2 was "Choose your membership level." -- word-for-word the Bloomerang form's own
+  heading, rendered about a screen below it. Now "Become a member." Subhead trimmed to
+  "Memberships run from Individual through Conservancy Patron." Tier amounts still come
+  from the form, so pricing lives in one place.
+
+TEXT WRAPPING
+  css/styles.css gains:
+    h1, h2, h3, .big, .disp            { text-wrap: balance }
+    .cta p, .section-intro, p.lead,
+    .discover-sub                      { text-wrap: pretty }
+    .nw                                { white-space: nowrap }
+  balance is effectively universal (Chrome/Edge 114+, Firefox 121+, Safari 17.5+) and is
+  scoped to headings only -- past roughly six lines the rebalance becomes visible on load
+  and costs performance. pretty is less settled: Firefox support varies by source, Chrome
+  adjusts only the last few lines while WebKit re-evaluates the whole paragraph, so the
+  same widow resolves differently by browser. Both are progressive enhancement; neither
+  can cause overflow, and unsupported browsers wrap exactly as they do today.
+  .stats span and .stats-ttd b already declared balance in v5.6; not duplicated.
+
+  Two confirmed breaks fixed DETERMINISTICALLY rather than relying on pretty:
+    anniversary.html  CTA -- <span class="nw">Willow Waterhole</span> so the name cannot
+                      split across lines.
+    thingstodo.html   "hear from&nbsp;you" -- binds the last two words so "you." cannot
+                      strand on its own line. The real problem there was the widow, not
+                      the link splitting; nowrapping the whole 27-character link would
+                      have stranded a longer line and risked overflow on small screens.
+
+  NOT done, on purpose: no blanket .nw on the 200+ "Willow Waterhole" occurrences, no
+  max-width changes to shared containers, no hard-coded <br> tags.
+
+REDIRECTS
+  /annualfund simplified from /donate.html#donate-form to /donate.html.
+
+DOCUMENTATION
+  CHANGELOG.md caught up from v4.6 through v6.8; prior history retained below the new
+  entries.
+  README.md corrected. It claimed pages are "generated from a template to keep nav/footer
+  identical." There is no build step and no template. It now states plainly that nav and
+  footer are duplicated by hand across 21 files in three variants, that nothing enforces
+  consistency, and that css/styles.css is the only stylesheet and must not be duplicated
+  at the root. Page count corrected from 11 to 13.
+
+STILL OPEN
+  Homepage repetition (six items) -- needs approved wording, next round.
+  Newsletter archive + the non-functional signup form on news.html.
+  Bill's four questions: Scout Lake 0.4 vs 0.5, "Ellis Island", Triangle Lake west side,
+  Westbury 2.2 vs 3.5 loop-vs-total.
+
+
+================================================================================
+ROUND 8 (v6.9) -- Greenway Stories + newsletter archive
+================================================================================
+
+NEW SECTION: GREENWAY STORIES (news.html)
+Four evergreen articles, sourced from the legacy Squarespace flood-control and prairie
+pages that _redirects had collapsed into about.html and prairie.html. Sits between
+Flora & Fauna and In the Press. Priority order reflects lasting visitor value, not
+production convenience:
+  news/greenway-why-houston-floods.html
+  news/greenway-wildflower-that-redrew-the-plan.html
+  news/greenway-prairie-before-the-city.html
+  news/greenway-fences-in-the-water.html
+
+The fences piece ranks last on purpose: the enclosures are designed to be removed once
+the vegetation establishes, so it is the least evergreen of the four.
+
+Model follows Central Park Conservancy, which runs an online magazine at /articles/
+separate from news, and Memorial Park Conservancy, which shows six news items per page
+with category filters and a visible date on everything. Dates, not item counts, are what
+stop older pieces from reading as new.
+
+FACTS RECONCILED AGAINST THE LOCKED LIST
+  Old site said the basin detains 300 million gallons. Corrected to 608 million.
+  Outside coverage says 279 acres. Site says 291 throughout.
+  The old Urbanization page quoted Joni Mitchell lyrics. Not carried over (copyright).
+  "Reduce" flooding used throughout, never "prevent". Harvey explicitly acknowledged as
+  exceeding what any basin is designed for.
+  Basin completion date (old site says December 2018) omitted, not in the locked facts.
+  "Vegetation-feeding fish" used rather than naming grass carp; the newsletter said
+  "invasive fish" and the species is unconfirmed.
+
+  *** NEEDS REVIEW *** greenway-prairie-before-the-city.html describes the Karankawa,
+  a living tribe, and an active effort by the Karankawa Kadla to protect a former village
+  site near Corpus Christi Bay. Accurate to the source, but worth a read by someone before
+  this is public, and possibly worth asking whether the Karankawa Kadla want to be
+  consulted or credited.
+
+NEW PAGE: newsletters.html
+  All 16 legacy PDFs, grouped newest year first. Replaces the Squarespace /pastnewsletter
+  page. FILENAMES KEPT EXACTLY AS PUBLISHED, including he_Watering_Hole_Newsletter_Fall_
+  2022_Draft_Revised_.pdf with its missing first letter. Renaming would break any existing
+  direct link, and these are published artifacts. Display labels carry the meaning instead,
+  which matters for three files whose names do not match their issue:
+    September_newsletter.02.pdf        = Summer 2024
+    winter_2023_newsletter_revise.pdf  = Winter 2023-2024  (distinct from Winter 2023)
+    Waterhole_Wire_May_2025.pdf        = Spring 2025
+  Volume numbering from the old site dropped: it was inconsistent (Winter 2023-2024 and
+  Fall 2023 both filed under Volume 4) and does not help anyone find an issue.
+  The page states plainly that the quarterly format is retired.
+
+  *** REQUIRES: a newsletters/ folder at the repo root containing the 16 PDFs. Without it
+  every link 404s. ***
+
+LINKS
+  news.html Stay Connected note now points to the archive.
+  "Newsletter Archive" added to the Connect column of the footer on all 25 pages.
+  _redirects /pastnewsletter retargeted from /news.html to /newsletters.html.
+  sitemap.xml gains newsletters.html and the four articles.
+
+NEW CSS (css/styles.css)
+  .photo-credit    caption under a lead image, for named photographers only.
+  .story-note      the "Next time you visit" block closing each evergreen article.
+  .imgwrap--logo   object-fit:contain for logos and marks. cover crops a logo's edges off,
+                   which reads as broken rather than cropped. Unused so far; this is the
+                   standard for any future logo card.
+  .nl-grid / .nl-year / .nl-list / .nl-issue / .nl-meta  the archive listing.
+  Cache-bust ?v=6.8 -> ?v=6.9 on all pages.
+
+NOT BUILT, ON PURPOSE
+  The "More Stories" archive. Latest News holds 7, inside the 6-9 ceiling, and the four
+  evergreen pieces went into their own section rather than onto the pile. Nothing has
+  rolled off yet, so there is nothing for an archive page to hold.
+
+STILL OPEN
+  news.html Stay Connected form is still action="#" onsubmit="return false;" -- it looks
+  functional and collects nothing. This matters more now that email is the stated
+  distribution channel for everything.
+  Article migration from the Fall 2025 / Winter 2026 newsletters (MLK Day, Monks Walk,
+  City Parks Alliance, electric fleet, fishing clinic, and the three Flora & Fauna pieces).
+  Images are in images/news/ and ready.
+  Homepage repetition, six items.
+  Bill's four questions.

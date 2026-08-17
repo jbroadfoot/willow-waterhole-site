@@ -278,7 +278,80 @@ footer h4{color:#fff;font:800 .76rem/1 Nunito;letter-spacing:.08em;text-transfor
 .f-col-head{font:800 .85rem/1 Nunito;letter-spacing:.1em;text-transform:uppercase;color:#8fc9a0;margin-bottom:1rem}
 footer ul{list-style:none}footer li{margin:.45rem 0}
 footer a{color:#bcd0ad;text-decoration:none}footer a:hover{color:#fff}
-.fg img{height:54px;margin-bottom:12px;filter:brightness(0) invert(1);opacity:.95}
+.fg img{height:54px;margin-bottom:18px;filter:brightness(0) invert(1);opacity:.95}
+.f-ident{margin-bottom:1.1rem}
+.f-ident-name{display:block;color:#fff;font-weight:800;font-size:.95rem;line-height:1.35;margin-bottom:.2rem}
+.f-ident p{line-height:1.5}
+
+/* --- Text wrapping (v6.8) --------------------------------------------------
+   balance: Chrome 114+/Edge 114+/Firefox 121+/Safari 17.5+. Headings only —
+   on blocks over ~6 lines the rebalance is visible on load and costs perf.
+   pretty: less settled (Firefox support varies; Chrome adjusts only the last
+   few lines, WebKit re-evaluates the whole paragraph). Progressive enhancement
+   only — unsupported browsers wrap exactly as they do today. Neither value can
+   cause overflow. For breaks that MUST be fixed everywhere, use .nw or &nbsp;.
+   Note: .stats span and .stats-ttd b already set balance; not duplicated here. */
+h1, h2, h3, .big, .disp{text-wrap:balance}
+.cta p, .section-intro, p.lead, .discover-sub{text-wrap:pretty}
+.nw{white-space:nowrap}
+
+/* --- Greenway Stories (v6.9) ------------------------------------------------
+   .photo-credit  caption under a lead image, used only where a named
+                  photographer supplied the shot.
+   .story-note    the "Next time you visit" block that closes an evergreen
+                  article. Reuses band cream + the green rule from .cta.
+   .imgwrap--logo logos and graphics must CONTAIN, not COVER. object-fit:cover
+                  crops a logo's edges off, which reads as broken rather than
+                  cropped. Use on any card whose image is a mark, not a photo. */
+.photo-credit{font:400 .82rem/1.4 Nunito;color:#7a8672;margin:0 0 2rem}
+.story-note{background:var(--cream,#f5f0e6);border-left:4px solid var(--green,#008444);border-radius:0 8px 8px 0;padding:18px 22px;margin:2.4rem 0 0;font-size:.98rem;line-height:1.6;color:#3c4734}
+.story-note b{color:var(--green,#008444);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;display:inline-block;margin-bottom:.35rem}
+.imgwrap--logo{background:#fff;display:flex;align-items:center;justify-content:center;padding:22px}
+.imgwrap--logo img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+
+/* --- Newsletter archive (v6.9) --------------------------------------------- */
+.nl-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px}
+.nl-year h3{font-size:1.15rem;color:var(--green,#008444);margin:0 0 .6rem;padding-bottom:.5rem;border-bottom:2px solid rgba(0,132,68,.18)}
+.nl-list{list-style:none;margin:0;padding:0}
+.nl-list li{margin:0}
+.nl-list a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:.6rem 0;text-decoration:none;border-bottom:1px solid rgba(8,30,18,.08)}
+.nl-list a:hover .nl-issue{color:var(--green,#008444);text-decoration:underline}
+.nl-issue{font-weight:600;color:#2f3a29}
+.nl-meta{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#8a9482;flex:none}
+
+/* --- Newsletter archive: cover shelf (v6.10) --------------------------------
+   Replaces the one-column-per-year list above. Years held between one and four
+   issues, so that grid left ragged empty cells; uniform cover tiles grid
+   cleanly at any count. Tiles are 600x776, the proportions of a US Letter page,
+   matching the thumbnails rendered from page one of each PDF.
+   .nl-grid, .nl-year and .nl-list are no longer referenced by any page as of
+   v6.10 but are left in place per the convention on possibly-shared classes.
+   .nl-issue and .nl-meta are still in use and are extended, not replaced. */
+.nl-shelf{display:grid;grid-template-columns:repeat(4,1fr);gap:40px 32px;margin-top:2rem}
+.nl-card{display:flex;flex-direction:column;text-decoration:none;color:var(--ink)}
+.nl-card .imgwrap{aspect-ratio:600/776;overflow:hidden;border-radius:6px;background:#fff;box-shadow:0 3px 14px rgba(8,30,18,.13);transition:transform .2s,box-shadow .2s}
+.nl-card img{width:100%;height:100%;object-fit:cover;display:block}
+/* Lift the cover, not the whole card: raising the caption too moves text under
+   the pointer and makes the grid feel unsettled. */
+.nl-card:hover .imgwrap{transform:translateY(-3px);box-shadow:0 12px 28px rgba(8,30,18,.2)}
+.nl-card .nl-issue{margin-top:.75rem;font-weight:700;font-size:.96rem;line-height:1.3}
+.nl-card:hover .nl-issue{color:var(--green);text-decoration:underline}
+/* Overrides the uppercase letterspaced .nl-meta above: as a caption under a
+   cover this reads as a plain detail line rather than a label. */
+.nl-card .nl-meta{margin-top:.15rem;font-size:.78rem;letter-spacing:0;text-transform:none;color:#8a9482}
+/* Focus ring on the card so it wraps the tile and its label; on .imgwrap it
+   would clip against that element's overflow:hidden. */
+.nl-card:focus-visible{outline:3px solid var(--blue);outline-offset:4px;border-radius:8px}
+@media(max-width:520px){
+  .nl-shelf{grid-template-columns:repeat(2,1fr);gap:28px 18px}
+  .nl-card .nl-issue{font-size:.9rem}
+}
+/* Fixed four-up preview of the archive on news.html. The auto-fill shelf above
+   is sized for sixteen tiles and would leave four sitting small in the first
+   four of six tracks; this holds them at full width so the covers read as a
+   body of work rather than a leftover row. */
+.nl-shelf--four{grid-template-columns:repeat(4,1fr)}
+@media(max-width:700px){.nl-shelf--four{grid-template-columns:repeat(2,1fr)}}
 .fbase{border-top:1px solid rgba(255,255,255,.16);padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.82rem;color:#94ad85}
 @media(max-width:860px){.fg{grid-template-columns:1fr 1fr}}
 

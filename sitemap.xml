@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.willowwaterhole.org/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/visit.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/thingstodo.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/lakes-trails.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
@@ -8,10 +9,16 @@
   <url><loc>https://www.willowwaterhole.org/getinvolved.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/about.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/donate.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/newsletters.html</loc><priority>0.5</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/membership.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/anniversary.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/news.html</loc><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/prairie.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/faqs.html</loc><priority>0.7</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/news/greenway-why-houston-floods.html</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/news/greenway-wildflower-that-redrew-the-plan.html</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/news/greenway-prairie-before-the-city.html</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority><changefreq>yearly</changefreq></url>
+  <url><loc>https://www.willowwaterhole.org/news/greenway-fences-in-the-water.html</loc><lastmod>2026-08-16</lastmod><priority>0.7</priority><changefreq>yearly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/news/2026-11-colors-of-the-prairie.html</loc><lastmod>2026-08-10</lastmod><priority>0.8</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/news/2026-musicfest.html</loc><lastmod>2026-08-10</lastmod><priority>0.6</priority><changefreq>never</changefreq></url>
   <url><loc>https://www.willowwaterhole.org/news/2026-boardwalk-partners.html</loc><lastmod>2026-08-10</lastmod><priority>0.6</priority><changefreq>never</changefreq></url>

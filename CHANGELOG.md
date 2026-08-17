@@ -1,5 +1,42 @@
 # Willow Waterhole Website — Changelog
 
+## v6.8 — 2026-08-16 · Consistency batch
+- Membership: 23 links (21 footers + homepage and Donate member cards) repointed from `getinvolved.html#member` to `membership.html`. Removes the two-hop path to the join form and a circular footer link on the membership page itself.
+- Capitalization: 20 proper-name uses of "greenway" capitalized. Six generic uses deliberately left lowercase — "create a major public greenway on...", "A unique urban greenway in southwest Houston", "into one walkable greenway" — plus a filename and an external URL slug. A blanket replace would have broken sentences written in Rounds 2 and 4.
+- Donate: mid-page line now names Willow Waterhole Greenspace Conservancy in full, restoring the recipient identification lost when the standalone lead was removed in v6.5.
+- Membership page: Join heading changed from "Choose your membership level." to "Become a member." — it duplicated the Bloomerang form's own heading a screen below. Subhead trimmed.
+- Text wrapping: `text-wrap: balance` on headings, `text-wrap: pretty` on body/intro copy, new `.nw` utility. Both values are progressive enhancement and cannot cause overflow. Two confirmed breaks fixed deterministically: `.nw` around "Willow Waterhole" in the anniversary CTA, and `&nbsp;` binding "from you" on Things to Do.
+- `_redirects`: `/annualfund` simplified to `/donate.html`.
+- **Stylesheet path corrected.** The repo carried two identical copies of `styles.css` — one at root, one at `css/`. Pages link to `css/styles.css`; the root copy was orphaned. All edits are now in `css/styles.css` and the root duplicate is deleted. Delete any stale root `styles.css` from the repo.
+- Cache-bust `?v=6.2` → `?v=6.8` on all 21 pages.
+
+## v6.7 — 2026-08-15 · Squarespace cutover
+- New `membership.html` replacing the old Squarespace membership page, with the live Qgiv/Bloomerang membership form (80139), separate from the general donation form on Donate (80141).
+- Donate bottom CTA now targets the on-page `#donate-form` instead of `/annualfund`.
+- Dead newsletter-archive link removed from News.
+- FAQ membership answer points to `membership.html`.
+- `sitemap.xml` and `_redirects` updated; zero visitor-facing links to the old site remain.
+- About mission statement restyled to Libre Baskerville green, spacing rebalanced.
+
+## v6.5–v6.6 — 2026-08-15 · Copy consistency
+- Proper-name capitalization of "Greenway" in six listed places.
+- Homepage news block, Westbury card, and TPW attribution de-duplicated.
+- Standalone lead paragraphs removed from Get Involved and Donate.
+- About financial-transparency paragraph no longer claims the community built the Greenway.
+
+## v6.3–v6.4 — 2026-08-15 · Terminology and metadata
+- 12 visible park→Greenway edits; "Park Improvements" → "Greenway Improvements".
+- 43 "Willow Waterhole Greenspace" → "Willow Waterhole Greenway" in titles, og/twitter titles, and JSON-LD place names. Meta descriptions deliberately unchanged (SEO surface).
+- 2024 accessibility milestone added to the anniversary timeline.
+- Explore the Neighborhood cards alphabetized; First Watch, IHOP, New York Bagel Shop added.
+- Anniversary hero and 2001 timeline reworded off "built by the community".
+
+## v6.0–v6.2 — 2026-08-15 · Bill Burhans feedback
+- Factual corrections: Triangle Lake cross streets, Triangle and Willow culvert counts, Heron Lake access, Bluebonnet added to Westbury, ADA tags on five Things to Do trails, Cullen Trail 1.5→1.2 mi.
+- Nine approved park→Greenway edits plus four siblings.
+- Conservancy named on Home, Get Involved, and Donate.
+- Footer brand column rebuilt as an identity card (`.f-ident`).
+
 ## v4.6 — 2026-08-06 · Homepage simplification pass
 
 ### index.html (v3.5 → v3.6)
